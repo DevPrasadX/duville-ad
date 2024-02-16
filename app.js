@@ -164,16 +164,25 @@ const sendDataToGoogleSheet = async (name, email, phone) => {
 }
 
 
-// const popupFormBtn = document.getElementById("popup-form-btn")
 
-document.getElementById("popup-form").addEventListener("submit", function(event){
-    event.preventDefault(); // Prevent the default form submission
-    // Perform your AJAX request here
-    // Assuming the form submission is successful, show the success message
-    alert("Registration Successful");
-    // Optionally, you can close the popup after showing the success message
-    // document.getElementById("popup").style.display = "none";
-  });
+const popupFormBtn = document.getElementById("popup-form-btn")
+
+popupFormBtn.addEventListener("click", async (e) => {
+    e.preventDefault()
+    const popupForm = document.getElementById("popup-form")
+    const name = popupForm.querySelector('input[name=name]').value
+    const email = popupForm.querySelector('input[name=email]').value
+    const phone = popupForm.querySelector('input[name=phone]').value
+    const configuration = popupForm.querySelector('select[name=configuration]').value
+    const createLeadStatus = await createLead(name, email, phone,configuration)
+    const sendDataToGoogleSheetStatus = await sendDataToGoogleSheet(name,email, phone,configuration)
+
+    if(createLeadStatus && sendDataToGoogleSheetStatus){
+        window.location.replace('./thankyou.html')
+    }
+
+
+})
 
 const footerFormBtn = document.getElementById("footer_form_btn")
 
