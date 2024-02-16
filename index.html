@@ -31,6 +31,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dynalight&family=Merriweather+Sans:wght@300;400&display=swap" rel="stylesheet">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11363426693"></script>
   <script>
@@ -43,11 +47,18 @@
   <style>
     html,
     body {
-      font-family: 'Lato', sans-serif;
+      font-family:  'Lato', sans-serif;
       /* heading:lato
         sub c
       */
     }
+
+    .dynalight-regular {
+      font-family: "Dynalight", cursive;
+      font-weight: 400;
+      font-style: normal;
+    }
+
 
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
@@ -69,6 +80,8 @@
       justify-content: center;
       align-items: center;
     }
+
+    
 
     #amenities_scroll::-webkit-scrollbar {
       display: none;
@@ -410,6 +423,7 @@
       border-collapse: collapse;
       margin-bottom: 20px;
       border-radius: 10px;
+      background:  #F9F9F9;
 
     }
 
@@ -423,8 +437,8 @@
     }
 
     th {
-      background-color: rgb(0, 0, 0);
-      color: white;
+      /* background-color: rgb(0, 0, 0); */
+      /* color: white; */
     }
 
 
@@ -512,14 +526,15 @@
     {
       var popupSection = document.getElementById('popup');
 
-// Make the popup section visible
-popupSection.style.display = 'block';
+       // Make the popup section visible
+       popupSection.style.display = 'block';
     }
+    
   </script>
 </head>
 
-<body style="overflow-x: hidden;">
-  <main>
+<body class="overflow-x-hidden">
+  <main class="overflow-x-hidden">
     <!-- <a href="https://wa.me/919730398937?text=Hello">
       <button id="whatsapp_button">
         <img src="./assets/whatsapp.png" style="height: 65%; width: 65%;" />
@@ -527,14 +542,18 @@ popupSection.style.display = 'block';
     </a> -->
   
     <!-- Navbar -->
-    <header style="z-index: 999;" class="bg-black/60 fixed top-0 w-full">
-      <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+    <header style="z-index: 999;" class="bg-white fixed top-0 w-full">
+      <div class="mx-auto  px-4 sm:px-6 lg:px-8">
         <div class="flex h-16 items-center justify-between">
-          <div class="flex-1 md:flex md:items-center md:gap-12">
-            <a id="header_logo" class="block text-teal-600" href="/">
+          <div class="flex ">
+            <a id="header_logo" class="block text-teal-600 flex flex-row space-x-3" href="/">
               <span class="sr-only">Home</span>
-              <img class="h-8"
-                src="https://ik.imagekit.io/athxbsw68/Duville%20Estate/public/Navbar/Logo.png?tr=w-128" />
+              <img class="h-16"
+              src="./assets/Duville_black logo-02.svg"   /> 
+              <div class="border-2  border-r border-red-300 py-2 "></div>
+              <img class="h-12"
+              src="./assets/reverdale_logo.jpeg"   /> 
+                      
             </a>
           </div>
 
@@ -542,58 +561,108 @@ popupSection.style.display = 'block';
             <nav aria-label="Global" class="hidden md:block">
               <ul class="flex items-center gap-6 text-sm">
                 <li>
-                  <a class="text-white" href="#about">
+                  <a class="text-black text-base" href="#about">
                     About
                   </a>
                 </li>
                 <li>
-                  <a class="text-white" href="#amenities">
+                  <a class="text-black text-lg" href="#amenities">
                     Amenities
                   </a>
                 </li>
                
                 <li>
-                  <a class="text-white" href="#offering">
+                  <a class="text-black text-lg" href="#offering">
                     Offering
                   </a>
                 </li>
                 <li>
-                  <a class="text-white" href="#plan">
+                  <a class="text-black text-lg" href="#plan">
                     Plan
                   </a>
                 </li>
                 <li>
-                  <a class="text-white" href="#location">
+                  <a class="text-black text-lg" href="#Infrastructure">
+                    Infrastructure
+                  </a>
+                </li>
+                <li>
+                  <a class="text-black text-lg" href="#location">
                     Location
                   </a>
+                </li>
+
+                <li class="flex flex-row gap-2 w-4">
+                  <img src="./assets/phone.png"/>
+                  <p class="text-black" href="#location">
+                    08037835621
+                  </p>
                 </li>
               
               </ul>
             </nav>
+          </div>
+
+          <div class="">
+            <a id="header_logo" class="block text-teal-600" href="/">
+              <span class="sr-only">Home</span>
+              <img class="h-12"
+              
+                 />         
+            </a>
           </div>
         </div>
       </div>
     </header>
 
     <!-- Banner -->
-    <section class="relative">
-      <div id="top_banner" class="h-screen w-full">
-        <img id="desktop_banner"
-          src="https://ik.imagekit.io/athxbsw68/Duville%20Estate/public/RiverdaleGrand/Banner.jpg?updatedAt=1707284637207"
-          class="h-full w-full object-cover" />
-        <img id="mobile_banner"
-          src="https://ik.imagekit.io/athxbsw68/Duville%20Estate/public/Duville-Estate/mob/8.jpg?updatedAt=1707285035217"
-          class="h-full w-full object-cover" />
+    <!-- <section class=" grid grid-cols-1 md:grid-cols-2 w-11/12 mx-auto my-24">
+      <div id="top_banner">
+        <div  class="h-screen w-full">
+          <img id="desktop_banner"
+          src="./assets/banner.png"         
+         class="h-full w-full object-cover" />
+          <img id="mobile_banner"
+          src="./assets/banner.png"         
+          class=" sm:hidden  h-full w-full object-cover" />
+        </div>
       </div>
+      <div class="bg-[#FFE4E4] pt-10 md:pt-32  md:pl-8 space-y-12">
+        <div>
+          <h1 class="text-5xl font-extrabold text-[#0E2644] pl-10">Live Grand! <span class="italic font-thin text-[#ED1C26]">Live Twice</span></h1>
+        </div>
+        <div>
+          <h1 class="text-5xl font-extrabold w text-[#0E2644] bg-[#ED1C26] text-white py-1 px-4 w-fit mx-auto">3 & 3.5 BHK  DUPLEX</h1>
+          <h1 class="text-4xl font-bold border border-[#ED1C26]  py-1 px-4 w-fit mx-auto">Starting at  1.15 Cr</h1>
+        </div>
+        <div class="w-[100%] mx-auto">
+          <h1 class="text-5xl mx-auto w-fit  mt-10  font-bold text-center text-[#0E2644]">Also Available In  <br/>
+            2 and 4 BHK Apartments</h1>
+        </div> 
+         
+        <div class="flex flex-row items-center mx-auto gap-2  w-fit">
+          <img 
+            src="./assets/location_logo.png"  />
+          <h1 class="text-3xl  w-fit  text-center font-bold text-[#0E2644]">  Kharadi Central</h1>
+        </div>
+      </div>
+      
       <button
         class="popup-btn fixed top-1/2 -rotate-90 right-[-4rem] inline-block rounded bg-red px-12 py-3 text-sm font-medium text-white transition hover:bg-amber-950 focus:outline-none">
         Enquire Now
       </button>
-    </section>
+    </section> -->
+
+    <div class=" hidden md:block mt-20">
+      <img  src="./assets/Banner-2.png"/>
+    </div>
+    <div class=" md:hidden mt-20">
+      <img  src="./assets/Banner-mob-2.png"/>
+    </div>
 
 
     <!-- icons -->
-    <section class="strip-section" id="strip">
+    <section class="w-11/12 mx-auto strip-section" id="strip">
       <div class="container">
         <ul class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
 
@@ -640,44 +709,89 @@ popupSection.style.display = 'block';
     
     <!-- About -->
 
-    <section id="about" class="my-12 bg-gray-50">
+    <section id="about" class="my-24 ">
 
-      <h3 class="text-4xl text-center py-0"><span class="text-red-600">About</span> <span class="text-black-600">Project</span></h3>
-      <div style="padding-top: 0;" class="mx-auto max-w-screen-2xl px-4 py-8 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-          <div class="bg-gray-50 p-8 md:p-12 lg:px-16 lg:py-24">
-            <div class="mx-auto max-w-xl text-center lg:text-left">
-              <h2 class="text-2xl font-bold text-gray-900 md:text-3xl">
-                3, 3.5, 4 BHK Flats & Duplexes in Riverdale Grand in Total of 31 Acres Area at Kharadi, Pune
-              </h2>
+      <!-- <h3 class="text-4xl text-center py-0"><span class="text-red-600">About</span> <span class="text-black-600">Project</span></h3> -->
+      <div style="padding-top: 0;" class="mx-auto  mt-20  space-y-10  py-8  ">
+        <div class="bg-[#FFE4E4]">
+          <div class="flex md:flex-row flex-col-reverse   w-11/12 mx-auto  flex-row items-center  justify-between  md:p-5">
+            <div class="  pt-10">
+              <div class="mx-auto max-w-xl  lg:text-left">
+              
+                <div class="mb-6 md:mb-0">
+                  <h2 class="text-4xl font-semibold  md:text-center ">
+                    Riverdale <span class="text-5xl  font-medium dynalight-regular  text-[#ED1C26]">Grand</span>
+                  </h2>
+                </div>
+                <p style="" class="text-gray-600   leading-6 sm:mt-4 sm:block md:w-[90%]  mx-auto">
+                  Welcome to Riverdale Grand, the epitome of luxury living in Kharadi,
+                  Pune. Our residential project offers a diverse range of 2, 3, and 4 BHK
+                  Flats and Duplexes meticulously designed to redefine your lifestyle.
+                  Strategically located amidst the bustling heart of Kharadi, Riverdale
+                  Grand boasts proximity to esteemed educational institutions,
+                  renowned healthcare facilities, and vibrant shopping hubs, ensuring
+                  unparalleled convenience for residents.
+                </p>
+  
+                <div class="w-[90%] mx-auto mt-5 space-y-2">
+  
+                  <ul class="font-semibold list-disc appearance leading-6 ml-3 text-gray-600">
+                    <li >Luxurious 2 BHK</li>
+                    <li>Spacious 3 BHK</li>
+                    <li>Expansive 4.5 BHK apartments (3000 sqft).</li>
+                  </ul>
+                </div>
+               
+                <div class="my-4 md:mt-8 mx-auto w-fit">
+                  <button
+                    class="popup-btn inline-block rounded border border-white bg-red px-12 py-3 text-sm font-medium text-white transition hover:bg-amber-950 focus:outline-none">
+                    Enquire Now
+                  </button>
+                </div>
+              </div>
+            </div>
+  
+            <div class="grid pt-10 mr-10">
+              <img alt="Forest Farm Villa" 
+                src="./assets/Grand-01.jpg" class="max-w-[500px] md:shadow-[40px_-40px] md:shadow-red-300 " />
+            </div>
+          </div>
+        </div>
+        <div class="flex md:flex-row-reverse flex-col-reverse   w-11/12 mx-auto   items-center  justify-between  md:p-5">
+          <div class="bg-gray-50  pt-10">
+            <div class="mx-auto w-full md:max-w-xl md:text-center lg:text-left">
+            
+              <h2 class="text-4xl font-semibold  md:text-center ">
+                Riverdale <span class="text-5xl  font-medium dynalight-regular  text-[#ED1C26]">Grove</span>
+              </h2>              <p style="" class="text-gray-600  mt-4 sm:block md:w-[90%]  mx-auto">
+                Welcome to Riverdale Grove, where urban living harmonizes with
+                nature's tranquillity along the Riverdale Riverfront Road. Our
+                residential community is a serene oasis, drawing inspiration from the
+                lush greenery and woods adorning the riverbank. Riverdale Grove
+                offers a curated selection of 2 BHK and 3.5 BHK Duplex Apartments,
+                ensuring efficient space utilization and zero wastage to cater to the
+                diverse needs of our residents.
 
-              <p style="text-align: justify; margin-top: 2vh;" class="text-gray-600 sm:mt-4 sm:block">
-                Welcome to Riverdale Grand, where your dream of owning a spacious and luxurious home becomes a reality.
-                Situated in the prime location of Kharadi, Pune, this exquisite residential project offers a range of 2,
-                3
-                & 4 BHK Flats and Duplexes that are designed to elevate your lifestyle to new heights. Let’s explore
-                what makes
-                Riverdale Grand the perfect place to call home. Nestled in the heart of Kharadi, Riverdale Grand offers
-                the perfect
-                blend of convenience and tranquility. With its proximity to reputable schools, renowned hospitals, and
-                vibrant shopping
-                centers, you’ll have everything you need right at your doorstep. Enjoy the ease of commuting and the
-                excitement of being part
-                of a thriving community.At Riverdale Grand, we understand the importance of spacious and well-designed
-                living spaces. Our range
-                of 3 & 4 BHK Flats and Duplexes are thoughtfully crafted to provide ample room for you and your loved
-                ones.
               </p>
-              <p id="list_items">31 Acres Project
-              </p>
-              <p id="list_items">Business Meeting Rooms In Each Tower
-              </p>
-              <p id="list_items">The Most Renowned Project of Kharadi, Pune
-              </p>
-              <p id="list_items">Amenities Like Theatre, Dog Park, Gazebo, Steam and Sauna and many more</p>
+
+              <div class="w-[90%] mx-auto mt-5 space-y-2">
+
+                <ul class=" font-semibold list-disc appearance leading-6 ml-3 text-gray-600">
+                  <li >Stylish 3 BHK</li>
+                  <li >Efficient 3.5 BHK duplex layouts.                  </li>
+                  <li >Prime Riverfront</li>
+
+                  
+
+                 </ul>
+              </div>
+              
+              
+              
+             
 
 
-              <div class="mt-4 md:mt-8">
+              <div class="mt-4 md:mt-8 pb-6 mx-auto w-fit">
                 <button
                   class="popup-btn inline-block rounded border border-white bg-red px-12 py-3 text-sm font-medium text-white transition hover:bg-amber-950 focus:outline-none">
                   Enquire Now
@@ -686,439 +800,671 @@ popupSection.style.display = 'block';
             </div>
           </div>
 
-          <div class="grid">
-            <img alt="Forest Farm Villa" style="height: 100%; width: 100%; object-fit: contain;"
-              src="./assets/Grand-01.jpg" class="h-40 w-full object-cover sm:h-56 md:h-full" />
+          <div class="grid pt-20 md:pt-10 mr-10 hidden md:block">
+            <img alt="Forest Farm Villa " 
+              src="./assets/Grove.png" class="max-w-[500px]  " />
+          </div>
+
+          <div class="grid pt-20 md:pt-10 mr-10 md:hidden">
+            <img alt="Forest Farm Villa  " 
+              src="./assets/Grove-2.png" class="max-w-[500px]  " />
           </div>
         </div>
-    </section>
-    <section class="price-table">
-      <table>
-        <thead>
-          <tr>
-            <th>Configuration</th>
-            <th>Carpet Area</th>
-            <th>Price</th>
-            <th>Price Breakdown</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>3 BHK</td>
-            <td>1084 Sq.Ft.</td>
-            <td>₹ 1.44 Cr</td>
-            <td><button class="price-breakdown" onclick="showPriceBreakdown()">Price Breakdown</button></td>
-          </tr>
-          <tr>
-            <td>3 BHK</td>
-            <td>1138 Sq.Ft.</td>
-            <td>₹ 1.54 Cr</td>
-            <td><button class="price-breakdown" onclick="showPriceBreakdown()">Price Breakdown</button></td>
-          </tr>
-          <tr>
-            <td>3 BHK</td>
-            <td>1190 Sq.Ft.</td>
-            <td>₹ 1.65 Cr</td>
-            <td><button class="price-breakdown" onclick="showPriceBreakdown()">Price Breakdown</button></td>
-          </tr>
-          <tr>
-            <td>3 BHK</td>
-            <td>1417 Sq.Ft.</td>
-            <td>₹ 1.99 Cr</td>
-            <td><button class="price-breakdown" onclick="showPriceBreakdown()">Price Breakdown</button></td>
-          </tr>
-          <tr>
-            <td>3 BHK Duplex</td>
-            <td>1168 Sq.Ft.</td>
-            <td>₹ 1.70 Cr</td>
-            <td><button class="price-breakdown" onclick="showPriceBreakdown() ">Price Breakdown</button></td>
-          </tr>
-          <tr>
-            <td>3.5 BHK Duplex</td>
-            <td>1358 Sq.Ft.</td>
-            <td>₹ 1.95 Cr</td>
-            <td><button class="price-breakdown" onclick="showPriceBreakdown()">Price Breakdown</button></td>
-          </tr>
-          <tr>
-            <td>4 BHK</td>
-            <td>2290 Sq.Ft.</td>
-            <td>₹ 2.95 Cr</td>
-            <td><button class="price-breakdown" onclick="showPriceBreakdown()">Price Breakdown</button></td>
-          </tr>
-        </tbody>
-      </table>
-
-
-    </section>
-
-
-    <!-- Amenities -->
-    <section id="amenities" class="my-12 bg-gray-50">
-
-      <div id="modern_div" style="width: 100vw; height: 60vh;  text-align: center; overflow-y: hidden;">
-        <h3 style="font-weight: 500; margin-top: 5vh; display: inline-block; width: 100%;"
-          class="text-4xl text-center py-0">MODERN <span class="text-red-600">AMENITIES</span></h3>
-      
-
-
-        <div id="amenities_scroll"
-          style=" overflow-x: scroll; white-space: nowrap;  margin-top: 5vh; padding-right: 3vw">
-          <div id="amenities_card"
-            style="height: fit-content; width: 22vw; background-color: rgb(255, 255, 255); margin-left: 3vw; display: inline-block; vertical-align: bottom;">
-            <img
-              src="https://ik.imagekit.io/athxbsw68/Duville%20Estate/public/RiverdaleGrand/Ground/FootballCourt.png?updatedAt=1707284639929" />
-            <h4 style="padding: 10px; font-size: 1vw;">THE ALL-PUPRPOSE FUTSAL COURT</h4>
-
-          </div>
-          <div id="amenities_card"
-            style="height: auto; width: 22vw; background-color: white; margin-left: 3vw; display: inline-block; vertical-align: bottom;">
-            <img
-              src="https://ik.imagekit.io/athxbsw68/Duville%20Estate/public/RiverdaleGrand/Ground/TennisCourt.png?tr=w-640" />
-            <h4 style="padding: 10px; font-size: 1vw;">THE MULTI-PURPOSE GAMES COURT</h4>
-
-          </div>
-
-
-          <div id="amenities_card"
-            style="height: auto; width: 22vw; background-color: white; margin-left: 3vw; display: inline-block; vertical-align: bottom;">
-            <img
-              src="https://ik.imagekit.io/athxbsw68/Duville%20Estate/public/RiverdaleGrand/Ground/DogPark.png?tr=w-640" />
-            <h4 style="padding: 10px; font-size: 1vw;">DOG PARK</h4>
-
-          </div>
-          <div id="amenities_card"
-            style="height: augo; width: 22vw; background-color: white; margin-left: 3vw; display: inline-block; vertical-align: bottom;">
-            <img
-              src="https://ik.imagekit.io/athxbsw68/Duville%20Estate/public/RiverdaleGrand/Ground/PetGravelPark.png?tr=w-640" />
-            <h4 style="padding: 10px; font-size: 1vw;">PET GRAVEL PARK</h4>
-
-          </div>
-          <div id="amenities_card"
-            style="height: auto; width: 22vw; background-color: white; margin-left: 3vw; display: inline-block; vertical-align: bottom;">
-            <img
-              src="https://ik.imagekit.io/athxbsw68/Duville%20Estate/public/RiverdaleGrand/Podium/Playground.png?tr=w-640" />
-            <h4 style="padding: 10px; font-size: 1vw;">THE OUTDOOR KIDS EXPERIENCE AREA</h4>
-
-          </div>
-          <div id="amenities_card"
-            style="height: auto; width: 22vw; background-color: white; margin-left: 3vw; display: inline-block; vertical-align: bottom;">
-            <img
-              src="https://ik.imagekit.io/athxbsw68/Duville%20Estate/public/RiverdaleGrand/Podium/WalkWay.png?tr=w-640" />
-            <h4 style="padding: 10px; font-size: 1vw;">THE ACUPRESSURE WALK WAY</h4>
-
-          </div>
-          <div id="amenities_card"
-            style="height: auto; width: 22vw; background-color: white; margin-left: 3vw; display: inline-block; vertical-align: bottom;">
-            <img
-              src="https://ik.imagekit.io/athxbsw68/Duville%20Estate/public/RiverdaleGrand/Podium/Pool.png?tr=w-640" />
-            <h4 style="padding: 10px; font-size: 1vw;">THE POOLSIDE DECK</h4>
-
-          </div>
-          <div id="amenities_card"
-            style="height: auto; width: 22vw; background-color: white; margin-left: 3vw; display: inline-block; vertical-align: bottom;">
-            <img
-              src="https://ik.imagekit.io/athxbsw68/Duville%20Estate/public/RiverdaleGrand/Podium/Garden.png?tr=w-640" />
-            <h4 style="padding: 10px; font-size: 1vw;">LIFESTYLE</h4>
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-<section id="offering">
-    <div class="flex flex-col items-center max-w-sm sm:max-w-7xl mx-auto">
-      <h3 style="font-weight: 500; margin-top: 5vh; display: inline-block; width: 100%;"
-      class="text-4xl text-center py-0">PEEK INTO <span class="text-red-600">RIVERDALE GRAND </span></h3><div class="flex flex-row gap-4 sm:gap-8 my-7">
-        <button onclick="toggleContent('content1')" class="btn border border-crimson-200 text-crimson-200 rounded-[30px] sm:px-8 px-4 py-2 uppercase hover:shadow-lg text-xs sm:text-lg">
-          2290 sq. ft flat </button>
-        <button onclick="toggleContent('content2')" class="btn border-red-600 border border rounded-[30px] sm:px-8 px-4 py-2 uppercase hover:shadow-lg text-xs sm:text-lg">
-          1417 sq. ft. flat</button>
-        <button onclick="toggleContent('content3')" class="btn border border rounded-[30px] sm:px-8 px-4 py-2 uppercase hover:shadow-lg text-xs sm:text-lg">
-          Building Elevation</button>
-      </div>
-      <!-- button 1 clicked display this -->
-      <div id="content1" class="content">
-        <div class="flex flex-col gap-2">
-          <div class="flex flex-col sm:flex-row space-y-8 sm:space-x-8 sm:space-y-0">
-            <div>
-              <img alt="Football court image" loading="lazy" width="400" height="400" decoding="async" data-nimg="1"
-                class="px-4 md:px-0 mx-auto md:w-full md:mx-0"
-                src="https://ik.imagekit.io/athxbsw68/Duville%20Estate/public/RiverdaleGrand/Design%20Innovation/Design3.jpg?tr=w-828 2x"
-                style="color: transparent;height: 200px;">
-              <p
-                class="flex justify-center font-lato md:text-[16px] font-normal leading-[36.5px] uppercase mt-3 text-mini">
-               the Master Bedroom</p>
-            </div>
-            <div>
-              <img alt="Tennis court image" loading="lazy" width="400" height="100" decoding="async" data-nimg="1"
-                class="px-4 md:px-0 mx-auto md:w-full md:mx-0"
-                src="https://ik.imagekit.io/athxbsw68/Duville%20Estate/public/RiverdaleGrand/Design%20Innovation/Design1.jpg?tr=w-828 2x"
-                style="color: transparent;height: 200px;">
-              <p
-                class="flex justify-center font-lato text-mini md:text-[16px] font-normal leading-[36.5px] uppercase mt-3">
-              The Living Room</p>
-            </div>
-          </div>
-          <div class="flex flex-col sm:flex-row space-y-8 sm:space-x-8 sm:space-y-0 mt-4 md:mt-0">
-            <div>
-              <img alt="dog park image" loading="lazy" width="400" height="100" decoding="async" data-nimg="1"
-                class="px-4 md:px-0 mx-auto md:w-full md:mx-0"
-                src="https://ik.imagekit.io/athxbsw68/Duville%20Estate/public/RiverdaleGrand/Design%20Innovation/Design2.jpg?tr=w-828 2x"
-                style="color: transparent; height: 200px;">
-              <p
-                class="flex justify-center font-lato text-mini md:text-[16px] font-normal leading-[36.5px] uppercase mt-3">
-              The dining room</p>
-            </div>
-
-          </div>
-        </div>
-        </div>
-        <!-- button 2 clicked display this -->
-        <div id="content2" class="content" style="display: block;">
-        <div class="flex flex-col gap-4">
-          <div class="flex flex-col sm:flex-row space-y-8 sm:space-x-8 sm:space-y-0">
-            <div>
-              <img alt="Football court image" loading="lazy" width="400" height="400" decoding="async" data-nimg="1"
-                class="px-4 md:px-0 mx-auto md:w-full md:mx-0"
-                src="https://ik.imagekit.io/athxbsw68/Duville%20Estate/public/RiverdaleGrand/InternalApartment1.jpg?tr=w-640"
-                style="color: transparent;height: 200px;">
-         
-            </div>
-            <div>
-              <img alt="Tennis court image" loading="lazy" width="400" height="100" decoding="async" data-nimg="1"
-                class="px-4 md:px-0 mx-auto md:w-full md:mx-0"
-                src="https://ik.imagekit.io/athxbsw68/Duville%20Estate/public/RiverdaleGrand/InternalApartment6.webp?tr=w-640"
-                style="color: transparent;height: 200px;">
-     
-            </div>
-          </div>
-          <div class="flex flex-col sm:flex-row space-y-8 sm:space-x-8 sm:space-y-0 mt-4 md:mt-0">
-            <div>
-              <img alt="dog park image" loading="lazy" width="400" height="100" decoding="async" data-nimg="1"
-                class="px-4 md:px-0 mx-auto md:w-full md:mx-0"
-                src="https://ik.imagekit.io/athxbsw68/Duville%20Estate/public/RiverdaleGrand/InternalApartment3.webp?tr=w-640"
-                style="color: transparent; height: 200px;">
-             
-            </div>
-            <div>
-              <img alt="dog park image" loading="lazy" width="400" height="100" decoding="async" data-nimg="1"
-                class="px-4 md:px-0 mx-auto md:w-full md:mx-0"
-                src="https://ik.imagekit.io/athxbsw68/Duville%20Estate/public/RiverdaleGrand/InternalApartment4.webp?tr=w-640"
-                style="color: transparent; height: 200px;">
-            
-            </div>
-
-          </div>
-        </div>
-        </div>
-        <div id="content3" class="content">
-        <!-- button 3 clicked display this -->
-        <div class="flex flex-col gap-4">
-          <div class="flex flex-col sm:flex-row space-y-8 sm:space-x-8 sm:space-y-0">
-            <div>
-              <img alt="Football court image" loading="lazy" height="400" decoding="async" data-nimg="1"
-                class="px-4 md:px-0 mx-auto h-full md:mx-0"
-                src="./assets/Duville_Banners-01.jpg"
-                style="color: transparent;height: 200px;">
-           
-            </div>
-            <div>
-              <img alt="Tennis court image" loading="lazy" height="400" decoding="async" data-nimg="1"
-                class="px-4 md:px-0 mx-auto md:w-full md:mx-0"
-                src="./assets/building2.jpg"
-                style="color: transparent;height: 200px;">
-         
-            </div>
-          </div>
         
+    
+    </section>
+
+    <div class="bg-[#F68D93] bg-opacity-[30%]  my-24  p-4 w-11/12 mx-auto  my-10  rounded-md">
+      <div class="grid  grid-cols-2 md:grid-cols-4 justify-between max-w-6xl gap-6 mx-auto ">
+        <div class="flex flex-col  md:flex-row gap-2 items-center">
+          <img src="./assets/icons/Carpet area.png" class="w-14" />
+          <p class="font-medium text-center text-sm md:text-base">31 Acres Project</p>
         </div>
-</div>
+        <div class="flex flex-col  md:flex-row gap-2 items-center">
+          <img src="./assets/icons/meeting.png" class="w-14" />
+          <p class="font-medium text-center text-sm md:text-base text-center">Business Meeting <br class="md:hidden"/>
+            Rooms In Each
+            Tower</p>
+        </div>
+        <div class="flex flex-col  md:flex-row gap-2 items-center">
+          <img src="./assets/icons/approved.png" class="w-14" />
+          <p class="font-medium text-center text-sm md:text-base">The Most 
+            Renowned <br class="md:hidden"/> Project
+            of Kharadi</p>
+        </div>
+        <div class="flex flex-col  md:flex-row gap-2 items-center w-fit">
+          <img src="./assets/icons/amenities.png" class="w-14" />
+          <p class="font-medium text-center text-sm md:text-base">Amenities Like Theatre, <br class="md:hidden"/> Dog Park and much more.</p>
+        </div>
       </div>
-
-      <script>
-        function toggleContent(contentId) {
-          const contentDivs = document.querySelectorAll('.content');
-          const buttons = document.querySelectorAll('.btn');
-          
-          contentDivs.forEach(div => {
-            if (div.id === contentId) {
-              div.style.display = 'block'; // Show the clicked content
-            } else {
-              div.style.display = 'none'; // Hide other content
-            }
-          });
-          
-          buttons.forEach(button => {
-            if (button.getAttribute('onclick') === `toggleContent('${contentId}')`) {
-              button.style.borderColor = 'red'; // Change border color to red for the selected button
-            } else {
-              button.style.borderColor = ''; // Reset border color for other buttons
-            }
-          });
-        }
-        </script>
-        
-
-
     </div>
-  </section>
-    <!-- Project by -->
-    <h3 class="text-4xl mt-14 text-center text-red-600 py-0">PROJECT BY Duville</h3>
-    <section id="eden" class="my-12" style="display: flex; margin-top: 5vh;">
-      <div id="eden_img" style="width: 40vw; display: flex; align-items: center; justify-content: center;">
-        <img alt="Company" src="./assets/Duville_black logo-02.svg" style="height: 30vh; width: 20vw;" />
-      </div>
-      <div id="eden_content" style="width: 60vw">
-        <div>
 
-          <p class="text-gray-500 mt-4 block" style="width: 50vw; text-align: justify;">
-            This being the last piece of development at Riverdale, we wanted to develop something spectacular
-            in the framework of residential luxury. We wanted
-            this to be a holistic offering meant for every member
-            of the family and this was the starting point for drawing
-            inspiration. Consequently, what was arrived at was four differently
-            sized 3 bed offerings and an even larger 4.5 bed offering. For us at
-            Duville Estates, it is the culmination of years of rigour poured into
-            the fruition of a long-held vision. It is with a deep sense of pride
-            that we welcome you to Riverdale Grand – a new standard of living built
-            uniquely for the family and one that is aptly positioned for simply living
-            ‘A Beautiful Life
-          </p>
+    <!-- video -->
+    <div class="my-40 w-11/12 space-y-16 mx-auto flex flex-col justify-center">
+      <h2 class="text-4xl font-semibold  text-center ">
+        Tour To Your <span class="text-5xl  font-medium dynalight-regular  text-[#ED1C26]">Dream Home</span>
+      </h2>
+    
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mt-12 gap-12 md:gap-6">
+          <iframe
+          src="https://www.youtube.com/embed/u623FKKndQA?si=HJ6fPFcLtCk2-DTi"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          class=" lg:w-[400px] lg:h-[300px]  mx-auto "
+        ></iframe>
+          <iframe
+          src="https://www.youtube.com/embed/9B849TUZMd0?si=eP0EV-dwDKrFaO7T"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          class="lg:w-[400px] lg:h-[300px]  mx-auto "
+        ></iframe>
+          <iframe
+          src="https://www.youtube.com/embed/c8xaWvJajYA?si=p-cuXi_sc6PCa1_R"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          class=" lg:w-[400px] lg:h-[300px]  mx-auto "
+        ></iframe>
         </div>
-      </div>
-    </section>
+      
+    </div>
 
+    <!-- price -->
+    <div class="space-y-16 my-42">
 
-    <!-- Map -->
-    <section id="location" class="my-12 bg-gray-50">
-      <div style=" padding-top: 5vh; padding-bottom: 5vh;">
-        <h3 class="text-4xl text-center text-red-600 py-0">STRATEGICALLY LOCATED, BLESSED BY NATURE</h3>
-        <div id="map_btn_container" style="width: 60vw; margin-left: 20vw; height: 7vh; margin-top: 2vh;">
-          <button onclick="isometric_view()" id="isometric_view_button"
-            style="width: 50%; height: 100%; display: inline-flex; align-items: center; justify-content: center;">Isometric View</button>
-
-          <button onclick="floor_plan()" id="floor_plan_button"
-            style="width: 49.5%; height: 100%; margin-left: 0; display: inline-flex; align-items: center; justify-content: center;">Floor Plan</button>
+      <h2 class="text-4xl font-semibold  text-center ">
+        Invest in Riverdale <span class="text-5xl  font-medium dynalight-regular  text-[#ED1C26]">Secure your legacy</span>
+      </h2>
+      <section class="price-table">
+        
+        <table>
+          <thead>
+            <tr>
+              <th>Configuration</th>
+              <th>Carpet Area</th>
+              <th>Price</th>
+              <th>Price Breakdown</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td ><p class=" bg-[#D9D9D9] w-fit mx-auto p-2 px-11" >4 BHK</p></td>
+              <td  ><p class=" bg-[#D9D9D9] w-fit mx-auto p-2 px-10" >2290 Sq.Ft.</p></td>
+              <td  ><p class=" bg-[#D9D9D9] w-fit mx-auto p-2 px-10" >₹ 2.95 Cr</p></td>
+  
+              <td><button class="price-breakdown" onclick="showPriceBreakdown()">Price Breakdown</button></td>
+            </tr>
+            <tr>
+              <td ><p class=" bg-[#D9D9D9] w-fit mx-auto p-2 px-3" >3.5 BHK Duplex</p></td>
+              <td  ><p class=" bg-[#D9D9D9] w-fit mx-auto p-2 px-10" >1358 Sq.Ft.</p></td>
+              <td  ><p class=" bg-[#D9D9D9] w-fit mx-auto p-2 px-10" >₹ 1.95 Cr</p></td>
+  
+              <td><button class="price-breakdown" onclick="showPriceBreakdown()">Price Breakdown</button></td>
+            </tr>
+            
+            <tr class="">
+              <td  ><p class=" bg-[#D9D9D9] w-fit mx-auto p-2 px-10" >3 BHK</p></td>
+              <td  ><p class=" bg-[#D9D9D9] w-fit mx-auto p-2 px-10" >1084 Sq.Ft.</p></td>
+              <td  ><p class=" bg-[#D9D9D9] w-fit mx-auto p-2 px-10" >₹ 1.44 Cr</p></td>
+              <td><button class="price-breakdown" onclick="showPriceBreakdown()">Price Breakdown</button></td>
+            </tr>
+            <tr>
+              <td  ><p class=" bg-[#D9D9D9] w-fit mx-auto p-2 px-10" >3 BHK</p></td>
+              <td  ><p class=" bg-[#D9D9D9] w-fit mx-auto p-2 px-10" >1138 Sq.Ft.</p></td>
+              <td  ><p class=" bg-[#D9D9D9] w-fit mx-auto p-2 px-10" >₹ 1.54 Cr</p></td>
+              <td><button class="price-breakdown" onclick="showPriceBreakdown()">Price Breakdown</button></td>
+            </tr>
+            <tr>
+              <td  ><p class=" bg-[#D9D9D9] w-fit mx-auto p-2 px-10" >3 BHK</p></td>
+              <td  ><p class=" bg-[#D9D9D9] w-fit mx-auto p-2 px-10" >1190 Sq.Ft.</p></td>
+              <td  ><p class=" bg-[#D9D9D9] w-fit mx-auto p-2 px-10" >₹ 1.65 Cr</p></td>
+              <td><button class="price-breakdown" onclick="showPriceBreakdown()">Price Breakdown</button></td>
+            </tr>
+            <tr>
+              <td ><p class=" bg-[#D9D9D9] w-fit mx-auto p-2 px-10" >3 BHK</p></td>
+              <td  ><p class=" bg-[#D9D9D9] w-fit mx-auto p-2 px-10" >1417 Sq.Ft.</p></td>
+              <td  ><p class=" bg-[#D9D9D9] w-fit mx-auto p-2 px-10" >₹ 1.99 Cr</p></td>
+              <td><button class="price-breakdown" onclick="showPriceBreakdown()">Price Breakdown</button></td>
+            </tr>
+            <tr>
+              <td ><p class=" bg-[#D9D9D9] w-fit mx-auto p-2 px-4" >3 BHK Duplex</p></td>
+              <td  ><p class=" bg-[#D9D9D9] w-fit mx-auto p-2 px-10" >1168 Sq.Ft.</p></td>
+              <td  ><p class=" bg-[#D9D9D9] w-fit mx-auto p-2 px-10" >₹ 1.70 Cr</p></td>
+              <td><button class="price-breakdown" onclick="showPriceBreakdown() ">Price Breakdown</button></td>
+            </tr>
+            
+          </tbody>
+        </table>
+  
+  
+      </section>
+     </div>
+       
+  
+      
+  
+  
+  
+      <!-- Amenities -->
+      <section id="amenities" class="my-24 bg-gray-50 pt-10">
+  
+        <div id="modern_div" style="width: 100vw; height: 60vh;  text-align: center; overflow-y: hidden;">
+          <h3 
+            class="text-4xl font-semibold  text-center">Elevate your Lifestyle <span class="text-5xl  font-medium dynalight-regular  text-[#ED1C26]">with unrivaled amenities</span></h3>
+        
+  
+  
+          <div id="amenities_scroll"
+            style=" overflow-x: scroll; white-space: nowrap;  margin-top: 5vh; padding-right: 3vw">
+            <div id="amenities_card"
+              style="height: fit-content; width: 22vw; background-color: rgb(255, 255, 255); margin-left: 3vw; display: inline-block; vertical-align: bottom;">
+              <img 
+              src="./assets/Amenities/Duville_2_GrandGrove-01.jpg" />
+              <h4 style="padding: 10px; font-size: 1vw;">THE ALL-PUPRPOSE FUTSAL COURT</h4>
+  
+            </div>
+            <div id="amenities_card"
+              style="height: fit-content; width: 22vw; background-color: rgb(255, 255, 255); margin-left: 3vw; display: inline-block; vertical-align: bottom;">
+              <img 
+              src="./assets/Amenities/Duville_2_GrandGrove-02.jpg" />
+              <h4 style="padding: 10px; font-size: 1vw;">THE ALL-PUPRPOSE FUTSAL COURT</h4>
+  
+            </div>
+            <div id="amenities_card"
+              style="height: fit-content; width: 22vw; background-color: rgb(255, 255, 255); margin-left: 3vw; display: inline-block; vertical-align: bottom;">
+              <img 
+              src="./assets/Amenities/Duville_2_GrandGrove-03.jpg" />
+              <h4 style="padding: 10px; font-size: 1vw;">THE ALL-PUPRPOSE FUTSAL COURT</h4>
+  
+            </div>
+            <div id="amenities_card"
+              style="height: fit-content; width: 22vw; background-color: rgb(255, 255, 255); margin-left: 3vw; display: inline-block; vertical-align: bottom;">
+              <img 
+              src="./assets/Amenities/Duville_2_GrandGrove-04.jpg" />
+              <h4 style="padding: 10px; font-size: 1vw;">THE ALL-PUPRPOSE FUTSAL COURT</h4>
+  
+            </div>
+            <div id="amenities_card"
+              style="height: fit-content; width: 22vw; background-color: rgb(255, 255, 255); margin-left: 3vw; display: inline-block; vertical-align: bottom;">
+              <img 
+              src="./assets/Amenities/Duville_2_GrandGrove-05.jpg" />
+              <h4 style="padding: 10px; font-size: 1vw;">THE ALL-PUPRPOSE FUTSAL COURT</h4>
+  
+            </div>
+            <div id="amenities_card"
+              style="height: fit-content; width: 22vw; background-color: rgb(255, 255, 255); margin-left: 3vw; display: inline-block; vertical-align: bottom;">
+              <img 
+              src="./assets/Amenities/Duville_2_GrandGrove-06.jpg" />
+              <h4 style="padding: 10px; font-size: 1vw;">THE ALL-PUPRPOSE FUTSAL COURT</h4>
+  
+            </div>
+            <div id="amenities_card"
+              style="height: fit-content; width: 22vw; background-color: rgb(255, 255, 255); margin-left: 3vw; display: inline-block; vertical-align: bottom;">
+              <img 
+              src="./assets/Amenities/Duville_2_GrandGrove-07.jpg" />
+              <h4 style="padding: 10px; font-size: 1vw;">THE ALL-PUPRPOSE FUTSAL COURT</h4>
+  
+            </div>
+  
+  
+  
+  
+          </div>
         </div>
-        <section id="map_mobile_div" class="my-12" style="display: flex; margin-top: 5vh;">
-          <div id="maps" style="width: 100vw; display: flex; justify-content: center;">
-            <div id="isometric_view" style="width: 600px; position: relative;">
-              <img style="filter: blur(8px); -webkit-filter: blur(8px);"
-                src="https://ik.imagekit.io/athxbsw68/Duville%20Estate/public/RiverdaleGrand/Apartment.png?updatedAt=1707284613064"
-                alt="">
-              <div class="overlay">
-                <button class="popup-btn view-button bg-red-600">View</button>
+      </section>
+       
+      
+  
+      <section id="offering" class="my-24">
+      <div class="flex flex-col items-center max-w-sm sm:max-w-7xl mx-auto">
+        <h3 style="font-weight: 500; margin-top: 5vh; display: inline-block; width: 100%;"
+        class="text-4xl font-semibold  text-center">PEEK INTO <span class="text-5xl  font-medium dynalight-regular  text-[#ED1C26]">RIVERDALE  </span></h3><div class="flex flex-row gap-4 sm:gap-8 my-7">
+          <button onclick="toggleContent('content1')" class="btn border border-crimson-200 text-crimson-200 rounded-[30px] sm:px-8 px-4 py-2 uppercase hover:shadow-lg text-xs sm:text-lg">
+            2290 sq. ft flat </button>
+          <button onclick="toggleContent('content2')" class="btn border-red-600 border border rounded-[30px] sm:px-8 px-4 py-2 uppercase hover:shadow-lg text-xs sm:text-lg">
+            1417 sq. ft. flat</button>
+          <button onclick="toggleContent('content3')" class="btn border border rounded-[30px] sm:px-8 px-4 py-2 uppercase hover:shadow-lg text-xs sm:text-lg">
+            Building Elevation</button>
+        </div>
+        <!-- button 1 clicked display this -->
+        <div id="content1" class="content">
+          <div class="flex flex-col gap-2">
+            <div class="flex flex-col sm:flex-row space-y-8 sm:space-x-8 sm:space-y-0">
+              <div>
+                <img alt="Football court image" loading="lazy" width="400" height="400" decoding="async" data-nimg="1"
+                  class="px-4 md:px-0 mx-auto md:w-full md:mx-0"
+                  src="https://ik.imagekit.io/athxbsw68/Duville%20Estate/public/RiverdaleGrand/Design%20Innovation/Design3.jpg?tr=w-828 2x"
+                  style="color: transparent;height: 200px;">
+                <p
+                  class="flex justify-center font-lato md:text-[16px] font-normal leading-[36.5px] uppercase mt-3 text-mini">
+                 the Master Bedroom</p>
+              </div>
+              <div>
+                <img alt="Tennis court image" loading="lazy" width="400" height="100" decoding="async" data-nimg="1"
+                  class="px-4 md:px-0 mx-auto md:w-full md:mx-0"
+                  src="https://ik.imagekit.io/athxbsw68/Duville%20Estate/public/RiverdaleGrand/Design%20Innovation/Design1.jpg?tr=w-828 2x"
+                  style="color: transparent;height: 200px;">
+                <p
+                  class="flex justify-center font-lato text-mini md:text-[16px] font-normal leading-[36.5px] uppercase mt-3">
+                The Living Room</p>
               </div>
             </div>
+            <div class="flex flex-col sm:flex-row space-y-8 sm:space-x-8 sm:space-y-0 mt-4 md:mt-0">
+              <div>
+                <img alt="dog park image" loading="lazy" width="400" height="100" decoding="async" data-nimg="1"
+                  class="px-4 md:px-0 mx-auto md:w-full md:mx-0"
+                  src="https://ik.imagekit.io/athxbsw68/Duville%20Estate/public/RiverdaleGrand/Design%20Innovation/Design2.jpg?tr=w-828 2x"
+                  style="color: transparent; height: 200px;">
+                <p
+                  class="flex justify-center font-lato text-mini md:text-[16px] font-normal leading-[36.5px] uppercase mt-3">
+                The dining room</p>
+              </div>
+  
+            </div>
+          </div>
+          </div>
+          <!-- button 2 clicked display this -->
+          <div id="content2" class="content" style="display: block;">
+          <div class="flex flex-col gap-4">
+            <div class="flex flex-col sm:flex-row space-y-8 sm:space-x-8 sm:space-y-0">
+              <div>
+                <img alt="Football court image" loading="lazy" width="400" height="400" decoding="async" data-nimg="1"
+                  class="px-4 md:px-0 mx-auto md:w-full md:mx-0"
+                  src="https://ik.imagekit.io/athxbsw68/Duville%20Estate/public/RiverdaleGrand/InternalApartment1.jpg?tr=w-640"
+                  style="color: transparent;height: 200px;">
+           
+              </div>
+              <div>
+                <img alt="Tennis court image" loading="lazy" width="400" height="100" decoding="async" data-nimg="1"
+                  class="px-4 md:px-0 mx-auto md:w-full md:mx-0"
+                  src="https://ik.imagekit.io/athxbsw68/Duville%20Estate/public/RiverdaleGrand/InternalApartment6.webp?tr=w-640"
+                  style="color: transparent;height: 200px;">
+       
+              </div>
+            </div>
+            <div class="flex flex-col sm:flex-row space-y-8 sm:space-x-8 sm:space-y-0 mt-4 md:mt-0">
+              <div>
+                <img alt="dog park image" loading="lazy" width="400" height="100" decoding="async" data-nimg="1"
+                  class="px-4 md:px-0 mx-auto md:w-full md:mx-0"
+                  src="https://ik.imagekit.io/athxbsw68/Duville%20Estate/public/RiverdaleGrand/InternalApartment3.webp?tr=w-640"
+                  style="color: transparent; height: 200px;">
+               
+              </div>
+              <div>
+                <img alt="dog park image" loading="lazy" width="400" height="100" decoding="async" data-nimg="1"
+                  class="px-4 md:px-0 mx-auto md:w-full md:mx-0"
+                  src="https://ik.imagekit.io/athxbsw68/Duville%20Estate/public/RiverdaleGrand/InternalApartment4.webp?tr=w-640"
+                  style="color: transparent; height: 200px;">
+              
+              </div>
+  
+            </div>
+          </div>
+          </div>
+          <div id="content3" class="content">
+          <!-- button 3 clicked display this -->
+          <div class="flex flex-col gap-4">
+            <div class="flex flex-col sm:flex-row space-y-8 sm:space-x-8 sm:space-y-0">
+              <div>
+                <img alt="Football court image" loading="lazy" height="400" decoding="async" data-nimg="1"
+                  class="px-4 md:px-0 mx-auto h-full md:mx-0"
+                  src="./assets/Duville_Banners-01.jpg"
+                  style="color: transparent;height: 200px;">
+             
+              </div>
+              <div>
+                <img alt="Tennis court image" loading="lazy" height="400" decoding="async" data-nimg="1"
+                  class="px-4 md:px-0 mx-auto md:w-full md:mx-0"
+                  src="./assets/building2.jpg"
+                  style="color: transparent;height: 200px;">
+           
+              </div>
+            </div>
+          
+          </div>
+  </div>
+        </div>
+  
+        <script>
+          function toggleContent(contentId) {
+            const contentDivs = document.querySelectorAll('.content');
+            const buttons = document.querySelectorAll('.btn');
+            
+            contentDivs.forEach(div => {
+              if (div.id === contentId) {
+                div.style.display = 'block'; // Show the clicked content
+              } else {
+                div.style.display = 'none'; // Hide other content
+              }
+            });
+            
+            buttons.forEach(button => {
+              if (button.getAttribute('onclick') === `toggleContent('${contentId}')`) {
+                button.style.borderColor = 'red'; // Change border color to red for the selected button
+              } else {
+                button.style.borderColor = ''; // Reset border color for other buttons
+              }
+            });
+          }
+          </script>
+          
+  
+  
+      </div>
+      </section>
 
-            <div id="floor_plan" class="mapouter" style="position: relative;">
-              <div id="isometric_view" style="width: 600px;">
+       
+      <!-- Map -->
+      <section id="Infrastructure" class="my-24 bg-gray-50">
+        <div style=" padding-top: 5vh; padding-bottom: 5vh;" >
+          <h3 style="font-weight: 500; margin-top: 5vh; display: inline-block; width: 100%;"
+          class="text-4xl font-semibold  text-center mb-6">Visualize your<span class="text-5xl  font-medium dynalight-regular  text-[#ED1C26]">Dream home</span></h3>
+          <div id="map_btn_container" style="width: 60vw; margin-left: 20vw; height: 7vh; margin-top: 2vh;">
+            <button onclick="isometric_view()" id="isometric_view_button"
+              style="width: 50%; height: 100%; display: inline-flex; align-items: center; justify-content: center;">Isometric View</button>
+  
+            <button onclick="floor_plan()" id="floor_plan_button"
+              style="width: 49.5%; height: 100%; margin-left: 0; display: inline-flex; align-items: center; justify-content: center;">Floor Plan</button>
+          </div>
+          <section id="map_mobile_div" class="my-12" style="display: flex; margin-top: 5vh;">
+            <div id="maps" style="width: 100vw; display: flex; justify-content: center;">
+              <div id="isometric_view" style="width: 600px; position: relative;">
                 <img style="filter: blur(8px); -webkit-filter: blur(8px);"
-                  src="https://ik.imagekit.io/athxbsw68/Duville%20Estate/public/RiverdaleGrand/ApartmentFloor.jpg?updatedAt=1707284614148s"
+                  src="https://ik.imagekit.io/athxbsw68/Duville%20Estate/public/RiverdaleGrand/Apartment.png?updatedAt=1707284613064"
                   alt="">
                 <div class="overlay">
                   <button class="popup-btn view-button bg-red-600">View</button>
                 </div>
               </div>
+  
+              <div id="floor_plan" class="mapouter" style="position: relative;">
+                <div id="isometric_view" style="width: 600px;">
+                  <img style="filter: blur(8px); -webkit-filter: blur(8px);"
+                    src="https://ik.imagekit.io/athxbsw68/Duville%20Estate/public/RiverdaleGrand/ApartmentFloor.jpg?updatedAt=1707284614148s"
+                    alt="">
+                  <div class="overlay">
+                    <button class="popup-btn view-button bg-red-600">View</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+  
+        </div>
+      </section>
+  
+      <div class="flex flex-col-reverse md:flex-row my-24 w-11/12 mx-auto justify-between  items-center ">
+        <div class="  md:p-12 lg:px-16 lg:py-24">
+          <div class="mx-auto max-w-xl flex flex-col items-center justify-center text-center lg:text-left">
+          
+            <h2 class="text-4xl mt-5 md:mt-0 font-semibold  text-center ">
+              Elevating Lifestyles  <span class="text-5xl  font-medium dynalight-regular  text-[#ED1C26]">for generations</span>
+            </h2>
+            <img alt="Company" src="./assets/Duville_black logo-02.svg" class="w-[300px]" />
+  
+            <p style="" class="text-gray-600 text-center sm:mt-4 sm:block  md:w-[80%] mx-auto">
+              Experience the culmination of over two centuries
+              of excellence
+               with Duville Estates. From our
+              inception to the grand unveiling of Riverdale
+              Grand, our commitment to engineering brilliance
+              and timeless elegance remains unwavering. Join
+              us in shaping the future of luxury living, where
+              tradition meets innovation,
+               and every detail
+              reflects our enduring legacy.        
+            </p>
+  
+         
+           
+  
+  
+            <div class="mt-4 md:mt-8 mx-auto w-fit">
+              <button
+                class="popup-btn inline-block rounded border border-white bg-red px-12 py-3 text-sm font-medium text-white transition hover:bg-amber-950 focus:outline-none">
+                Enquire Now
+              </button>
             </div>
           </div>
-        </section>
-
-      </div>
-    </section>
-    <section>
-      <div
-        class="grid grid-cols-1 bg-[#FAFAFA] pb-10 h-full md:grid-cols-5 w-full gap-y-5 md:gap-16 place-content-center mx-auto mt-20">
-        <div
-          class="col-span-2 flex  flex-col md:p-10 justify-center md:max-w-3xl  space-y-4 bg-[#FAFAFA] md:mt-10 p-10">
-          <p
-            class="flex justify-center md:justify-start text-black font-lato text-mob-heading md:text-[24px] leading-[21px] pb-10 ">
-            Initiate a Conversation</p>
-          <div class="flex flex-col space-y-10">
-            <div class="flex flex-row gap-1 justify-between">
-              <input type="text" id="firstname" placeholder="First name*"
-                class="border-b outline-none pb-2 w-[130px] md:w-[292px] bg-transparent placeholder:font-lato placeholder:text-[12px]  md:placeholder:text-[14px] placeholder:font-semibold placeholder:leading-[21px]"
-                name="firstname">
-              <input type="text" id="lastname" placeholder="Last name*"
-                class="border-b outline-none pb-2 w-[130px] md:w-[292px]  bg-transparent placeholder:font-lato placeholder:text-[12px]  md:placeholder:text-[14px] placeholder:font-semibold placeholder:leading-[21px]"
-                name="lastname">
-            </div>
-            <div class="flex flex-row gap-1 justify-between">
-              <input type="email" id="email" placeholder="Your Email ID*"
-                class="border-b outline-none pb-2 w-[130px] md:w-[292px] bg-transparent placeholder:font-lato placeholder:text-[12px]  md:placeholder:text-[14px] placeholder:font-semibold placeholder:leading-[21px]"
-                name="email">
-              <input type="text" id="city" placeholder="City*"
-                class="border-b outline-none pb-2 w-[130px] md:w-[292px] bg-transparent placeholder:font-lato placeholder:text-[12px]  md:placeholder:text-[14px] placeholder:font-semibold placeholder:leading-[21px]"
-                name="city">
-            </div>
-            <div class="flex flex-row gap-1 justify-between">
-              <input type="text" id="budget" placeholder="Budget*"
-                class="border-b outline-none pb-2 w-[130px] md:w-[292px] bg-transparent placeholder:font-lato placeholder:text-[12px]  md:placeholder:text-[14px] placeholder:font-semibold placeholder:leading-[21px]"
-                name="budget">
-              <input type="text" id="source" placeholder="Source*"
-                class="border-b outline-none pb-2 w-[130px] md:w-[292px] bg-transparent placeholder:font-lato placeholder:text-[12px]  md:placeholder:text-[14px] placeholder:font-semibold placeholder:leading-[21px]"
-                name="source">
-            </div>
-          </div>
-          <p class="font-lato text-[14px] font-normal leading-[22px] pt-5">I grant authorization to Duville and its
-            representatives to contact me via Call, SMS, Email, or WhatsApp regarding its products and offers. This
-            consent takes precedence over any registration for DNC/NDNC.</p>
-          <div class="flex items-center justify-center"><button type="button"
-              class="uppercase font-lato md:text-lg font-normal leading-[21px] bg-black-900 rounded-[20px]  py-2 px-7 md:px-10 mt-6 text-white">Submit</button>
-          </div>
-        </div><iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.672683059927!2d73.93978650943568!3d18.543687782481584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c371dc77b805%3A0x317cf16d3ff747ae!2sRiverdale%20Grand%2C%20Kharadi%2C%20Pune!5e0!3m2!1sen!2sin!4v1704441340605!5m2!1sen!2sin"
-          loading="lazy" class="w-[100vw] md:w-full col-span-2 mx-auto  h-[530px] mt-10"></iframe>
-        <div class="col-span-1 bg-[#FAFAFA] p-4 mx-auto  h-full flex flex-col justify-center items-center">
-          <h1 class="text-lg font-semibold uppercase">Maharera</h1>
-          <div><img alt="scanner " loading="lazy" width="400" height="400" decoding="async" data-nimg="1"
-              class="cursor-pointer" style="color:transparent"
-              srcset="https://ik.imagekit.io/athxbsw68/Duville%20Estate/public/Scanner/grand.webp?tr=w-640 1x, https://ik.imagekit.io/athxbsw68/Duville%20Estate/public/Scanner/grand.webp?tr=w-828 2x"
-              src="https://ik.imagekit.io/athxbsw68/Duville%20Estate/public/Scanner/grand.webp?tr=w-828"></div>
-          <h1 class="font-semibold ">Riverdale Grand</h1>
-          <div class="border-b-2 border-slate-400 w-[70%] mx-auto mt-5"></div>
-          <p class="text-sm mt-5 font-plus-jakarta-sans">MahaRERA No.P52100034877</p>
-          <p class="text-sm mt-5 font-plus-jakarta-sans text-red"><a href="/pdf_files/Riverdale-Grand.pdf"
-              class="button" download=""><i class="fa fa-download"></i>Download</a></p>
-          <p class="text-sm mt-1 font-plus-jakarta-sans "> <!-- -->MahaRERA certificate</p>
+        </div>
+  
+        <div class="grid">
+          <img alt="Forest Farm Villa" 
+            src="./assets/life_style.png" class="max-w-[564px] md:shadow-[40px_-40px] md:shadow-red-300 " />
         </div>
       </div>
-    </section>
+  
+  
+      <div id="location" class="grid grid-cols-2 w-11/12 gap-12 mx-auto">
+          <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.672683059927!2d73.93978650943568!3d18.543687782481584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c371dc77b805%3A0x317cf16d3ff747ae!2sRiverdale%20Grand%2C%20Kharadi%2C%20Pune!5e0!3m2!1sen!2sin!4v1704441340605!5m2!1sen!2sin"
+          loading="lazy" class="w-[100vw] md:w-full col-span-1 mx-auto  h-[530px] mt-10">
+          </iframe>
+          <!-- <div class="p-6 pt-8 space-y-4">
+             <h3 class="text-lg font-semibold">Key Approach: </h3>
+             <ul class="space-y-2">
+                <li>Management Institute Of Leadership & Excellence (6.7 Km)
+                </li>
+                <li>Kothari International (1.1 Km)</li>
+                <li>Victorious Kids Educares (1.1 Km)
+                </li>
+                <li>Christ College (3.4 Km)
+                </li>
+                <li>Shankar Rao Ursal College Of Pharmacy (2.3 Km)
+                </li>
+                <li>Upcoming Ramwadi Metro Station (3.7 Km)
+                </li>
+                <li>More For You (2.8 Km)
+                </li>
+                <li>Reliance SMART (0.9 Km)
+                </li>
+                <li>Big Bazaar (3.5 Km)
+                </li>
+                <li>Global Highstreet (0.9 Km)
+                </li>
+                <li>D Mart (2.5 Km)
+                </li>
+                <li>Zensar (0.7 Km)
+                </li>
+                <li>Wipro (11.4 Km)
+                </li>
+             </ul>
+          </div> -->
+          
 
-    <!-- Footer -->
-    <footer class="bg-black flex justify-center">
-      <div class="mx-auto max-w-screen-2xl px-4 py-4 sm:px-6 lg:px-8 text-white">
-        © Copyright 2024 Riverdale Grand | Disclaimer
-      </div>
-    </footer>
+          <div>
+            <div class="px-4 sm:px-6 lg:px-8">
+             
+              <div class="mt-8 flow-root">
+                <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                  <div class="inline-block min-w-[90%]  py-2 align-middle sm:px-6 lg:px-8">
+                    <div class="overflow-hidden border border-b-0 ring-1 ring-black ring-opacity-5 sm:rounded-lg">
+                      <table class="min-w-full divide-y divide-gray-300">
+                        <thead class="bg-gray-50 bg-[#ED1C26] bg-opacity-[30%]">
+                          <tr>
+                            <th scope="col" class="py-3.5 pl-4 pr-3 border text-left text-sm font-semibold text-gray-900 sm:pl-6">Name</th>
+                            <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900 tex-white">Distance </th>
+                          </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200 bg-white">
+                          <tr>
+                            <td class="  whitespace- py-2 pl-4 pr-3 border text-sm font-medium text-gray-900 text-left sm:pl-4">Management Institute Of Leadership & Excellence</td>
+                            <td class="whitespace-nowrap px-8 py-2 text-sm  text-gray-500 text-left">6.7 Km</td>
+                          </tr>
+                          
+                          <tr>
+                            <td class="bg-[#ED1C26] bg-opacity-[30%] whitespace- py-2 pl-4 pr-3 border text-sm font-medium text-gray-900 text-left sm:pl-4">Kothari International</td>
+                            <td class="bg-[#ED1C26] bg-opacity-[30%] whitespace-nowrap px-8 py-2 text-sm  text-gray-500 text-left">1.1 Km</td>
+                          </tr>
+                          <tr>
+                            <td class="whitespace- py-2 pl-4 pr-3 border text-sm font-medium text-gray-900 text-left sm:pl-4">Christ College</td>
+                            <td class="whitespace-nowrap px-8 py-2 text-sm  text-gray-500 text-left">3.4 Km</td>
+                          </tr>
+                          <tr>
+                            <td class="bg-[#ED1C26] bg-opacity-[30%] whitespace- py-2 pl-4 pr-3 border text-sm font-medium text-gray-900 text-left sm:pl-4">Shankar Rao Ursal College Of Pharmacy</td>
+                            <td class="bg-[#ED1C26] bg-opacity-[30%] whitespace-nowrap px-8 py-2 text-sm  text-gray-500 text-left">2.3 Km</td>
+                          </tr>
+                          <tr>
+                            <td class="whitespace- py-2 pl-4 pr-3 border text-sm font-medium text-gray-900 text-left sm:pl-4">Upcoming Ramwadi Metro Station</td>
+                            <td class="whitespace-nowrap px-8 py-2 text-sm  text-gray-500 text-left">3.7 Km</td>
+                          </tr>
+                          <tr>
+                            <td class="bg-[#ED1C26] bg-opacity-[30%] whitespace- py-2 pl-4 pr-3 border text-sm font-medium text-gray-900 text-left sm:pl-4">More For You</td>
+                            <td class="bg-[#ED1C26] bg-opacity-[30%] whitespace-nowrap px-8 py-2 text-sm  text-gray-500 text-left">2.8 Km</td>
+                          </tr>
+                          <tr>
+                            <td class="whitespace- py-2 pl-4 pr-3 border text-sm font-medium text-gray-900 text-left sm:pl-4">Reliance SMART</td>
+                            <td class="whitespace-nowrap px-8 py-2 text-sm  text-gray-500 text-left">0.9 Km</td>
+                          </tr>
+                          <tr>
+                            <td class="bg-[#ED1C26] bg-opacity-[30%] whitespace- py-2 pl-4 pr-3 border text-sm font-medium text-gray-900 text-left sm:pl-4">Big Bazaar</td>
+                            <td class="bg-[#ED1C26] bg-opacity-[30%] whitespace-nowrap px-8 py-2 text-sm  text-gray-500 text-left">3.5 Km</td>
+                          </tr>
+                          <tr>
+                            <td class="whitespace- py-2 pl-4 pr-3 border text-sm font-medium text-gray-900 text-left sm:pl-4">Global Highstreet</td>
+                            <td class="whitespace-nowrap px-8 py-2 text-sm  text-gray-500 text-left">0.9 Km</td>
+                          </tr>
+                          <tr>
+                            <td class="bg-[#ED1C26] bg-opacity-[30%] whitespace- py-2 pl-4 pr-3 border text-sm font-medium text-gray-900 text-left sm:pl-4">D Mart</td>
+                            <td class="bg-[#ED1C26] bg-opacity-[30%] whitespace-nowrap px-8 py-2 text-sm  text-gray-500 text-left">2.5 Km</td>
+                          </tr>
+                          <tr>
+                            <td class="whitespace- py-2 pl-4 pr-3 border text-sm font-medium text-gray-900 text-left sm:pl-4">Zensar</td>
+                            <td class="whitespace-nowrap px-8 py-2 text-sm  text-gray-500 text-left">0.7 Km</td>
+                          </tr>
+                          <tr>
+                            <td class="bg-[#ED1C26] bg-opacity-[30%] whitespace- pt-2 pl-4 pr-3 border text-sm font-medium text-gray-900 text-left sm:pl-4">Wipro</td>
+                            <td class="bg-[#ED1C26] bg-opacity-[30%] whitespace-nowrap px-8 py-2 text-sm  text-gray-500 text-left">11.4 Km</td>
+                          </tr>
+                          <!-- More people... -->
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+     
+        </div>
+      
+      <section>
+        <div
+          class="flex flex-row-reverse bg-[#FAFAFA] pb-10 h-full md:grid-cols-2 w-full gap-y-5 md:gap-16 place-content-center mx-auto mt-20">
+          <div
+            class=" flex  flex-col md:p-10 justify-center md:max-w-3xl  space-y-4 bg-[#FAFAFA] md:mt-10 p-10">
+            <p
+              class="flex justify-center md:justify-start text-black font-lato text-mob-heading md:text-[24px] leading-[21px] pb-10 ">
+              Initiate a Conversation</p>
+            <div class="flex flex-col space-y-10">
+              <div class="flex flex-row gap-1 justify-between">
+                <input type="text" id="firstname" placeholder="First name*"
+                  class="border-b outline-none pb-2 w-[130px] md:w-[292px] bg-transparent placeholder:font-lato placeholder:text-[12px]  md:placeholder:text-[14px] placeholder:font-semibold placeholder:leading-[21px]"
+                  name="firstname">
+                <input type="text" id="lastname" placeholder="Last name*"
+                  class="border-b outline-none pb-2 w-[130px] md:w-[292px]  bg-transparent placeholder:font-lato placeholder:text-[12px]  md:placeholder:text-[14px] placeholder:font-semibold placeholder:leading-[21px]"
+                  name="lastname">
+              </div>
+              <div class="flex flex-row gap-1 justify-between">
+                <input type="email" id="email" placeholder="Your Email ID*"
+                  class="border-b outline-none pb-2 w-[130px] md:w-[292px] bg-transparent placeholder:font-lato placeholder:text-[12px]  md:placeholder:text-[14px] placeholder:font-semibold placeholder:leading-[21px]"
+                  name="email">
+                <input type="text" id="city" placeholder="City*"
+                  class="border-b outline-none pb-2 w-[130px] md:w-[292px] bg-transparent placeholder:font-lato placeholder:text-[12px]  md:placeholder:text-[14px] placeholder:font-semibold placeholder:leading-[21px]"
+                  name="city">
+              </div>
+              <div class="flex flex-row gap-1 justify-between">
+                <input type="text" id="budget" placeholder="Budget*"
+                  class="border-b outline-none pb-2 w-[130px] md:w-[292px] bg-transparent placeholder:font-lato placeholder:text-[12px]  md:placeholder:text-[14px] placeholder:font-semibold placeholder:leading-[21px]"
+                  name="budget">
+                <input type="text" id="source" placeholder="Source*"
+                  class="border-b outline-none pb-2 w-[130px] md:w-[292px] bg-transparent placeholder:font-lato placeholder:text-[12px]  md:placeholder:text-[14px] placeholder:font-semibold placeholder:leading-[21px]"
+                  name="source">
+              </div>
+            </div>
+
+            
+            <p class="font-lato pb-6 text-[14px] font-normal leading-[22px] pt-5">I grant authorization to Duville and its
+              representatives to contact me via Call, SMS, Email, or WhatsApp regarding its products and offers. This
+              consent takes precedence over any registration for DNC/NDNC.</p>
 
 
-
-    <!-- <section class="w-full bg-amber-900 fixed bottom-0">
-      <div id="footer_container" class="mx-auto max-w-screen-2xl px-4 py-4 sm:px-6 lg:px-8">
-        <form id="footer_form" class="form flex flex-wrap gap-6">
-          <input name="name" class="rounded-lg border border-gray-200 p-3 text-sm" placeholder="Name" type="text" id="name" name="name"
-            required="true" />
-          <input name="email" class="rounded-lg border border-gray-200 p-3 text-sm" placeholder="Email address" type="email" name="email"
-            id="email" required="true" />
-          <input name="phone" class="rounded-lg border border-gray-200 p-3 text-sm" placeholder="Phone Number" type="number" id="phone" name="phone"
-            required="true" maxlength="10" />
-          <button id="footer_form_btn" type="submit"
-            class="submit inline-block w-full rounded-md bg-white px-5 py-3 font-medium text-amber-900 sm:w-auto">
-            Send Enquiry
+            <button
+            class="popup-btn mt-8  w-fit inline-block rounded bg-red px-12 py-3 text-sm font-medium text-white transition hover:bg-amber-950 focus:outline-none">
+            Enquire Now
           </button>
-        </form>
-      </div>
-    </section> -->
-
-
-
-  </main>
+        
+          </div>
+         
+          <div class="p-8">
+            <div class="space-y-4">
+              <h3 class="text-3xl font-bold ">About Duville Estates - Riverdale Grand | A Beautiful Life
+              </h3>
+  
+              <p class="text-gray-500 text-left">
+                Riverdale Grand is more than just an assortment of uber-luxurious homes and an upmarket residential enclave alongside the Riverdale riverside road. It is a community with a host of lifestyle
+                indulgences meticulously designed and planned for every single member of the
+                family. For us at Duville Estates, it is the culmination of years of rigour poured into the accomplishment of the vision of developing a complete familial community.
+              </p>
+  
+              
+              
+              <div class="flex flex-row space-y-4">
+                <div>
+                  <p class="text-lg font-semibold">
+                    Site Address – <span class="text-base font-normal">Riverdale Grand, S. No. 16/2A, 16/2B, 16/3, 14 at Kharadi, Pune, Maharashtra 411014</span> 
+                  </p>
+                  <p class="text-lg font-semibold">
+                    MahaRERA Registration No –<span class="text-base font-normal"> P52100034877</span> 
+                  </p>
+      
+                  <p class="text-gray-500 text-left">
+                    Available at website:  <a href="https://maharera.mahaonline.gov.in" target="_blank" class="text-red-500"> https://maharera.mahaonline.gov.in</a> 
+                  </p>
+                </div>
+                
+              </div>
+              <div class="flex flex-row gap-6 items-center">
+                <div class="bg-[#FAFAFA]    w-fit  flex flex-col justify-center items-center">
+                  <h1 class="text-lg font-semibold uppercase text-center">Maharera</h1>
+                  <div><img alt="scanner " loading="lazy" 
+                      class="cursor-pointer  h-[100px]"
+                      srcset="https://ik.imagekit.io/athxbsw68/Duville%20Estate/public/Scanner/grand.webp?tr=w-640 1x, https://ik.imagekit.io/athxbsw68/Duville%20Estate/public/Scanner/grand.webp?tr=w-828 2x"
+                      src="https://ik.imagekit.io/athxbsw68/Duville%20Estate/public/Scanner/grand.webp?tr=w-828"></div>
+                  <h1 class="font-semibold ">Riverdale Grand</h1>
+                  <div class="border-b-2 border-slate-400 w-[70%] mx-auto mt-5"></div>
+                 
+                </div>
+                <div>
+                  <p class="text-smfont-plus-jakarta-sans text-center">MahaRERA No.P52100034877</p>
+                <p class="text-sm  font-plus-jakarta-sans text-red"><a href="/pdf_files/Riverdale-Grand.pdf"
+                    class="button" download=""><i class="fa fa-download"></i>Download</a></p>
+                <p class="text-sm mt- font-plus-jakarta-sans "> MahaRERA certificate</p>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+  
+  
+      
+  
+      <!-- Footer -->
+      <footer class="bg-black flex justify-center">
+        <div class="mx-auto max-w-screen-2xl px-4 py-4 sm:px-6 lg:px-8 text-white">
+          © Copyright 2024 Riverdale Grand | Disclaimer
+        </div>
+      </footer>
+  
+  
+  
+  
+    </main>
   <section id="popup">
     <div class="h-screen w-full fixed top-0 left-0 flex justify-center items-center bg-black/60 z-50">
       <div class="mx-auto max-w-lg bg-white p-8 rounded-lg relative">
-        <form id="popup-form" action="" class="form space-y-7">
+        <form id="popup-form" method="POST" action="https://script.google.com/macros/s/AKfycbzebJ_v0KHY-aSvV03_Ou6nJU62Go0-31u0AaTWf97WlJFt0ts5kP9HeJKfV0Rpxxdx/exec" class="form space-y-7">
           <p class="text-center text-lg font-medium">Contact us now</p>
           <div>
             <label class="sr-only" for="name">Name</label>
@@ -1126,16 +1472,7 @@ popupSection.style.display = 'block';
               type="text" id="name" required="true" />
           </div>
 
-          <div>
-            <label class="sr-only" for="name">Configuration</label>
-            <select name="configuration" id="duplex" val class="w-full rounded-lg border border-gray-200 p-3 text-sm">
-              <option value="" disabled selected>Select Configuration</option>
-              <option value="3duplex">3 Duplex</option>
-              <option value="3.5duplex">3.5 Duplex</option>
-              <option value="4duplex">4 Duplex</option>
-              <option value="4.5duplex">4.5 Duplex</option>
-            </select>
-          </div>
+         
 
 
           <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -1151,6 +1488,17 @@ popupSection.style.display = 'block';
                 placeholder="Phone Number" type="number" id="phone" required="true" maxlength="10" />
             </div>
 
+          </div>
+
+          <div>
+            <label class="sr-only" for="name">Configuration</label>
+            <select name="configuration" id="duplex" val class="w-full rounded-lg border border-gray-200 p-3 text-sm">
+              <option value="" disabled selected>Select Configuration</option>
+              <option value="3duplex">2 BHK Apartment</option>
+              <option value="3duplex">3 BHK Duplex</option>
+              <option value="3.5duplex">3.5 BHK Duplex</option>
+              <option value="4.5duplex">4.5 BHK Apartment</option>
+            </select>
           </div>
 
           <div class="mt-4">
@@ -1174,7 +1522,7 @@ popupSection.style.display = 'block';
   <section id="popup" class="hidden">
     <div class="h-screen w-full fixed top-0 left-0 flex justify-center items-center bg-black/60 z-50">
       <div class="mx-auto max-w-lg bg-white p-8 rounded-lg relative">
-        <form id="popup-form" action="" class="form space-y-7">
+        <form id="popup-form" method="POST" action="https://script.google.com/macros/s/AKfycbzebJ_v0KHY-aSvV03_Ou6nJU62Go0-31u0AaTWf97WlJFt0ts5kP9HeJKfV0Rpxxdx/exec" class="form space-y-7">
           <p class="text-center text-lg font-medium">Contact us now</p>
           <div>
             <label class="sr-only" for="name">Name</label>
