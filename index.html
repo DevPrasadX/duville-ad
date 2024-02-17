@@ -504,6 +504,19 @@
     option {
       margin: 10px;
     }
+    @media screen and (max-width: 1024px)
+    {
+#mobile_footer {
+    display: flex;
+    align-self: center;
+    height: 5vh;
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    z-index: 999;
+    background-color: #1e1e1e;
+}
+    }
   </style>
   <script src="./script.js"></script>
   <script>
@@ -545,7 +558,7 @@
 
     <!-- Navbar -->
     <header style="z-index: 999;" class="bg-white fixed top-0 w-full">
-      <div class="mx-auto  px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto  px-4 sm:px-6 ">
         <div class="flex h-16 items-center justify-between">
           <div class="flex ">
             <a id="header_logo" class="block text-teal-600 flex flex-row space-x-3" href="/">
@@ -557,8 +570,8 @@
             </a>
           </div>
 
-          <div class="md:flex md:items-center md:gap-12">
-            <nav aria-label="Global" class="hidden md:block">
+          <div class="md:flex md:items-center md:gap-10 ">
+            <nav aria-label="Global" class="hidden md:block ">
               <ul class="flex items-center gap-6 text-sm">
                 <li>
                   <a class="text-black text-base" href="#about">
@@ -592,10 +605,10 @@
                   </a>
                 </li>
 
-                <li class="flex flex-row gap-2 w-4">
+                <li class="flex flex-row gap-1 ">
                   <img src="./assets/phone.png" />
                   <p class="text-black" href="#location">
-                    08037835621
+                    9922992628
                   </p>
                 </li>
 
@@ -603,23 +616,22 @@
             </nav>
           </div>
 
-          <div class="">
-            <a id="header_logo" class="block text-teal-600" href="/">
-              <span class="sr-only">Home</span>
-              <img class="h-12" />
-            </a>
-          </div>
+          
         </div>
       </div>
     </header>
 
+    <div class="button absolute ">
+      <button>Enquire Now</button>
+    </div>
+   
     <!-- Banner -->
     <!-- <section class=" grid grid-cols-1 md:grid-cols-2 w-11/12 mx-auto my-24">
       <div id="top_banner">
         <div  class="h-screen w-full">
           <img id="desktop_banner"
           src="./assets/banner.png"         
-         class="h-full w-full object-cover" />
+         class="h-full w-full object-cover" />    
           <img id="mobile_banner"
           src="./assets/banner.png"         
           class=" sm:hidden  h-full w-full object-cover" />
@@ -645,12 +657,12 @@
         </div>
       </div>
       
-      <button
-        class="popup-btn fixed top-1/2 -rotate-90 right-[-4rem] inline-block rounded bg-red px-12 py-3 text-sm font-medium text-white transition hover:bg-amber-950 focus:outline-none">
-        Enquire Now
-      </button>
+     
     </section> -->
-
+    <button
+    class="popup-btn fixed top-1/2 -rotate-90 right-[-4rem] inline-block rounded bg-red px-12 py-3 text-sm font-medium text-white transition hover:bg-amber-950 focus:outline-none z-10">
+    Enquire Now
+  </button>
     <div class=" hidden md:block mt-20">
       <img src="./assets/Banner-2.png" />
     </div>
@@ -660,7 +672,7 @@
 
 
     <!-- icons -->
-    <section class="w-11/12 mx-auto strip-section" id="strip">
+    <section class="mt-10 w-11/12 mx-auto strip-section" id="strip">
       <div class="container">
         <ul class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
 
@@ -703,8 +715,18 @@
         </ul>
       </div>
     </section>
-
-
+    <!-- <div className="flex lg:hidden fixed bottom-0 justify-between z-10 items-center px-2 py-1 bg-richblack-900  w-full">
+      <div className="flex flex-row gap-1 w-full justify-between">
+       Enquire Now
+        
+      </div>
+      <div className="flex flex-row gap-1 w-full justify-between">
+       
+        9765559032
+      </div>
+    </div> -->
+    
+    
     <!-- About -->
 
     <section id="about" class="my-24 ">
@@ -751,8 +773,9 @@
             </div>
 
             <div class="grid pt-10 ">
-              <img alt="Forest Farm Villa" src="./assets/Grand-01.jpg" class="max-w-[500px] h-auto md:shadow-[40px_-40px] md:shadow-red-300" />
-            </div>
+              <img alt="Forest Farm Villa" src="./assets/Grand-01.jpg" class="w-full h-auto md:max-w-[500px] md:shadow-[40px_-40px] md:shadow-red-300" />
+          </div>
+          
           </div>
         </div>
         <div
@@ -805,14 +828,14 @@
           </div>
 
           <div class="grid  md:pt-10 mr-10 md:hidden">
-            <img alt="Forest Farm Villa  " src="./assets/Grove-2.png" class="max-w-[500px]  " />
+            <img alt="Forest Farm Villa  " src="./assets/Grove-2.png"class="w-full h-auto md:max-w-[500px] md:shadow-[40px_-40px] md:shadow-red-300"  />
           </div>
         </div>
 
 
     </section>
 
-    <div class="bg-[#F68D93] bg-opacity-[30%]  my-12  p-4 w-11/12 mx-auto   rounded-md">
+    <div class="bg-[#F68D93] bg-opacity-[30%]  my-24  p-4 w-11/12 mx-auto   rounded-md">
       <div class="grid  grid-cols-2 md:grid-cols-4 justify-between max-w-6xl gap-6 mx-auto ">
         <div class="flex flex-col  md:flex-row gap-2 items-center">
           <img src="./assets/icons/Carpet area.png" class="w-14" />
@@ -839,9 +862,9 @@
     </div>
 
     <!-- video -->
-    <div class=" w-11/12 space-y-16 mx-auto flex flex-col justify-center">
+    <div class=" w-11/12 space-y-4 mx-auto flex flex-col justify-center">
       <h2 class="text-4xl font-semibold  text-center ">
-        Tour To Your <span class="text-5xl  font-medium dynalight-regular  text-[#ED1C26]">Dream Home</span>
+        Tour To Your <br class="hidden xs:block"><span class="text-5xl  font-medium dynalight-regular  text-[#ED1C26]">Dream home</span>
       </h2>
 
       <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-3 mt-12 gap-12 md:gap-12 ">
@@ -861,7 +884,7 @@
     <!-- price -->
     <div class="space-y-16 my-42">
 
-      <h2 class="text-4xl font-semibold mt-14 text-center ">
+      <h2 class="text-4xl font-semibold mt-24  text-center ">
         Invest in Riverdale <span class="text-5xl  font-medium dynalight-regular  text-[#ED1C26]">Secure your
           legacy</span>
       </h2>
@@ -1131,6 +1154,89 @@
         <div id="amenities_scroll"
           style=" overflow-x: scroll; white-space: nowrap;  margin-top: 5vh; padding-right: 3vw">
           <div id="amenities_card"
+            style="height: fit-content; width: 22vw; background-color: rgb(255, 255, 255); margin-left: 1vw; display: inline-block; vertical-align: bottom;">
+            <img src="./assets/Amenities/Duville_2_GrandGrove-01.jpg" />
+            <h4 style="padding: 10px; font-size: 1vw;">THE POOLSIDE DECK</h4><br>
+
+          </div>
+          <div id="amenities_card"
+            style="height: fit-content; width: 22vw; background-color: rgb(255, 255, 255); margin-left: 3vw; display: inline-block; vertical-align: bottom;">
+            <img src="./assets/Amenities/Duville_2_GrandGrove-02.jpg" />
+            <h4 style="padding: 10px; font-size: 1vw;">THE OUTDOOR KIDS EXPERIENCE  <br class="block xs:hidden"> AREA  </h4>
+
+          </div>
+          <div id="amenities_card"
+            style="height: fit-content; width: 22vw; background-color: rgb(255, 255, 255); margin-left: 3vw; display: inline-block; vertical-align: bottom;">
+            <img src="./assets/Amenities/Duville_2_GrandGrove-03.jpg" />
+            <h4 style="padding: 10px; font-size: 1vw;">THE ALL-PUPRPOSE FUTSAL COURT</h4><br class="xs:hidden">
+
+          </div>
+          <div id="amenities_card"
+            style="height: fit-content; width: 22vw; background-color: rgb(255, 255, 255); margin-left: 3vw; display: inline-block; vertical-align: bottom;">
+            <img src="./assets/Amenities/Duville_2_GrandGrove-04.jpg" />
+            <h4 style="padding: 10px; font-size: 1vw;">THE ACUPRESSURE WALK WAY</h4><br class="xs:hidden">
+
+          </div>
+          <div id="amenities_card"
+            style="height: fit-content; width: 22vw; background-color: rgb(255, 255, 255); margin-left: 3vw; display: inline-block; vertical-align: bottom;">
+            <img src="./assets/Amenities/Duville_2_GrandGrove-05.jpg" />
+            <h4 style="padding: 10px; font-size: 1vw;">THE DOG PARK</h4><br>
+
+          </div>
+          <div id="amenities_card"
+            style="height: fit-content; width: 22vw; background-color: rgb(255, 255, 255); margin-left: 3vw; display: inline-block; vertical-align: bottom;">
+            <img src="./assets/Amenities/Duville_2_GrandGrove-06.jpg" />
+            <h4 style="padding: 10px; font-size: 1vw;">THE MULTI-PURPOSE GAMES <br class="block xs:block">COURT</h4>
+
+          </div>
+          <div id="amenities_card"
+            style="height: fit-content; width: 22vw; background-color: rgb(255, 255, 255); margin-left: 3vw; display: inline-block; vertical-align: bottom;">
+            <img src="./assets/Amenities/Duville_2_GrandGrove-07.jpg" />
+            <h4 style="padding: 10px; font-size: 1vw;">THE HERB GARDEN</h4><br>
+
+          </div>
+
+
+
+
+        </div>
+        <div class="hidden lg:flex lg:justify-center lg:items-center lg:mt-5">
+          <button class="prev-button mr-4" onclick="scrollAmenities(-1)">
+              <img src="./assets/icons/Left Arrow.svg" alt="Previous">
+          </button>
+          <button class="next-button ml-4" onclick="scrollAmenities(1)">
+              <img src="./assets/icons/Right arrow.svg" alt="Next">
+          </button>
+      </div>
+       
+      </div>
+
+      <div class="flex justify-center items-center mt-10 mb-10">
+        <button class="price-breakdown" onclick="showPriceBreakdown()">Download Brochure</button>
+      </div>
+    </section>
+    <script>
+      const scrollAmenities = (direction) => {
+     const scrollContainer = document.getElementById('amenities_scroll');
+     const scrollAmount = 400; // Change this value as needed for scrolling
+     const scrollDirection = direction === 1 ? scrollAmount : -scrollAmount;
+     scrollContainer.scrollBy({
+       left: scrollDirection,
+       behavior: 'smooth'
+     });
+   };
+     </script>
+
+    <!-- <section id="amenities" class="bg-gray-50 pt-10 justify-center align-items">
+  <div id="modern_div" style="width: 100vw; text-align: center; overflow-y: hidden;">
+        <h3 class="text-4xl font-semibold  text-center">Elevate your Lifestyle <span
+            class="text-5xl  font-medium dynalight-regular  text-[#ED1C26]">with unrivaled amenities</span></h3>
+
+
+
+        <div id="amenities_scroll"
+          style=" overflow-x: scroll; white-space: nowrap;  margin-top: 5vh; padding-right: 3vw">
+          <div id="amenities_card"
             style="height: fit-content; width: 22vw; background-color: rgb(255, 255, 255); margin-left: 3vw; display: inline-block; vertical-align: bottom;">
             <img src="./assets/Amenities/Duville_2_GrandGrove-01.jpg" />
             <h4 style="padding: 10px; font-size: 1vw;">THE ALL-PUPRPOSE FUTSAL COURT</h4>
@@ -1177,13 +1283,29 @@
 
 
         </div>
-       
+    
+        <div class="flex justify-center gap-36 items-center mt-5">
+          <button class="prev-button" onclick="scrollAmenities(-1)"><- Next</button>
+          <button class="next-button" onclick="scrollAmenities(1)">Next-></button>
+        </div>
+    
       </div>
 
       <div class="flex justify-center items-center m-10">
         <button class="price-breakdown" onclick="showPriceBreakdown()">Download Brochure</button>
       </div>
     </section>
+    <script>
+     const scrollAmenities = (direction) => {
+    const scrollContainer = document.getElementById('amenities_scroll');
+    const scrollAmount = 400; // Change this value as needed for scrolling
+    const scrollDirection = direction === 1 ? scrollAmount : -scrollAmount;
+    scrollContainer.scrollBy({
+      left: scrollDirection,
+      behavior: 'smooth'
+    });
+  };
+    </script> -->
 
 
 
@@ -1331,7 +1453,7 @@
     <section id="Infrastructure" class="my-24 bg-gray-50">
       <div>
         <h3 style="font-weight: 500; margin-top: 5vh; display: inline-block; width: 100%;"
-          class="text-4xl font-semibold  text-center mb-6">Visualize your<span
+          class="text-4xl font-semibold  text-center mb-6">Visualize your <br class="hidden xs:block"><span
             class="text-5xl  font-medium dynalight-regular  text-[#ED1C26]">Dream home</span></h3>
         <div id="map_btn_container" class="flex justify-center items-center"
           style="width: auto; height: 7vh; margin-top: 2vh;">
@@ -1376,7 +1498,7 @@
         <div class="mx-auto max-w-xl flex flex-col items-center justify-center text-center lg:text-left">
 
           <h2 class="text-4xl mt-5 md:mt-0 font-semibold  text-center ">
-            Elevating Lifestyles <span class="text-5xl  font-medium dynalight-regular  text-[#ED1C26]">for
+            Elevating Lifestyles <span class="text-5xl  font-medium dynalight-regular  text-[#ED1C26]"><br class="hidden xs:block md:block">for
               generations</span>
           </h2>
           <img alt="Company" src="./assets/Duville_black logo-02.svg" class="w-[300px]" />
@@ -1408,7 +1530,7 @@
       </div>
 
       <div class="grid">
-        <img alt="Forest Farm Villa" src="./assets/life_style.png"
+        <img alt="lifestyle" src="./assets/life_style.png"
           class="max-w-[564px] md:shadow-[40px_-40px] md:shadow-red-300 " />
       </div>
     </div>
@@ -1692,16 +1814,38 @@
     </section>
 
 
-
+    <div class="flex lg:hidden fixed bottom-0 h-14 text-white text-sm  justify-between z-10 items-center px-2 py-1 bg-gray-900 w-full">
+      <div class="flex flex-row gap-1 w-full justify-between">
+        <a class=" flex  flex-row items-center gap-2" >
+           <img src="./assets/icons/Call icon_white-01.svg" class="max-w-6"/>
+           <p>Call us</p>
+        </a>
+        <a class=" flex flex-row items-center gap-2" >
+           <img src="./assets/icons/Menu.svg" />
+           <p>Enquire</p>
+        </a>
+        <a class=" flex flex-row items-center gap-2" >
+           <img src="./assets/whatsapp copy.png" class="max-w-5" />
+           <p>9922992628</p>
+        </a>
+      
+      </div>
+    </div>
 
     <!-- Footer -->
-    <footer class="bg-black flex justify-center">
-      <div class="mx-auto max-w-screen-2xl px-4 py-4 sm:px-6 lg:px-8 text-white">
+    <footer class="bg-black flex justify-center xs:mb-10 sm:mb-10">
+      <div class="mx-auto max-w-screen-2xl px-4 py-6 sm:px-24 lg:px-8 text-white">
         © Copyright 2024 Riverdale Grand | Disclaimer | Designed and Developed by Black Cherie Media
       </div>
+     
     </footer>
-
-
+    <footer class="lg:hidden md:hidden bg-black flex justify-center mb-10 ">
+      <div class="mx-auto max-w-screen-2xl px-4 py-4 sm:px-24 lg:hidden">
+      </div>
+     
+    </footer>
+    
+    
 
 
   </main>
