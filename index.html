@@ -3,6 +3,9 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <!-- Meta Pixel Code -->
   <script>
     !function (f, b, e, v, n, t, s) {
@@ -354,7 +357,7 @@
     }
 
     .strip-section {
-      border-bottom: 1px solid #a4a4a4;
+
       display: flex;
       justify-content: center;
       align-items: center;
@@ -392,8 +395,8 @@
     }
 
     .strip-section ul li .images {
-      width: 50px;
-      margin-right: 20px;
+      width: 60px;
+
     }
 
     .strip-section ul li .data {
@@ -504,18 +507,31 @@
     option {
       margin: 10px;
     }
-    @media screen and (max-width: 1024px)
+
+    @media screen and (max-width: 1024px) {
+      #mobile_footer {
+        display: flex;
+        align-self: center;
+        height: 5vh;
+        width: 100vw;
+        position: fixed;
+        bottom: 0;
+        z-index: 999;
+        background-color: #1e1e1e;
+      }
+    }
+
+    .bg-gray-100:hover {
+      background-color: #ffffff;
+    }
+
+    .leading-8 {
+      line-height: 1.8rem;
+    }
+    .youtubevideo
     {
-#mobile_footer {
-    display: flex;
-    align-self: center;
-    height: 5vh;
-    width: 100vw;
-    position: fixed;
-    bottom: 0;
-    z-index: 999;
-    background-color: #1e1e1e;
-}
+      font-family: "Montserrat", sans-serif;
+      font-size: 12px;
     }
   </style>
   <script src="./script.js"></script>
@@ -557,7 +573,7 @@
     </a> -->
 
     <!-- Navbar -->
-    <header style="z-index: 999;" class="bg-white fixed top-0 w-full">
+    <header style="z-index: 999;" class=" bg-white bg-opacity-50 fixed top-0 w-full">
       <div class="mx-auto  px-4 sm:px-6 ">
         <div class="flex h-16 items-center justify-between">
           <div class="flex ">
@@ -616,15 +632,12 @@
             </nav>
           </div>
 
-          
+
         </div>
       </div>
     </header>
 
-    <div class="button absolute ">
-      <button>Enquire Now</button>
-    </div>
-   
+
     <!-- Banner -->
     <!-- <section class=" grid grid-cols-1 md:grid-cols-2 w-11/12 mx-auto my-24">
       <div id="top_banner">
@@ -660,52 +673,85 @@
      
     </section> -->
     <button
-    class="popup-btn fixed top-1/2 -rotate-90 right-[-4rem] inline-block rounded bg-red px-12 py-3 text-sm font-medium text-white transition hover:bg-amber-950 focus:outline-none z-10">
-    Enquire Now
-  </button>
-    <div class=" hidden md:block mt-20">
+      class="popup-btn fixed top-1/2 -rotate-90 right-[-4rem] inline-block rounded bg-red px-12 py-3 text-sm font-medium text-white transition hover:bg-amber-950 focus:outline-none z-10">
+      Enquire Now
+    </button>
+    <!-- <div class=" hidden md:block mt-20">
       <img src="./assets/Banner-2.png" />
     </div>
     <div class=" md:hidden mt-20">
       <img src="./assets/Banner-mob-2.png" />
-    </div>
+    </div> -->
+
+    <section style="position: relative;">
+      <div id="top_banner">
+        <div class="h-screen w-full relative">
+          <img id="desktop_banner" src="./assets/Riverdale Grove hd image.jpg" class="h-full w-full object-cover" />
+          <img id="mobile_banner" src="./assets/banner.png" class="sm:hidden h-full w-full object-cover" />
+          <div
+            class="absolute right-20 bg-white p-24 bg-opacity-75 text-white text-center fixed top-1/2 transform -translate-y-1/2 p-6 ">
+            <p class="text-lg  text-black font-bold	">TWICE THE LIFE</p>
+            <p class="text-lg text-black font-bold	">TWICE THE MEMORIES!</p>
+            <div class="mt-4">
+              <p class="bg-blue-600 text-white px-4 py-2 rounded-lg inline-block">Starting at @1.65 CR</p>
+            </div>
+            <div class="mt-2">
+              <p class=" px-4 py-2 rounded-lg inline-block text-black">Discover Perfect fit,<BR> <b>2 or 4.5 BHK</b>
+                Apartments Also Available</p>
+            </div>
+            <div class="mt-2">
+              <p class=" px-4 py-2 rounded-lg inline-block text-black font-bold	">Heart of Kharadi!</p>
+            </div>
+            <div>
+              <p class="  px-4 py-2 rounded-lg inline-block text-black ">Riverdale Riverside Road</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
 
 
     <!-- icons -->
-    <section class="mt-10 w-11/12 mx-auto strip-section" id="strip">
+    <section class="mt-10 w-11/12 mb-10 mx-auto strip-section" id="strip">
       <div class="container">
         <ul class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
 
-          <li>
-            <div class="content">
-              <div class="images"><img width="64" height="64" src="./assets/icons/flats and duplex.png"></div>
+          <li class="rounded-1 overflow-hidden shadow-md bg-gray-100 transition-transform transform hover:shadow-lg">
+            <div class="content text-center flex-col">
+              <div class="images flex items-center justify-center mb-5">
+                <img class="w-full h-full" src="./assets/icons/flats and duplex.png">
+              </div>
               <div class="data">
                 <div class="title">3, 3.5 &amp; 4 BHK Flats &amp; Duplexes</div>
                 <div class="links-description">Configuration</div>
               </div>
             </div>
           </li>
-          <li>
-            <div class="content">
-              <div class="images"><img width="64" height="64" src="./assets/icons/Carpet area.png"></div>
+          <li class="rounded-1 overflow-hidden shadow-md bg-gray-100 transition-transform transform hover:shadow-lg">
+            <div class="content text-center flex-col">
+              <div class="images flex items-center justify-center mb-5"><img width="64" height="64"
+                  src="./assets/icons/Carpet area.png"></div>
               <div class="data">
                 <div class="title">1084 Sqft - 2290 Sqft</div>
                 <div class="links-description">Carpet Area</div>
               </div>
             </div>
           </li>
-          <li>
-            <div class="content">
-              <div class="images"><img width="64" height="64" src="./assets/icons/Price.png"></div>
+          <li class="rounded-1 overflow-hidden shadow-md bg-gray-100 transition-transform transform hover:shadow-lg">
+            <div class="content text-center flex-col">
+              <div class="images flex items-center justify-center mb-5"><img width="64" height="64"
+                  src="./assets/icons/Price.png"></div>
               <div class="data">
                 <div class="title">Starting ₹ 1.44 Cr*</div>
                 <div class="links-description">Price</div>
               </div>
             </div>
           </li>
-          <li>
-            <div class="content">
-              <div class="images"><img width="64" height="64" src="./assets/icons/New launch.png"></div>
+          <li class="rounded-1 overflow-hidden shadow-md bg-gray-100 transition-transform transform hover:shadow-lg">
+            <div class="content text-center flex-col">
+              <div class="images flex items-center justify-center mb-5"><img width="64" height="64"
+                  src="./assets/icons/New launch.png"></div>
               <div class="data">
                 <div class="title">New Launch</div>
                 <div class="links-description">Project Status</div>
@@ -725,9 +771,61 @@
         9765559032
       </div>
     </div> -->
-    
-    
+
+
     <!-- About -->
+
+    <div class="flex md:flex-row-reverse flex-col-reverse items-center justify-center mx-auto p-5">
+      <div class="">
+        <div class="w-full max-w-xl text-center lg:text-left">
+
+          <div >
+            <div class="border-2 border-blue-500 w-14 ml-16"></div>
+            <h2 class="text-2xl font-bold ml-16">
+
+              Riverdal Grove
+
+
+            </h2>
+          </div>
+
+          <div class="w-full text-center lg:text-left">
+            <ul class="leading-8 mt-4 sm:block w-9/12 mx-auto list-disc list-inside">
+              <li>The ‘DUPLEX’ at Riverdale Grove is for those with a <span class="ml-6">
+                  to possess and own a bungalow</span></li>
+              <li>This is a ‘PRIVATE VILLA’ suspended in the air</li>
+              <li>The ‘DUPLEX’ at Riverdale Grove has two Master <span class="ml-6">
+                  Bedrooms, a unique feature never seen before</span></li>
+              <li>The ‘BAY WINDOWS’ at both levels provide exquisite <span class="ml-6">
+                  panoramic view</span></li>
+              <li>A privately tucked away dining room separate from the <span class="ml-6">
+                  living room</span></li>
+              <li>The Double-Height atrium has an exquisite feeling of <span class="ml-6">
+                  premiumness to it</span></li>
+              <li>The Double-Height height provides maximum ventilation <span class="ml-6">
+                  to the Duplex with the volume of air within the room
+                  <span class="ml-6"> getting multiplied several times over</li>
+
+            </ul>
+          </div>
+
+          <div class="ml-16 mt-4 md:mt-8 pb-6 mx-auto w-fit flex justify-start">
+            <button
+              class="popup-btn inline-block border border-blue-500 bg-white px-12 py-3 text-sm font-medium text-blue-500 transition hover:bg-blue-500 hover:text-white focus:outline-none">
+              Enquire Now
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="md:ml-10 mt-10 md:mt-0">
+        <img alt="Forest Farm Villa" src="./assets/grove.jpg" class="w-full h-auto md:max-w-[500px] ">
+      </div>
+    </div>
+
+
+
+    <!-- grand -->
 
     <section id="about" class="my-24 ">
 
@@ -773,68 +871,14 @@
             </div>
 
             <div class="grid pt-10 ">
-                            <img alt="Forest Farm Villa" src="./assets/Grand-01.jpg" class="w-full h-auto md:max-w-[500px] md:shadow-[40px_-40px] md:shadow-red-300" />
-                        </div>
-          </div>
-        </div>
-        <div
-          class="flex md:flex-row-reverse flex-col-reverse   w-11/12 mx-auto   items-center  justify-between  md:p-5">
-          <div class="bg-gray-50  pt-10">
-            <div class="mx-auto w-full md:max-w-xl md:text-center lg:text-left">
-
-              <h2 class="text-4xl font-semibold  md:text-center ">
-                Riverdale <span class="text-5xl  font-medium dynalight-regular  text-[#ED1C26]">Grove</span>
-              </h2>
-              <p style="" class="text-gray-600  mt-4 sm:block md:w-[90%]  mx-auto">
-                Welcome to Riverdale Grove, where urban living harmonizes with
-                nature's tranquillity along the Riverdale Riverfront Road. Our
-                residential community is a serene oasis, drawing inspiration from the
-                lush greenery and woods adorning the riverbank. Riverdale Grove
-                offers a curated selection of 2 BHK and 3.5 BHK Duplex Apartments,
-                ensuring efficient space utilization and zero wastage to cater to the
-                diverse needs of our residents.
-
-              </p>
-
-              <div class="w-[90%] mx-auto mt-5 space-y-2">
-
-                <ul class=" font-semibold list-disc appearance leading-6 ml-3 text-gray-600">
-                  <li>Stylish 3 BHK</li>
-                  <li>Efficient 3.5 BHK duplex layouts. </li>
-                  <li>Prime Riverfront</li>
-
-
-
-                </ul>
-              </div>
-
-
-
-
-
-
-              <div class="mt-4 md:mt-8 pb-6 mx-auto w-fit">
-                <button
-                  class="popup-btn inline-block rounded border border-white bg-red px-12 py-3 text-sm font-medium text-white transition hover:bg-amber-950 focus:outline-none">
-                  Enquire Now
-                </button>
-              </div>
+              <img alt="Forest Farm Villa" src="./assets/Grand-01.jpg"
+                class="w-full h-auto md:max-w-[500px] md:shadow-[40px_-40px] md:shadow-red-300" />
             </div>
           </div>
-
-          <div class="grid pt-20 md:pt-10 mr-10 hidden md:block">
-            <img alt="Forest Farm Villa " src="./assets/Grove.png" class="max-w-[500px]  " />
-          </div>
-
-          <div class="grid  md:pt-10 mr-10 md:hidden">
-            <img alt="Forest Farm Villa  " src="./assets/Grove-2.png"class="w-full h-auto md:max-w-[500px] md:shadow-[40px_-40px] md:shadow-red-300"  />
-          </div>
         </div>
-
-
     </section>
 
-    <div class="bg-[#F68D93] bg-opacity-[30%]  my-24  p-4 w-11/12 mx-auto   rounded-md">
+    <!-- <div class="bg-[#F68D93] bg-opacity-[30%]  my-24  p-4 w-11/12 mx-auto   rounded-md">
       <div class="grid  grid-cols-2 md:grid-cols-4 justify-between max-w-6xl gap-6 mx-auto ">
         <div class="flex flex-col  md:flex-row gap-2 items-center">
           <img src="./assets/icons/Carpet area.png" class="w-14" />
@@ -858,14 +902,19 @@
             Park and much more.</p>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- video -->
     <div class=" w-11/12 space-y-4 mx-auto flex flex-col justify-center">
-      <h2 class="text-4xl font-semibold  text-center ">
-        Tour To Your <br class="hidden xs:block"><span class="text-5xl  font-medium dynalight-regular  text-[#ED1C26]"><br class="block md:hidden lg:hidden">Dream home</span>
-      </h2>
+      <div >
+        <div class="border-2 mb-4 border-blue-500 w-16 "></div>
+        <h2 class="text-2xl font-bold ">
+Tour To Your Dream Home
 
+
+        </h2>
+      </div>
+<!-- 
       <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-3 mt-12 gap-12 md:gap-12 ">
         <iframe src="https://www.youtube.com/embed/u623FKKndQA?si=HJ6fPFcLtCk2-DTi" title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -876,8 +925,55 @@
         <iframe src="https://www.youtube.com/embed/c8xaWvJajYA?si=p-cuXi_sc6PCa1_R" title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           class=" lg:w-[300px] lg:h-[200px]  mx-auto "></iframe>
+      </div> -->
+
+      <div class="youtubevideo  text-center align-bottom grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mt-12">
+      <div class="max-w-80 bg-whiteounded-lg shadow  dark:border-gray-700">
+        <a href="#">
+          <iframe src="https://www.youtube.com/embed/u623FKKndQA?si=HJ6fPFcLtCk2-DTi" title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          class="w-full h-auto" ></iframe>
+        </a>
+        <div class="p-5">
+        
+          <p class="mb-3 font-medium text-gray-900 dark:text-gray-600 uppercase ">experience living amidst a natural
+
+            ambient environment abutting the 
+            Riverdale Grand</p>
+          
+        </div>
       </div>
 
+
+      <div class="youtubevideo text-center max-w-80 bg-whiteounded-lg shadow  dark:border-gray-700">
+        <a href="#">
+          <iframe src="https://www.youtube.com/embed/9B849TUZMd0?si=eP0EV-dwDKrFaO7T" title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          class="w-full h-auto" ></iframe>        </a>
+        <div class="p-5">
+        
+          <p class="mb-3 font-medium text-gray-900 dark:text-gray-600 uppercase">experience a beautiful life at
+
+            riverdale grand</p>
+          
+        </div>
+      </div>
+
+
+      <div class="youtubevideo text-center max-w-80 bg-whiteounded-lg shadow  dark:border-gray-700">
+        <a href="#">
+          <iframe src="https://www.youtube.com/embed/c8xaWvJajYA?si=p-cuXi_sc6PCa1_R" title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          class="w-full h-auto" ></iframe>        </a>
+        <div class="p-5">
+        
+          <p class="mb-3 font-medium text-gray-900 dark:text-gray-600 uppercase">experience familial living within
+
+            well designed spaces at riverdale Grand</p>
+          
+        </div>
+      </div>
+    </div>
     </div>
 
     <!-- price -->
@@ -1056,7 +1152,8 @@
           <thead class="bg-[#F68D93] bg-opacity-[30%]">
             <tr>
 
-              <th scope="col" class="py-3.5 pl-4 pr-3 border text-center text-sm font-semibold text-gray-900 sm:pl-6">4.5
+              <th scope="col" class="py-3.5 pl-4 pr-3 border text-center text-sm font-semibold text-gray-900 sm:pl-6">
+                4.5
                 BHK</th>
             </tr>
           </thead>
@@ -1077,7 +1174,8 @@
           <thead class="bg-[#F68D93] bg-opacity-[30%]">
             <tr>
 
-              <th scope="col" class="py-3.5 pl-4 pr-3 border text-center text-sm font-semibold text-gray-900 sm:pl-6">3.5
+              <th scope="col" class="py-3.5 pl-4 pr-3 border text-center text-sm font-semibold text-gray-900 sm:pl-6">
+                3.5
                 BHK</th>
             </tr>
           </thead>
@@ -1118,7 +1216,8 @@
           <thead class="bg-[#F68D93] bg-opacity-[30%]">
             <tr>
 
-              <th scope="col" class="py-3.5 pl-4 pr-3 border text-center text-sm font-semibold text-gray-900 sm:pl-6">3 BHK DUPLEX              BHK</th>
+              <th scope="col" class="py-3.5 pl-4 pr-3 border text-center text-sm font-semibold text-gray-900 sm:pl-6">3
+                BHK DUPLEX BHK</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-gray-200 bg-white">
@@ -1131,8 +1230,8 @@
 
             </tr>
         </table>
-        
-       
+
+
       </section>
     </div>
 
@@ -1146,7 +1245,8 @@
 
       <div id="modern_div md:h-[70vh]" style="width: 100vw;   text-align: center; overflow-y: hidden;">
         <h3 class="text-4xl font-semibold  text-center">Elevate your Lifestyle <span
-            class="text-5xl  font-medium dynalight-regular  text-[#ED1C26]"><br class="block md:hidden lg:hidden">with unrivaled amenities</span></h3>
+            class="text-5xl  font-medium dynalight-regular  text-[#ED1C26]"><br class="block md:hidden lg:hidden">with
+            unrivaled amenities</span></h3>
 
 
 
@@ -1161,7 +1261,8 @@
           <div id="amenities_card"
             style="height: fit-content; width: 22vw; background-color: rgb(255, 255, 255); margin-left: 3vw; display: inline-block; vertical-align: bottom;">
             <img src="./assets/Amenities/Duville_2_GrandGrove-02.jpg" />
-            <h4 style="padding: 10px; font-size: 1vw;">THE OUTDOOR KIDS EXPERIENCE  <br class="block xs:hidden"> AREA  </h4>
+            <h4 style="padding: 10px; font-size: 1vw;">THE OUTDOOR KIDS EXPERIENCE <br class="block xs:hidden"> AREA
+            </h4>
 
           </div>
           <div id="amenities_card"
@@ -1201,13 +1302,13 @@
         </div>
         <div class="hidden lg:flex lg:justify-center lg:items-center lg:mt-5">
           <button class="prev-button mr-4" onclick="scrollAmenities(-1)">
-              <img src="./assets/icons/Left Arrow.svg" alt="Previous">
+            <img src="./assets/icons/Left Arrow.svg" alt="Previous">
           </button>
           <button class="next-button ml-4" onclick="scrollAmenities(1)">
-              <img src="./assets/icons/Right arrow.svg" alt="Next">
+            <img src="./assets/icons/Right arrow.svg" alt="Next">
           </button>
-      </div>
-       
+        </div>
+
       </div>
 
       <div class="flex justify-center items-center mt-10 mb-10">
@@ -1216,15 +1317,15 @@
     </section>
     <script>
       const scrollAmenities = (direction) => {
-     const scrollContainer = document.getElementById('amenities_scroll');
-     const scrollAmount = 400; // Change this value as needed for scrolling
-     const scrollDirection = direction === 1 ? scrollAmount : -scrollAmount;
-     scrollContainer.scrollBy({
-       left: scrollDirection,
-       behavior: 'smooth'
-     });
-   };
-     </script>
+        const scrollContainer = document.getElementById('amenities_scroll');
+        const scrollAmount = 400; // Change this value as needed for scrolling
+        const scrollDirection = direction === 1 ? scrollAmount : -scrollAmount;
+        scrollContainer.scrollBy({
+          left: scrollDirection,
+          behavior: 'smooth'
+        });
+      };
+    </script>
 
     <!-- <section id="amenities" class="bg-gray-50 pt-10 justify-center align-items">
   <div id="modern_div" style="width: 100vw; text-align: center; overflow-y: hidden;">
@@ -1413,34 +1514,34 @@
                 <img alt="Tennis court image" loading="lazy" decoding="async" data-nimg="1"
                   class="px-4 md:px-0 mx-auto md:w-full md:mx-0 h-auto " src="./assets/building2.jpeg">
               </div>
-              
 
+
+            </div>
           </div>
         </div>
-      </div>
 
-      <script>
-        function toggleContent(contentId) {
-          const contentDivs = document.querySelectorAll('.content');
-          const buttons = document.querySelectorAll('.btn');
+        <script>
+          function toggleContent(contentId) {
+            const contentDivs = document.querySelectorAll('.content');
+            const buttons = document.querySelectorAll('.btn');
 
-          contentDivs.forEach(div => {
-            if (div.id === contentId) {
-              div.style.display = 'block'; // Show the clicked content
-            } else {
-              div.style.display = 'none'; // Hide other content
-            }
-          });
+            contentDivs.forEach(div => {
+              if (div.id === contentId) {
+                div.style.display = 'block'; // Show the clicked content
+              } else {
+                div.style.display = 'none'; // Hide other content
+              }
+            });
 
-          buttons.forEach(button => {
-            if (button.getAttribute('onclick') === `toggleContent('${contentId}')`) {
-              button.style.borderColor = 'red'; // Change border color to red for the selected button
-            } else {
-              button.style.borderColor = ''; // Reset border color for other buttons
-            }
-          });
-        }
-      </script>
+            buttons.forEach(button => {
+              if (button.getAttribute('onclick') === `toggleContent('${contentId}')`) {
+                button.style.borderColor = 'red'; // Change border color to red for the selected button
+              } else {
+                button.style.borderColor = ''; // Reset border color for other buttons
+              }
+            });
+          }
+        </script>
 
 
 
@@ -1497,7 +1598,8 @@
         <div class="mx-auto max-w-xl flex flex-col items-center justify-center text-center lg:text-left">
 
           <h2 class="text-4xl mt-5 md:mt-0 font-semibold  text-center ">
-            Elevating Lifestyles <span class="text-5xl  font-medium dynalight-regular  text-[#ED1C26]"><br class="block md:hidden lg:hidden">for
+            Elevating Lifestyles <span class="text-5xl  font-medium dynalight-regular  text-[#ED1C26]"><br
+                class="block md:hidden lg:hidden">for
               generations</span>
           </h2>
           <img alt="Company" src="./assets/Duville_black logo-02.svg" class="w-[300px]" />
@@ -1799,9 +1901,9 @@
 
                 <div class="text-center  text-left">
                   <p class="text-sm font-plus-jakarta-sans text-left">MahaRERA No.P52100029023</p>
-                <p class="text-sm  text-left font-plus-jakarta-sans text-red"><a href="/pdf_files/Riverdale-Grand.pdf"
-                    class="button text-left" download=""><i class="fa fa-download"></i>Download</a></p>
-                <p class="text-sm  text-left mt- font-plus-jakarta-sans "> MahaRERA certificate</p>
+                  <p class="text-sm  text-left font-plus-jakarta-sans text-red"><a href="/pdf_files/Riverdale-Grand.pdf"
+                      class="button text-left" download=""><i class="fa fa-download"></i>Download</a></p>
+                  <p class="text-sm  text-left mt- font-plus-jakarta-sans "> MahaRERA certificate</p>
 
                 </div>
               </div>
@@ -1813,21 +1915,22 @@
     </section>
 
 
-    <div class="flex lg:hidden fixed bottom-0 h-14 text-white text-sm  justify-between z-10 items-center px-2 py-1 bg-gray-900 w-full">
+    <div
+      class="flex lg:hidden fixed bottom-0 h-14 text-white text-sm  justify-between z-10 items-center px-2 py-1 bg-gray-900 w-full">
       <div class="flex flex-row gap-1 w-full justify-between">
-        <a class=" flex  flex-row items-center gap-2" >
-           <img src="./assets/icons/Call icon_white-01.svg" class="max-w-6"/>
-           <p>Call us</p>
+        <a class=" flex  flex-row items-center gap-2">
+          <img src="./assets/icons/Call icon_white-01.svg" class="max-w-6" />
+          <p>Call us</p>
         </a>
-        <a class=" flex flex-row items-center gap-2" >
-           <img src="./assets/icons/Menu.svg" />
-           <p>Enquire</p>
+        <a class=" flex flex-row items-center gap-2">
+          <img src="./assets/icons/Menu.svg" />
+          <p>Enquire</p>
         </a>
-        <a class=" flex flex-row items-center gap-2" >
-           <img src="./assets/whatsapp copy.png" class="max-w-5" />
-           <p>9922992628</p>
+        <a class=" flex flex-row items-center gap-2">
+          <img src="./assets/whatsapp copy.png" class="max-w-5" />
+          <p>9922992628</p>
         </a>
-      
+
       </div>
     </div>
 
@@ -1836,15 +1939,15 @@
       <div class="mx-auto max-w-screen-2xl px-4 py-6 sm:px-24 lg:px-8 text-white">
         © Copyright 2024 Riverdale Grand | Disclaimer | Designed and Developed by Black Cherie Media
       </div>
-     
+
     </footer>
     <footer class="lg:hidden md:hidden bg-black flex justify-center mb-10 ">
       <div class="mx-auto max-w-screen-2xl px-4 py-4 sm:px-24 lg:hidden">
       </div>
-     
+
     </footer>
-    
-    
+
+
 
 
   </main>
