@@ -562,6 +562,15 @@
     }
 
   </script>
+
+  <!-- Style and CDN for Swiper  -->
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+
+  <link rel="stylesheet" href="./style.css" />
+  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
 </head>
 
 <body class="overflow-x-hidden">
@@ -1408,7 +1417,7 @@ Tour To Your Dream Home
     </script> -->
 
 
-
+    <!-- Old Peek Into Riverdale Section  -->
     <section id="offering">
       <div class="flex flex-col items-center max-w-sm sm:max-w-7xl mx-auto">
         <h3 style="font-weight: 500; margin-top: 1vh; display: inline-block; width: 100%;"
@@ -1546,6 +1555,62 @@ Tour To Your Dream Home
 
 
       </div>
+    </section>
+
+    <!-- New Peek Into Riverdale Section  -->
+    <section class="w-11/12 mx-auto my-20">
+      <h1 class="text-4xl font-semibold"><span class="border-t-2 border-[#fc0000] pt-2">Peek Into</span> Riverdale</h1>
+      <div class="flex my-10 gap-10 max-h-[500px]">
+        <div class="flex flex-col justify-between w-[40%]">
+          <!-- TODO: Change the index accordingly -->
+            <button onclick="swipeToIndex(0)" class="px-4 py-5 hover:rounded-md hover:shadow-md border-2 text-sm font-medium text-start bg-slate-200 hover:bg-white" type="button">2290 Sq.Ft Flat</button>
+            <button onclick="swipeToIndex(1)" class="px-4 py-5 hover:rounded-md hover:shadow-md border-2 text-sm font-medium text-start bg-slate-200 hover:bg-white" type="button">1417 Sq.Ft Flat</button>
+            <button onclick="swipeToIndex(2)" class="px-4 py-5 hover:rounded-md hover:shadow-md border-2 text-sm font-medium text-start bg-slate-200 hover:bg-white" type="button">Building Elevation</button>
+        </div>
+          <!-- Slider main container -->
+          <div class="swiper mySwiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <img src="./assets/air copy.jpg"/>
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/air copy.jpg"/>
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/air copy.jpg"/>
+              </div>
+            </div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+      </div>
+
+      <script type="module">
+
+        function initializeSwiper() {
+        import('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs')
+            .then(module => {
+                const Swiper = module.default;
+                const swiper = new Swiper('.swiper', {
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                });
+
+                window.swipeToIndex = function(index) {
+                    swiper.slideTo(index); 
+                };
+            })
+            .catch(error => {
+                console.error('Failed to load Swiper:', error);
+            });
+          }
+          document.addEventListener('DOMContentLoaded', initializeSwiper);
+      </script>
     </section>
 
 
@@ -2085,7 +2150,6 @@ Tour To Your Dream Home
       })
 
     })
-
   </script>
 
   <script src="./app.js"></script>
