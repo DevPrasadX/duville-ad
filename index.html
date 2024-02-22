@@ -588,6 +588,15 @@
     }
 
   </script>
+
+  <!-- Style and CDN for Swiper  -->
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+
+  <link rel="stylesheet" href="./style.css" />
+  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
 </head>
 
 <body class="overflow-x-hidden">
@@ -829,9 +838,9 @@
           <div class="ml-16">
             <div class="border-2 mb-4 border-blue-500 w-16 "></div>
             <h2 class="text-2xl font-bold ">
-              RiverDale Grove
-
-
+              Riverdale Grove
+    
+    
             </h2>
           </div>
 
@@ -1305,7 +1314,7 @@
 
 
     <!-- Amenities -->
-    <section id="amenities" class="xs:ml-4 xs:mr-4 ">
+    <section id="amenities" class=" bg-gray-50 pt-10 mt-20">
 
       <div id="modern_div md:h-[70vh]" style="width: 100vw;   overflow-y: hidden;">
         <!-- <h3 class="text-4xl font-semibold  text-center">Elevate your Lifestyle <span
@@ -1324,8 +1333,8 @@
 
 
 
-        <div id="amenities_scroll" class="ml-16 mr-16"
-          style=" overflow-x: scroll; white-space: nowrap;  margin-top: 5vh; padding-right: 3vw">
+        <div id="amenities_scroll"
+          style=" overflow-x: scroll; white-space: nowrap;  margin-top: 5vh; padding: 4vw">
           <div id="amenities_card"
             style="height: fit-content; width: 22vw; background-color: rgb(255, 255, 255); margin-left: 1vw; display: inline-block; vertical-align: bottom;">
             <img src="./assets/Amenities/Duville_2_GrandGrove-01.jpg" />
@@ -1520,7 +1529,7 @@
     </script> -->
 
 
-
+    <!-- Old Peek Into Riverdale Section  -->
     <section id="offering">
       <div class="youtubevideo flex flex-col items-center max-w-sm sm:max-w-7xl mx-auto lg:hidden">
 
@@ -1655,6 +1664,96 @@
 
 
       </div>
+    </section>
+
+    <!-- Color - #36A3C0 -->
+
+    <!-- New Peek Into Riverdale Section  -->
+    <section class="w-11/12 mx-auto my-20">
+      <h1 class="text-4xl font-semibold"><span class="border-t-2 border-[#fc0000] pt-2">Peek Into</span> Riverdale</h1>
+      <div class="flex my-10 gap-10 max-h-[800px]">
+        <div class="flex flex-col justify-between w-[30%]">
+          <!-- TODO: Change the index accordingly -->
+            <button onclick="swipeToIndex(0)" class="flex items-center gap-5 pl-8 py-10 hover:rounded-md hover:shadow-md border-2 text-base font-medium text-start bg-slate-50 hover:bg-white rounded-md" type="button">
+              <img src="./assets/check.png" class="w-8 h-8 hover:text-[#36A3C0] text-slate-200 bg-slate-200 p-2 rounded-[10px]" />
+              2290 Sq.Ft Flat
+            </button>
+
+            <button onclick="swipeToIndex(3)" class="flex items-center gap-5 pl-8 py-10 hover:rounded-md hover:shadow-md border-2 text-base font-medium text-start bg-slate-50 hover:bg-white rounded-md" type="button">
+              <img src="./assets/check.png" class="w-8 h-8 hover:text-[#36A3C0] text-slate-200 bg-slate-200 p-2 rounded-[10px]" />
+              1417 Sq.Ft Flat
+            </button>
+
+              <button onclick="swipeToIndex(7)" class="flex items-center gap-5 pl-8 py-10 hover:rounded-md hover:shadow-md border-2 text-base font-medium text-start bg-slate-50 hover:bg-white rounded-md" type="button">
+                <img src="./assets/check.png" class="w-8 h-8 hover:text-[#36A3C0] text-slate-200 bg-slate-200 p-2 rounded-[10px]" />
+                Building Elevation
+              </button>
+        </div>
+          <!-- Slider main container -->
+          <div class="swiper mySwiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <img src="./assets/PeekIntoRiverdale/2290/grove.jpg"/>
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/PeekIntoRiverdale/2290/InternalApartment1.jpg"/>
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/PeekIntoRiverdale/2290/Living Room.jpg"/>
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/PeekIntoRiverdale/1417/Grand_master Bed.jpg"/>
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/PeekIntoRiverdale/1417/InternalApartment3.jpg"/>
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/PeekIntoRiverdale/1417/InternalApartment4.jpg"/>
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/PeekIntoRiverdale/1417/InternalApartment6.jpg"/>
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/PeekIntoRiverdale/Elevation/Grand elevation.jpg"/>
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/PeekIntoRiverdale/Elevation/grove.png"/>
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/PeekIntoRiverdale/Elevation/Riverdale Grand_3.jpg"/>
+              </div>
+            </div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+      </div>
+
+      <script type="module">
+
+        function initializeSwiper() {
+        import('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs')
+            .then(module => {
+                const Swiper = module.default;
+                const swiper = new Swiper('.swiper', {
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                });
+
+                window.swipeToIndex = function(index) {
+                    swiper.slideTo(index); 
+                };
+            })
+            .catch(error => {
+                console.error('Failed to load Swiper:', error);
+            });
+          }
+          document.addEventListener('DOMContentLoaded', initializeSwiper);
+      </script>
     </section>
 
 
@@ -2249,7 +2348,6 @@
       })
 
     })
-
   </script>
 
   <script src="./app.js"></script>
