@@ -710,32 +710,53 @@
     </div> -->
 
     <section style="position: relative;">
-      <div id="top_banner">
-        <div class="h-screen w-full relative">
-          <img id="desktop_banner" src="./assets/Riverdale Grove hd image.jpg" class="h-full w-full object-cover" />
-          <img id="mobile_banner" src="./assets/banner.png" class="sm:hidden h-full w-full object-cover" />
-          <div
-            class="youtubevideo absolute right-20 bg-white p-24 bg-opacity-75 text-white text-center fixed top-1/2 transform -translate-y-1/2 p-6 ">
-            <div class="p-10  ">
-            <p class="  text-black font-bold text-3xl	">TWICE THE LIFE</p>
-            <p class=" text-black font-bold	text-3xl">TWICE THE MEMORIES!</p>
-            <div class="mt-4">
-              <p class="bg-[#36A3C0] pl-12 pr-12 text-white  text-3xl px-4 py-2  inline-block">Starting at @1.65 CR</p>
-            </div>
-            <div class="mt-2">
-              <p class=" px-4 py-2 rounded-lg inline-block text-black  text-2xl">Discover Perfect fit,<BR> <b>2 or 4.5 BHK</b>
-                Apartments Also Available</p>
-            </div>
-            <div class="mt-2">
-              <p class=" px-4 py-2 rounded-lg inline-block text-black font-bold  text-2xl	">Heart of Kharadi!</p><br><span class="text-1xl text-black">Riverdale Riverside Road</span> 
-            </div>
-           </div>
+      <!-- Desktop Banner -->
+      <div id="top_banner" class="hidden sm:block lg:block md:block h-screen w-full relative">
+          <img id="desktop_banner" src="./assets/Riverdale Grove hd image.jpg" class="block h-full w-full object-cover" />
+          <div class="youtubevideo absolute right-20 bg-white p-24 bg-opacity-75 text-white text-center fixed top-1/2 transform -translate-y-1/2 p-6">
+              <div class="p-10">
+                  <p class="text-black font-bold text-3xl">TWICE THE LIFE</p>
+                  <p class="text-black font-bold text-3xl">TWICE THE MEMORIES!</p>
+                  <div class="mt-4">
+                      <p class="bg-[#36A3C0] pl-12 pr-12 text-white text-3xl px-4 py-2 inline-block">Starting at @1.65 CR</p>
+                  </div>
+                  <div class="mt-2">
+                      <p class="px-4 py-2 rounded-lg inline-block text-black text-2xl">Discover Perfect fit,<br> <b>2 or 4.5 BHK</b> Apartments Also Available</p>
+                  </div>
+                  <div class="mt-2">
+                      <p class="px-4 py-2 rounded-lg inline-block text-black font-bold text-2xl">Heart of Kharadi!</p>
+                      <br><span class="text-1xl text-black">Riverdale Riverside Road</span>
+                  </div>
+              </div>
           </div>
-
-        </div>
       </div>
-    </section>
+  
+      <!-- Mobile Banner -->
+      <div id="top_banner" class="block sm:hidden h-screen w-full relative">
+          <img id="mobile_banner" src="./assets/riverdale-phone-banner.jpg" class="block sm:hidden md:hidden h-full w-full" />
+          <!-- <div class="youtubevideo absolute bg-white p-24 bg-opacity-75 text-white text-center fixed top-1/2 transform -translate-y-1/2 p-6"> -->
+          <div class="youtubevideo absolute bg-white p-24 bg-opacity-75 text-white text-center fixed ml-10 transform translate-y-[-106%] p-6">
 
+              <div class="">
+                  <p class="text-black font-bold text-1xl">TWICE THE LIFE</p>
+                  <p class="text-black font-bold text-1xl">TWICE THE MEMORIES!</p>
+                  <div class="mt-4">
+                      <p class="bg-[#36A3C0] pl-4 pr-4 text-white text-1xl px-4 py-2 inline-block">Starting at @1.65 CR</p>
+                  </div>
+                  <div class="mt-2">
+                      <p class="px-4 py-2 rounded-lg inline-block text-black text-1xl">Discover Perfect fit,<br> <b>2 or 4.5 BHK</b> Apartments Also Available</p>
+                  </div>
+                  <div class="mt-2">
+                      <p class="px-4 py-2 rounded-lg inline-block text-black font-bold text-1xl">Heart of Kharadi!</p>
+                      <br><span class="text-1xl text-black">Riverdale Riverside Road</span>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  
+
+ 
 
     <!-- icons -->
     <section class="mt-10 w-11/12 mb-10 mx-auto strip-section" id="strip">
@@ -748,7 +769,7 @@
                 <img class="w-full h-full" src="./assets/icons/flats and duplex.png">
               </div>
               <div class="data">
-                <div class="title">3, 3.5 &amp; 4 BHK Flats &amp; Duplexes</div>
+                <div class="title">3, 3.5 BHK Duplexes & 4.5 BHK <BR>Ultra Luxurious Apartments</div>
                 <div class="links-description">Configuration</div>
               </div>
             </div>
@@ -758,7 +779,8 @@
               <div class="images flex items-center justify-center mb-5"><img width="64" height="64"
                   src="./assets/icons/Carpet area.png"></div>
               <div class="data">
-                <div class="title">1084 Sqft - 2290 Sqft</div>
+                <div class="title">1168 - 1358 & 2290*Sq.Ft.
+                 Carpet Areas</div>
                 <div class="links-description">Carpet Area</div>
               </div>
             </div>
@@ -768,7 +790,7 @@
               <div class="images flex items-center justify-center mb-5"><img width="64" height="64"
                   src="./assets/icons/Price.png"></div>
               <div class="data">
-                <div class="title">Starting ₹ 1.44 Cr*</div>
+                <div class="title">Starting ₹ 1.65 Cr*</div>
                 <div class="links-description">Price</div>
               </div>
             </div>
@@ -778,7 +800,7 @@
               <div class="images flex items-center justify-center mb-5"><img width="64" height="64"
                   src="./assets/icons/New launch.png"></div>
               <div class="data">
-                <div class="title">New Launch</div>
+                <div class="title">New Launch (RERA Registered) </div>
                 <div class="links-description">Project Status</div>
               </div>
             </div>
@@ -801,34 +823,34 @@
     <!-- About -->
 
     <div class="flex md:flex-row-reverse flex-col-reverse items-center justify-center mx-auto p-5">
-      <div >
+      <div>
         <div class="w-full max-w-xl text-left lg:text-left">
 
           <div class="ml-16">
             <div class="border-2 mb-4 border-blue-500 w-16 "></div>
             <h2 class="text-2xl font-bold ">
               RiverDale Grove
-    
-    
+
+
             </h2>
           </div>
 
           <div class="w-full text-left lg:text-left">
             <ul class="leading-8 mt-4 sm:block w-9/12 mx-auto list-disc list-inside" style=" list-style: none;">
-              <li>The ‘DUPLEX’ at Riverdale Grove is for those with a 
-                  to possess and own a bungalow</span></li>
+              <li>The ‘DUPLEX’ at Riverdale Grove is for those with a
+                to possess and own a bungalow</span></li>
               <li>This is a ‘PRIVATE VILLA’ suspended in the air</li>
-              <li>The ‘DUPLEX’ at Riverdale Grove has two Master 
-                  Bedrooms, a unique feature never seen before</span></li>
-              <li>The ‘BAY WINDOWS’ at both levels provide exquisite 
-                  panoramic view</span></li>
-              <li>A privately tucked away dining room separate from the 
-                  living room</span></li>
-              <li>The Double-Height atrium has an exquisite feeling of 
-                  premiumness to it</span></li>
-              <li>The Double-Height height provides maximum ventilation 
-                  to the Duplex with the volume of air within the room
-                   getting multiplied several times over</li>
+              <li>The ‘DUPLEX’ at Riverdale Grove has two Master
+                Bedrooms, a unique feature never seen before</span></li>
+              <li>The ‘BAY WINDOWS’ at both levels provide exquisite
+                panoramic view</span></li>
+              <li>A privately tucked away dining room separate from the
+                living room</span></li>
+              <li>The Double-Height atrium has an exquisite feeling of
+                premiumness to it</span></li>
+              <li>The Double-Height height provides maximum ventilation
+                to the Duplex with the volume of air within the room
+                getting multiplied several times over</li>
 
             </ul>
           </div>
@@ -849,61 +871,95 @@
 
 
 
-  <!--  grand -->
-  <div class="relative my-24 ">
-    <img alt="Forest Farm Villa" src="./assets/bg-grand.jpeg" class="  md:w-screen object-contain ">
-    
-       
-  
-    <div class="w-fit text-white font-medium max-w-2xl absolute right-[10%] -top-6 py-16 bg-[#36A3C0]  text-center lg:text-left text-lg">
-
-      <div  class="w-fit space-y-4" >
-       
-        <h2 class=" font-bold ml-24 text-3xl">
-
-          Riverdale Grand
+    <!--  grand -->
+    <div class="hidden relative my-24 lg:block md:block">
+      <img alt="Forest Farm Villa" src="./assets/bg-grand.jpeg" class="  md:w-screen object-contain ">
 
 
 
-        </h2>
-      </div>
+      <div
+        class="youtubevideo w-fit text-white font-medium max-w-2xl absolute right-[10%] -top-6 py-16 bg-[#36A3C0]  text-center lg:text-left text-lg">
 
-      <div class="w-full text-center lg:text-left ">
+        <div class="w-fit space-y-4">
 
-        <ul class="leading-8 mt-4 sm:block space-y-4 w-9/12 mx-auto list-disc list-inside">
-          <p class="ml-3 appearance-none">An ‘OASIS’ of ‘LUXURY’ with approximately 475 Sq. Ft. of Living &
-            Dining space</p>
-          <li>‘OPULENT DESIGN LIVING’ ASIS’ of ‘LUXURY’ with <span class="ml-6">approximately
-            475 Sq. Ft. of Living & Dining space</span> </li>
+          <h2 class=" font-bold ml-24 text-3xl">
+
+            Riverdale Grand
 
 
-          <li>‘COMPREHENSIVE VENTILATION’ with 6 Balconies plus a <span class="ml-6"> Dry
-            Balcony attached to the Kitchen</span> </li>
 
-          <li>Option to design and create a ‘PRIVATE SCREENING <span class="ml-6"> ROOM’ for
-            friends & family to celebrate an occasion </span>
+          </h2>
+        </div>
+
+        <div class=" w-full text-center lg:text-left ">
+
+          <ul class="leading-8 mt-4 sm:block space-y-4 w-9/12 mx-auto list-disc list-inside">
+            <p class="ml-3 appearance-none">An ‘OASIS’ of ‘LUXURY’ with approximately 475 Sq. Ft. of Living &
+              Dining space</p>
+            <li>‘OPULENT DESIGN LIVING’ ASIS’ of ‘LUXURY’ with <span class="ml-6">approximately
+                475 Sq. Ft. of Living & Dining space</span> </li>
+
+
+            <li>‘COMPREHENSIVE VENTILATION’ with 6 Balconies <span class="ml-6"> plus a Dry
+                Balcony attached to the Kitchen</span> </li>
+
+            <li>Option to design and create a ‘PRIVATE SCREENING <span class="ml-6"> ROOM’ for
+                friends & family to celebrate an occasion </span>
             </li>
 
-          <li>Option to create a ‘SMALL PRIVATE OFFICE’ with a <span class="ml-6">Balcony for
-            coffee and a tete a tete</span> </li>
+            <li>Option to create a ‘SMALL PRIVATE OFFICE’ with a <span class="ml-6">Balcony for
+                coffee and a tete a tete</span> </li>
 
-          <li>Absolutely surreal sunset views into an ‘OPEN HORIZON’
-          </li>
+            <li>Absolutely surreal sunset views into an ‘OPEN HORIZON’
+            </li>
 
-         
 
-        </ul>
+
+          </ul>
+        </div>
+
+        <div class=" ml-28 mt-4 md:mt-8 pb-6 mx-auto w-fit flex justify-start">
+          <button
+            class="youtubevideo uppercase inline-block border border-white  px-12 py-3 text-sm font-medium text-white transition hover:bg-blue-500 hover:text-white focus:outline-none">
+            Enquire Now
+          </button>
+        </div>
       </div>
 
-      <div class=" ml-28 mt-4 md:mt-8 pb-6 mx-auto w-fit flex justify-start">
-        <button
-          class="youtubevideo uppercase inline-block border border-white  px-12 py-3 text-sm font-medium text-white transition hover:bg-blue-500 hover:text-white focus:outline-none">
-          Enquire Now
-        </button>
+    </div>
+
+
+    <!-- phone -->
+    <div class="block relative my-24 xs:hidden md:hidden lg:hidden">
+      <img alt="Forest Farm Villa" src="./assets/Riverdale Grand HD.jpg">
+      <div
+        class="youtubevideo w-full md:w-fit text-white   right-0 md:right-[10%] -top-6 py-16 bg-[#36A3C0] text-center lg:text-left text-lg">
+        <div class="w-full md:w-fit space-y-4">
+          <h2 class="font-bold text-2xl">Riverdale Grand</h2>
+        </div>
+        <div class="w-full text-left lg:text-left">
+          <ul class="leading-8 p-4 mt-4 sm:block space-y-4 w-full md:w-9/12 mx-auto list-disc list-inside text-1xl" style="list-style: none;">
+            <p class=" appearance-none">An ‘OASIS’ of ‘LUXURY’ with approximately 475 Sq. Ft. of Living & Dining
+              space</p>
+            <li>‘OPULENT DESIGN LIVING’ ASIS’ of ‘LUXURY’ with approximately 475 Sq. Ft. of Living &
+                Dining space</span></li>
+            <li>‘COMPREHENSIVE VENTILATION’ with 6 Balconies  plus a Dry Balcony attached to the
+                Kitchen</span></li>
+            <li>Option to design and create a ‘PRIVATE SCREENING  ROOM’ for friends & family to
+                celebrate an occasion </span></li>
+            <li>Option to create a ‘SMALL PRIVATE OFFICE’ with a Balcony for coffee and a tete a
+                tete</span></li>
+            <li>Absolutely surreal sunset views into an ‘OPEN HORIZON’</li>
+          </ul>
+        </div>
+        <div class="ml-0 mt-4 md:mt-8 pb-6 mx-auto w-full md:w-fit flex justify-center">
+          <button
+            class="youtubevideo uppercase inline-block border border-white px-12 py-3 text-sm font-medium text-white transition hover:bg-blue-500 hover:text-white focus:outline-none">Enquire
+            Now</button>
+        </div>
       </div>
     </div>
-  
-  </div>
+
 
 
     <!-- video -->
@@ -977,6 +1033,7 @@
         </div>
       </div>
     </div>
+    
 
     <!-- price -->
     <div class="youtubevideo mt-24 space-y-16 my-42 ml-16 mr-16">
@@ -1003,7 +1060,7 @@
           <tbody>
             <tr>
               <td>
-                <p class=" Enquire Now w-fit mx-auto  px-11">4 BHK</p>
+                <p class=" Enquire Now w-fit mx-auto  px-11">4.5 BHK</p>
               </td>
               <td>
                 <p class=" Enquire Now w-fit mx-auto  px-10">2290 Sq.Ft.</p>
@@ -1248,15 +1305,15 @@
 
 
     <!-- Amenities -->
-    <section id="amenities" class=" bg-gray-50 pt-10">
+    <section id="amenities" class="xs:ml-4 xs:mr-4 ">
 
       <div id="modern_div md:h-[70vh]" style="width: 100vw;   overflow-y: hidden;">
         <!-- <h3 class="text-4xl font-semibold  text-center">Elevate your Lifestyle <span
             class="text-5xl  font-medium dynalight-regular  text-[#ED1C26]"><br class="block md:hidden lg:hidden">with
             unrivaled amenities</span></h3> -->
 
-        <div class="ml-16">
-          <div class="border-2 mb-4 border-blue-500 w-16 "></div>
+            <div class="ml-16">
+              <div class="border-2 mb-4 border-blue-500 w-16 "></div>
           <h2 class="text-2xl font-bold ">
             Elevate your Lifestyle with unrivaled amenities</span>
 
@@ -1267,49 +1324,49 @@
 
 
 
-        <div id="amenities_scroll"
+        <div id="amenities_scroll" class="ml-16 mr-16"
           style=" overflow-x: scroll; white-space: nowrap;  margin-top: 5vh; padding-right: 3vw">
           <div id="amenities_card"
             style="height: fit-content; width: 22vw; background-color: rgb(255, 255, 255); margin-left: 1vw; display: inline-block; vertical-align: bottom;">
             <img src="./assets/Amenities/Duville_2_GrandGrove-01.jpg" />
-            <h4 style="padding: 10px; font-size: 1vw;">THE POOLSIDE DECK</h4><br>
+            <!-- <h4 style="padding: 10px; font-size: 1vw;">THE POOLSIDE DECK</h4><br> -->
 
           </div>
           <div id="amenities_card"
             style="height: fit-content; width: 22vw; background-color: rgb(255, 255, 255); margin-left: 3vw; display: inline-block; vertical-align: bottom;">
             <img src="./assets/Amenities/Duville_2_GrandGrove-02.jpg" />
-            <h4 style="padding: 10px; font-size: 1vw;">THE OUTDOOR KIDS EXPERIENCE <br class="block xs:hidden"> AREA
+            <!-- <h4 style="padding: 10px; font-size: 1vw;">THE OUTDOOR KIDS EXPERIENCE <br class="block xs:hidden"> AREA -->
             </h4>
 
           </div>
           <div id="amenities_card"
             style="height: fit-content; width: 22vw; background-color: rgb(255, 255, 255); margin-left: 3vw; display: inline-block; vertical-align: bottom;">
             <img src="./assets/Amenities/Duville_2_GrandGrove-03.jpg" />
-            <h4 style="padding: 10px; font-size: 1vw;">THE ALL-PUPRPOSE FUTSAL COURT</h4><br class="xs:hidden">
+            <!-- <h4 style="padding: 10px; font-size: 1vw;">THE ALL-PUPRPOSE FUTSAL COURT</h4><br class="xs:hidden"> -->
 
           </div>
           <div id="amenities_card"
             style="height: fit-content; width: 22vw; background-color: rgb(255, 255, 255); margin-left: 3vw; display: inline-block; vertical-align: bottom;">
             <img src="./assets/Amenities/Duville_2_GrandGrove-04.jpg" />
-            <h4 style="padding: 10px; font-size: 1vw;">THE ACUPRESSURE WALK WAY</h4><br class="xs:hidden">
+            <!-- <h4 style="padding: 10px; font-size: 1vw;">THE ACUPRESSURE WALK WAY</h4><br class="xs:hidden"> -->
 
           </div>
           <div id="amenities_card"
             style="height: fit-content; width: 22vw; background-color: rgb(255, 255, 255); margin-left: 3vw; display: inline-block; vertical-align: bottom;">
             <img src="./assets/Amenities/Duville_2_GrandGrove-05.jpg" />
-            <h4 style="padding: 10px; font-size: 1vw;">THE DOG PARK</h4><br>
+            <!-- <h4 style="padding: 10px; font-size: 1vw;">THE DOG PARK</h4><br> -->
 
           </div>
           <div id="amenities_card"
             style="height: fit-content; width: 22vw; background-color: rgb(255, 255, 255); margin-left: 3vw; display: inline-block; vertical-align: bottom;">
             <img src="./assets/Amenities/Duville_2_GrandGrove-06.jpg" />
-            <h4 style="padding: 10px; font-size: 1vw;">THE MULTI-PURPOSE GAMES <br class="block xs:block">COURT</h4>
+            <!-- <h4 style="padding: 10px; font-size: 1vw;">THE MULTI-PURPOSE GAMES <br class="block xs:block">COURT</h4> -->
 
           </div>
           <div id="amenities_card"
             style="height: fit-content; width: 22vw; background-color: rgb(255, 255, 255); margin-left: 3vw; display: inline-block; vertical-align: bottom;">
             <img src="./assets/Amenities/Duville_2_GrandGrove-07.jpg" />
-            <h4 style="padding: 10px; font-size: 1vw;">THE HERB GARDEN</h4><br>
+            <!-- <h4 style="padding: 10px; font-size: 1vw;">THE HERB GARDEN</h4><br> -->
 
           </div>
 
@@ -1465,16 +1522,16 @@
 
 
     <section id="offering">
-      <div class="flex flex-col items-center max-w-sm sm:max-w-7xl mx-auto">
+      <div class="youtubevideo flex flex-col items-center max-w-sm sm:max-w-7xl mx-auto lg:hidden">
+
         <h3 style="font-weight: 500; margin-top: 1vh; display: inline-block; width: 100%;"
-          class="text-4xl font-semibold  text-center"><b>Peek Into</b><span
-            class="text-5xl  font-medium dynalight-regular  text-[#ED1C26]"> Riverdale </span></h3>
+          class="text-2xl text-center"><b>Peek Into Riverdale </span></h3>
         <div class="flex flex-row gap-4 sm:gap-8 my-7">
           <button onclick="toggleContent('content1')"
-            class="btn border border-crimson-200 text-crimson-200 rounded-[30px] sm:px-8 px-4 py-2 uppercase hover:shadow-lg text-xs sm:text-lg">
+            class="btn border border text-crimson-200 rounded-[30px] sm:px-8 px-4 py-2 uppercase hover:shadow-lg text-xs sm:text-lg">
             2290 sq. ft flat </button>
           <button onclick="toggleContent('content2')"
-            class="btn border-red-600 border border rounded-[30px] sm:px-8 px-4 py-2 uppercase hover:shadow-lg text-xs sm:text-lg">
+            class="btn border-blue-600 border border rounded-[30px] sm:px-8 px-4 py-2 uppercase hover:shadow-lg text-xs sm:text-lg">
             1417 sq. ft. flat</button>
           <button onclick="toggleContent('content3')"
             class="btn border border rounded-[30px] sm:px-8 px-4 py-2 uppercase hover:shadow-lg text-xs sm:text-lg">
@@ -1564,7 +1621,7 @@
               </div>
               <div>
                 <img alt="Tennis court image" loading="lazy" decoding="async" data-nimg="1"
-                  class="px-4 md:px-0 mx-auto md:w-full md:mx-0 h-auto " src="./assets/building2.jpeg">
+                  class="px-4 md:px-0 mx-auto md:w-full md:mx-0  h-auto " src="./assets/building2.jpeg">
               </div>
 
 
@@ -1587,7 +1644,7 @@
 
             buttons.forEach(button => {
               if (button.getAttribute('onclick') === `toggleContent('${contentId}')`) {
-                button.style.borderColor = 'red'; // Change border color to red for the selected button
+                button.style.borderColor = 'blue'; // Change border color to red for the selected button
               } else {
                 button.style.borderColor = ''; // Reset border color for other buttons
               }
@@ -1606,25 +1663,33 @@
       <div>
         <div>
           <div class="border-2 border-blue-500 w-14 ml-16"></div>
-          <h2 class="text-2xl font-bold ml-16">Peek Into Riverdale</h2>
+          <h2 class="text-2xl font-bold ml-16">Visualize Your Dream House</h2>
         </div>
         <div class="md:flex md:flex-row md:ml-10 md:mr-10 xs:flex xs:flex-col">
           <div class="max-w-60vh mx-auto relative">
             <div class="card border border-gray-300 shadow-lg m-2 overflow-hidden">
-              <img class="w-full blur" src="https://ik.imagekit.io/athxbsw68/Duville%20Estate/public/RiverdaleGrand/ApartmentFloor.jpg?updatedAt=1707284614148s" alt="">
-              <button class="youtubevideo absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  border-[#36A3C0] text-[#36A3C0] bg-white 500 py-2 px-4 rounded cursor-pointer uppercase">isometric view</button>
+              <img class="w-full blur"
+                src="https://ik.imagekit.io/athxbsw68/Duville%20Estate/public/RiverdaleGrand/ApartmentFloor.jpg?updatedAt=1707284614148s"
+                alt="">
+              <button
+                class="youtubevideo absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  border-[#36A3C0] text-[#36A3C0] bg-white 500 py-2 px-4 rounded cursor-pointer uppercase">isometric
+                view</button>
             </div>
           </div>
           <div class="max-w-60vh mx-auto relative">
             <div class="card border border-gray-300 shadow-lg m-2 overflow-hidden">
-              <img class="w-full blur" src="https://ik.imagekit.io/athxbsw68/Duville%20Estate/public/RiverdaleGrand/ApartmentFloor.jpg?updatedAt=1707284614148s" alt="">
-              <button class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border-[#36A3C0] text-[#36A3C0] bg-white py-2 px-4 rounded cursor-pointer uppercase">Floor Plan</button>
+              <img class="w-full blur"
+                src="https://ik.imagekit.io/athxbsw68/Duville%20Estate/public/RiverdaleGrand/ApartmentFloor.jpg?updatedAt=1707284614148s"
+                alt="">
+              <button
+                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border-[#36A3C0] text-[#36A3C0] bg-white py-2 px-4 rounded cursor-pointer uppercase">Floor
+                Plan</button>
             </div>
           </div>
         </div>
       </div>
     </section>
-    
+
 
 
     <!-- <div class="flex flex-col-reverse md:flex-row my-24 w-11/12 mx-auto justify-between  items-center ">
@@ -1672,11 +1737,11 @@
 
 
     <!-- <div id="location" class="grid grid-cols-2 w-11/12 gap-12 mx-auto md:flex md:flex-col"> -->
-      <div id="location" class="flex w-11/12 gap-12 mx-auto ">
-        <iframe
+    <div id="location" class="flex w-11/12 gap-12 mx-auto ">
+      <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.672683059927!2d73.93978650943568!3d18.543687782481584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c371dc77b805%3A0x317cf16d3ff747ae!2sRiverdale%20Grand%2C%20Kharadi%2C%20Pune!5e0!3m2!1sen!2sin!4v1704441340605!5m2!1sen!2sin"
         loading="lazy" class="w-full md:w-full col-span-1 mx-auto  min-h-full mt-10">
-        
+
       </iframe>
 
       <!-- <div class="p-6 pt-8 space-y-4">
@@ -1711,18 +1776,19 @@
           </div> -->
 
 
-    <div class="w-[60%]">
+      <div class="w-[60%]">
         <div class="mt-8 flow-root">
           <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
             <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
               <table class="min-w-full divide-y divide-gray-300">
-                <thead class="bg-gray-50 bg-[#98D5FF] bg-opacity-[30%]">
+                <thead class="bg-[#98D5FF] bg-opacity-[30%]">
                   <tr>
                     <th scope="col"
-                      class="py-3.5 pl-4 pr-3 border text-left text-sm font-semibold text-gray-900 sm:pl-6">Business centers
+                      class="py-3.5 pl-4 pr-3 border text-left text-sm font-semibold text-gray-900 sm:pl-6">Business
+                      centers
                     </th>
                     <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900 tex-white">
-                       </th>
+                    </th>
                   </tr>
                 </thead>
                 <tbody class="divide-y divide-gray-200 bg-white">
@@ -1730,15 +1796,13 @@
                   <tr>
                     <td
                       class=" bg-opacity-[30%] whitespace- py-2 pl-4 pr-3 border text-sm font-medium text-gray-900 text-left sm:pl-4">
-                      Distances to WTC 
+                      Distances to WTC
                     </td>
-                    <td
-                      class=" bg-opacity-[30%] whitespace-nowrap px-8 py-2 text-sm  text-gray-500 text-left">
+                    <td class=" bg-opacity-[30%] whitespace-nowrap px-8 py-2 text-sm  text-gray-500 text-left">
                       1.7 km</td>
                   </tr>
                   <tr>
-                    <td
-                      class="whitespace- py-2 pl-4 pr-3 border text-sm font-medium text-gray-900 text-left sm:pl-4">
+                    <td class="whitespace- py-2 pl-4 pr-3 border text-sm font-medium text-gray-900 text-left sm:pl-4">
                       EON IT Parks</td>
                     <td class="whitespace-nowrap px-8 py-2 text-sm  text-gray-500 text-left">2.0 km</td>
                   </tr>
@@ -1746,13 +1810,11 @@
                     <td
                       class=" bg-opacity-[30%] whitespace- py-2 pl-4 pr-3 border text-sm font-medium text-gray-900 text-left sm:pl-4">
                       Gera Commerzone</td>
-                    <td
-                      class=" bg-opacity-[30%] whitespace-nowrap px-8 py-2 text-sm  text-gray-500 text-left">
+                    <td class=" bg-opacity-[30%] whitespace-nowrap px-8 py-2 text-sm  text-gray-500 text-left">
                       2.8 km</td>
                   </tr>
                   <tr>
-                    <td
-                      class="whitespace- py-2 pl-4 pr-3 border text-sm font-medium text-gray-900 text-left sm:pl-4">
+                    <td class="whitespace- py-2 pl-4 pr-3 border text-sm font-medium text-gray-900 text-left sm:pl-4">
                       Global Business Hub</td>
                     <td class="whitespace-nowrap px-8 py-2 text-sm  text-gray-500 text-left">1.7 km</td>
                   </tr>
@@ -1760,8 +1822,7 @@
                     <td
                       class=" bg-opacity-[30%] whitespace- pt-2 pl-4 pr-3 border text-sm font-medium text-gray-900 text-left sm:pl-4">
                       Prestige Corporate Park</td>
-                    <td
-                      class=" bg-opacity-[30%] whitespace-nowrap px-8 py-2 text-sm  text-gray-500 text-left">
+                    <td class=" bg-opacity-[30%] whitespace-nowrap px-8 py-2 text-sm  text-gray-500 text-left">
                       2.7 km</td>
                   </tr>
 
@@ -1778,10 +1839,11 @@
                 <thead class="bg-gray-50 bg-[#98D5FF] bg-opacity-[30%]">
                   <tr>
                     <th scope="col"
-                      class="py-3.5 pl-4 pr-3 border text-left text-sm font-semibold text-gray-900 sm:pl-6">Education Institutes
+                      class="py-3.5 pl-4 pr-3 border text-left text-sm font-semibold text-gray-900 sm:pl-6">Education
+                      Institutes
                     </th>
                     <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900 tex-white">
-                       </th>
+                    </th>
                   </tr>
                 </thead>
                 <tbody class="divide-y divide-gray-200 bg-white">
@@ -1789,31 +1851,27 @@
                   <tr>
                     <td
                       class=" bg-opacity-[30%] whitespace- py-2 pl-4 pr-3 border text-sm font-medium text-gray-900 text-left sm:pl-4">
-                      Victorious Kids Educares 
+                      Victorious Kids Educares
                     </td>
-                    <td
-                      class=" bg-opacity-[30%] whitespace-nowrap px-8 py-2 text-sm  text-gray-500 text-left">
+                    <td class=" bg-opacity-[30%] whitespace-nowrap px-8 py-2 text-sm  text-gray-500 text-left">
                       1.7 km</td>
                   </tr>
                   <tr>
-                    <td
-                      class="whitespace- py-2 pl-4 pr-3 border text-sm font-medium text-gray-900 text-left sm:pl-4">
+                    <td class="whitespace- py-2 pl-4 pr-3 border text-sm font-medium text-gray-900 text-left sm:pl-4">
                       Orchids School
-</td>
+                    </td>
                     <td class="whitespace-nowrap px-8 py-2 text-sm  text-gray-500 text-left">2.0 km</td>
                   </tr>
                   <tr>
                     <td
                       class=" bg-opacity-[30%] whitespace- py-2 pl-4 pr-3 border text-sm font-medium text-gray-900 text-left sm:pl-4">
                       Orchids School
-</td>
-                    <td
-                      class=" bg-opacity-[30%] whitespace-nowrap px-8 py-2 text-sm  text-gray-500 text-left">
+                    </td>
+                    <td class=" bg-opacity-[30%] whitespace-nowrap px-8 py-2 text-sm  text-gray-500 text-left">
                       2.8 km</td>
                   </tr>
                   <tr>
-                    <td
-                      class="whitespace- py-2 pl-4 pr-3 border text-sm font-medium text-gray-900 text-left sm:pl-4">
+                    <td class="whitespace- py-2 pl-4 pr-3 border text-sm font-medium text-gray-900 text-left sm:pl-4">
                       Euro</td>
                     <td class="whitespace-nowrap px-8 py-2 text-sm  text-gray-500 text-left">1.7 km</td>
                   </tr>
@@ -1822,8 +1880,7 @@
                       class=" bg-opacity-[30%] whitespace- pt-2 pl-4 pr-3 border text-sm font-medium text-gray-900 text-left sm:pl-4">
                       Ryan International Academy
                     </td>
-                    <td
-                      class=" bg-opacity-[30%] whitespace-nowrap px-8 py-2 text-sm  text-gray-500 text-left">
+                    <td class=" bg-opacity-[30%] whitespace-nowrap px-8 py-2 text-sm  text-gray-500 text-left">
                       2.7 km</td>
                   </tr>
 
@@ -1840,10 +1897,11 @@
                 <thead class="bg-gray-50 bg-[#98D5FF] bg-opacity-[30%]">
                   <tr>
                     <th scope="col"
-                      class="py-3.5 pl-4 pr-3 border text-left text-sm font-semibold text-gray-900 sm:pl-6">Travel Destinations
+                      class="py-3.5 pl-4 pr-3 border text-left text-sm font-semibold text-gray-900 sm:pl-6">Travel
+                      Destinations
                     </th>
                     <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900 tex-white">
-                       </th>
+                    </th>
                   </tr>
                 </thead>
                 <tbody class="divide-y divide-gray-200 bg-white">
@@ -1851,15 +1909,13 @@
                   <tr>
                     <td
                       class=" bg-opacity-[30%] whitespace- py-2 pl-4 pr-3 border text-sm font-medium text-gray-900 text-left sm:pl-4">
-                      Airport 
+                      Airport
                     </td>
-                    <td
-                      class=" bg-opacity-[30%] whitespace-nowrap px-8 py-2 text-sm  text-gray-500 text-left">
+                    <td class=" bg-opacity-[30%] whitespace-nowrap px-8 py-2 text-sm  text-gray-500 text-left">
                       1.7 km</td>
                   </tr>
                   <tr>
-                    <td
-                      class="whitespace- py-2 pl-4 pr-3 border text-sm font-medium text-gray-900 text-left sm:pl-4">
+                    <td class="whitespace- py-2 pl-4 pr-3 border text-sm font-medium text-gray-900 text-left sm:pl-4">
                       Railway Station</td>
                     <td class="whitespace-nowrap px-8 py-2 text-sm  text-gray-500 text-left">2.0 km</td>
                   </tr>
@@ -1868,12 +1924,12 @@
 
                 </tbody>
               </table>
-                </div>
-              </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
+    </div>
 
     </div>
 
@@ -1883,12 +1939,16 @@
           background-color: #737373;
           /* Your hexadecimal color code */
         }
-          .enquirebtn
-          {
-            border-color: #ffffff;
-            background-color: #36A3C0;
-          }
-     
+        .bg-custom-clr
+        {
+          background-color: #36A3C0;
+
+        }
+
+        .enquirebtn {
+          border-color: #ffffff;
+          background-color: #36A3C0;
+        }
       </style>
       <div
         class="flex flex-col md:flex-row-reverse bg-[#4C4C4C] pb-10 h-full text-white w-full gap-y- 20 place-content-center mx-auto mt-20">
@@ -1934,7 +1994,7 @@
           </button>
 
         </div>
-       
+
 
         <div class="p-8">
           <div class="space-y-4">
@@ -1972,7 +2032,7 @@
               <div class="flex flex-row bg-custom-color gap-6 mt-2 items-center">
                 <div class="bg-custom-color   w-fit  flex flex-col justify-center items-center">
 
-                  <div  class="w-20"><img alt="scanner " loading="lazy" class="cursor-pointer m-2 h-[100px]"
+                  <div class="w-20"><img alt="scanner " loading="lazy" class="cursor-pointer m-2 h-[100px]"
                       srcset="https://ik.imagekit.io/athxbsw68/Duville%20Estate/public/Scanner/grand.webp?tr=w-640 1x, https://ik.imagekit.io/athxbsw68/Duville%20Estate/public/Scanner/grand.webp?tr=w-828 2x"
                       src="https://ik.imagekit.io/athxbsw68/Duville%20Estate/public/Scanner/grand.webp?tr=w-828"></div>
 
@@ -1991,7 +2051,7 @@
               <div class="flex flex-row bg-custom-color gap-6 sm:ml-2 mt-2 ml-0 items-center">
                 <div class="   w-fit  flex flex-col justify-center items-center">
 
-                  <div  class="w-20"><img alt="scanner " loading="lazy" class="cursor-pointer m-2  h-[100px]"
+                  <div class="w-20"><img alt="scanner " loading="lazy" class="cursor-pointer m-2  h-[100px]"
                       srcset="https://ik.imagekit.io/athxbsw68/Duville%20Estate/public/Scanner/grand.webp?tr=w-640 1x, https://ik.imagekit.io/athxbsw68/Duville%20Estate/public/Scanner/grand.webp?tr=w-828 2x"
                       src="https://ik.imagekit.io/athxbsw68/Duville%20Estate/public/Scanner/grand.webp?tr=w-828"></div>
 
@@ -2012,10 +2072,10 @@
           </div>
 
         </div>
-       
+
       </div>
-    
- 
+
+
     </section>
 
 
