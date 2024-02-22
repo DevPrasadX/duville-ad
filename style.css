@@ -2,7 +2,7 @@
   display: block;
 }
 
-.swiper {
+.mySwiper {
   width: 70%;
   height: 50%;
 }
@@ -20,5 +20,11 @@
   display: block;
   width: 100%;
   max-height: 400px;
+  min-height: 400px;
   object-fit: cover;
+}
+
+.scrollSwiper {
+  width: 90%;
+  height: 100%;
 }
