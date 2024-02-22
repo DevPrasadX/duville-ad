@@ -609,10 +609,10 @@
 
     <!-- Navbar -->
     <header style="z-index: 999;" class=" bg-white bg-opacity-50 fixed top-0 w-full">
-      <div class="mx-auto  px-4 sm:px-6 ">
-        <div class="flex h-16 items-center justify-between">
-          <div class="flex h-16 items-center justify-between lg:justify-start">
-            <a id="header_logo" class="block text-teal-600 flex flex-row space-x-3 lg:space-x-0 lg:justify-start w-full" href="/">
+      <div class="mx-auto sm:px-6 ">
+        <div class="flex h-16 items-center justify-center sm:justify-between">
+          <div class="flex ">
+            <a id="header_logo" class="block text-teal-600 flex flex-row space-x-3" href="/">
               <span class="sr-only">Home</span>
               <div class="flex items-center justify-center lg:justify-start">
                 <img class="h-12 md:h-16" src="./assets/Duville_black logo-02.svg" />
@@ -1384,8 +1384,22 @@
               .then(module => {
                   const Swiper = module.default;
                   const swiper = new Swiper('.scrollSwiper', {
-                    slidesPerView: 3,
+                    slidesPerView: 1,
                     loop: true,
+                    breakpoints: {
+                      640: {
+                        slidesPerView: 1,
+                        spaceBetween: 20,
+                      },
+                      768: {
+                        slidesPerView: 2,
+                        spaceBetween: 40,
+                      },
+                      1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 50,
+                      },
+                    },
                     spaceBetween: 30,
                       navigation: {
                           nextEl: '.swiper-button-next',
@@ -1857,10 +1871,10 @@
 
 
     <!-- <div id="location" class="grid grid-cols-2 w-11/12 gap-12 mx-auto md:flex md:flex-col"> -->
-    <div id="location" class="flex w-11/12 gap-12 mx-auto ">
+    <div id="location" class="flex flex-col sm:flex-row w-11/12 gap-12 mx-auto ">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.672683059927!2d73.93978650943568!3d18.543687782481584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c371dc77b805%3A0x317cf16d3ff747ae!2sRiverdale%20Grand%2C%20Kharadi%2C%20Pune!5e0!3m2!1sen!2sin!4v1704441340605!5m2!1sen!2sin"
-        loading="lazy" class="w-full md:w-full col-span-1 mx-auto  min-h-full mt-10">
+        loading="lazy" class="w-full md:w-full col-span-1 mx-auto  min-h-full mt-1">
 
       </iframe>
 
@@ -1896,7 +1910,7 @@
           </div> -->
 
 
-      <div class="w-[60%]">
+      <div class="w-[100%] sm:w-[60%]">
         <div class="mt-8 flow-root">
           <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
             <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
