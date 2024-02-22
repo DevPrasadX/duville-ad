@@ -977,29 +977,15 @@
 
 
     <!-- video -->
-    <div class=" w-11/12 space-y-4 mx-auto flex flex-col justify-center">
+    <div class=" w-11/12 space-y-4 mx-auto hidden sm:flex flex-col justify-center">
       <div>
         <div class="border-2 sm:mb-4 border-blue-500 w-16 "></div>
         <h2 class="text-lg sm:text-2xl font-bold ">
           Tour To Your Dream Home
-
-
         </h2>
       </div>
-      <!-- 
-      <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-3 mt-12 gap-12 md:gap-12 ">
-        <iframe src="https://www.youtube.com/embed/u623FKKndQA?si=HJ6fPFcLtCk2-DTi" title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          class=" lg:w-[300px] lg:h-[200px]  mx-auto "></iframe>
-        <iframe src="https://www.youtube.com/embed/9B849TUZMd0?si=eP0EV-dwDKrFaO7T" title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          class="lg:w-[300px] lg:h-[200px]  mx-auto "></iframe>
-        <iframe src="https://www.youtube.com/embed/c8xaWvJajYA?si=p-cuXi_sc6PCa1_R" title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          class=" lg:w-[300px] lg:h-[200px]  mx-auto "></iframe>
-      </div> -->
 
-      <div class="youtubevideo  text-center align-bottom grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 mt-12">
+      <div class="youtubevideo  text-center  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-between mt-12">
         <div class="max-w-80 bg-whiteounded-lg shadow mb-10 m-2 dark:border-gray-700">
           <a href="#">
             <iframe src="https://www.youtube.com/embed/u623FKKndQA?si=HJ6fPFcLtCk2-DTi" title="YouTube video player"
@@ -1047,6 +1033,66 @@
         </div>
       </div>
     </div>
+
+    <section class="block sm:hidden px-3">
+      <div class="mb-10 -mt-10">
+        <div class="border-2 border-blue-500 w-16 "></div>
+        <h2 class="text-lg sm:text-2xl font-bold ">
+          Tour To Your Dream Home
+        </h2>
+      </div>
+      <!-- Slider main container -->
+        <div class="swiper videoScroll">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <iframe src="https://www.youtube.com/embed/9B849TUZMd0?si=eP0EV-dwDKrFaO7T" title="YouTube video player"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      class="w-full h-80">
+              </iframe> 
+            </div>
+            <div class="swiper-slide">
+              <iframe src="https://www.youtube.com/embed/u623FKKndQA?si=HJ6fPFcLtCk2-DTi" title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    class="w-full h-80">
+              </iframe>
+            </div>
+            <div class="swiper-slide">
+              <iframe src="https://www.youtube.com/embed/c8xaWvJajYA?si=p-cuXi_sc6PCa1_R" title="YouTube video player"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      class="w-full h-80">
+              </iframe>
+            </div>
+          </div>
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+    </div>
+
+    <script type="module">
+      function initializeSwiper1() {
+      import('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs')
+          .then(module => {
+              const Swiper = module.default;
+              const swiper = new Swiper('.videoScroll', {
+                slidesPerView: 1,
+                loop: true,
+                spaceBetween: 30,
+                  navigation: {
+                      nextEl: '.swiper-button-next',
+                      prevEl: '.swiper-button-prev',
+                  },
+              });
+          })
+          .catch(error => {
+              console.error('Failed to load Swiper:', error);
+          });
+        }
+        document.addEventListener('DOMContentLoaded', initializeSwiper1);
+    </script>
+    </section>
     
 
     <!-- price -->
@@ -1063,7 +1109,7 @@
       </div>
       <section class="hidden md:block price-table overflow-x-auto">
         <table class="min-w-full">
-          <thead>
+          <thead class="text-lg">
             <tr>
               <th>Configuration</th>
               <th>Carpet Area</th>
@@ -1071,7 +1117,7 @@
               <th>Enquire Now</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody class="text-base">
             <tr>
               <td>
                 <p class=" Enquire Now w-fit mx-auto  px-11">4.5 BHK</p>
@@ -1796,7 +1842,7 @@
       <div>
         <div>
           <div class="border-2 border-blue-500 w-14 ml-3 sm:ml-16"></div>
-          <h2 class="text-lg ml:text-2xl font-bold ml-3 sm:ml-16">Visualize Your Dream House</h2>
+          <h2 class="text-lg sm:text-2xl font-bold ml-3 sm:ml-16">Visualize Your Dream House</h2>
         </div>
         <div class="md:flex md:flex-row md:ml-10 md:mr-10 xs:flex xs:flex-col">
           <div class="max-w-60vh mx-auto relative">
