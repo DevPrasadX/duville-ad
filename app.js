@@ -169,16 +169,17 @@ const popupFormBtn = document.getElementById("popup-form-btn")
 
 popupFormBtn.addEventListener("click", async (e) => {
     e.preventDefault()
-    // const popupForm = document.getElementById("popup-form")
-    // const name = popupForm.querySelector('input[name=name]').value
-    // const email = popupForm.querySelector('input[name=email]').value
-    // const phone = popupForm.querySelector('input[name=phone]').value
-    // const configuration = popupForm.querySelector('select[name=configuration]').value
-    // const createLeadStatus = await createLead(name, email, phone,configuration)
-    // const sendDataToGoogleSheetStatus = await sendDataToGoogleSheet(name,email, phone,configuration)
+    const popupForm = document.getElementById("popup-form")
+    const name = popupForm.querySelector('input[name=name]').value
+    const email = popupForm.querySelector('input[name=email]').value
+    const phone = popupForm.querySelector('input[name=phone]').value
+    const configuration = popupForm.querySelector('select[name=configuration]').value
+    const createLeadStatus = await createLead(name, email, phone,configuration)
+    const status = await sendDataToGoogleSheet(name,email, phone,configuration)
 
-   
-    window.location.href('./thankyou.html');
+    if (status) {
+        window.location.href = "/thankyou.html";
+    }
 
 })
 

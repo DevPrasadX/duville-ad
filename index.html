@@ -2298,6 +2298,7 @@
 
 <!-- https://script.google.com/macros/s/AKfycbzebJ_v0KHY-aSvV03_Ou6nJU62Go0-31u0AaTWf97WlJFt0ts5kP9HeJKfV0Rpxxdx/exec -->
   </main>
+
   <section id="popup"  class="hidden">
     <div class="h-screen w-full fixed top-0 left-0 flex justify-center items-center bg-black/60 z-50">
       <div class="mx-auto max-w-lg bg-white p-8 rounded-lg relative">
@@ -2356,40 +2357,40 @@
         </button>
       </div>
     </div>
+      document.addEventListener("DOMContentLoaded", function () {
+        const popup = document.getElementById("popup");
+        const form = document.getElementById("popup-form");
+    
+        // Check if popup should be displayed
+        if (!localStorage.getItem("popupClosed")) {
+            popup.classList.remove("hidden");
+        }
+    
+        // Event listener for form submission
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            
+            // Store form data in local storage
+            localStorage.setItem("popupClosed", true);
+    
+            // Perform form submission
+            form.submit();
+            
+            // Hide the popup
+            popup.classList.add("hidden");
+            alert("form submitted");
+        });
+    
+        // Event listener for closing the popup
+        document.getElementById("popup-close").addEventListener("click", function () {
+            popup.classList.add("hidden");
+            localStorage.setItem("popupClosed", true);
+        });
+    });
+    
+    </script> -->
   </section>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const popup = document.getElementById("popup");
-    const form = document.getElementById("popup-form");
 
-    // Check if popup should be displayed
-    if (!localStorage.getItem("popupClosed")) {
-        popup.classList.remove("hidden");
-    }
-
-    // Event listener for form submission
-    form.addEventListener("submit", function (e) {
-        e.preventDefault();
-        
-        // Store form data in local storage
-        localStorage.setItem("popupClosed", true);
-
-        // Perform form submission
-        form.submit();
-        
-        // Hide the popup
-        popup.classList.add("hidden");
-        alert("form submitted");
-    });
-
-    // Event listener for closing the popup
-    document.getElementById("popup-close").addEventListener("click", function () {
-        popup.classList.add("hidden");
-        localStorage.setItem("popupClosed", true);
-    });
-});
-
-</script>
   
 
   <section id="popup" class="hidden">
