@@ -119,7 +119,7 @@ const createLead = async (name, email, mobile) => {
 
 }
 
-const sendDataToGoogleSheet = async (name, email, phone) => {
+const sendDataToGoogleSheet = async (name, email, phone,configuration) => {
     if(!validateMobileNumber(phone)){
         alert("Please enter valid 10 digit number")
         return false
@@ -133,12 +133,13 @@ const sendDataToGoogleSheet = async (name, email, phone) => {
         name: name,
         email: email,
         phone: phone,
+        configuration: configuration,
     }
 
 
     if(requestData){
         try {
-            const response = await fetch('https://sheetdb.io/api/v1/5wf5m45cm7ad6', {
+            const response = await fetch('https://sheetdb.io/api/v1/2u05e1oydua18', {
                 method: 'POST',
                 headers: {
                     'Accept': 'application/json',
@@ -175,10 +176,11 @@ popupFormBtn.addEventListener("click", async (e) => {
     const phone = popupForm.querySelector('input[name=phone]').value
     const configuration = popupForm.querySelector('select[name=configuration]').value
     const createLeadStatus = await createLead(name, email, phone,configuration)
-    const status = await sendDataToGoogleSheet(name,email, phone,configuration)
+    const sendDataToGoogleSheetStatus = await sendDataToGoogleSheet(name,email, phone,configuration)
 
-    if (status) {
-        window.location.href = "/thankyou.html";
+   
+    if(createLeadStatus && sendDataToGoogleSheetStatus){
+       window.location.replace('./thankyou.html')
     }
 
 })

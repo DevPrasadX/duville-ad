@@ -850,18 +850,18 @@
             <ul class="leading-8 mt-4 sm:block sm:w-9/12 mx-auto list-disc list-inside text-base" style="   list-style-position: outside; 
             ">
            
-              <li >The ‘DUPLEX’ at Riverdale Grove is for those with a
+              <li class="mb-2">The ‘DUPLEX’ at Riverdale Grove is for those with a
                 to possess and own a bungalow</span></li>
-              <li >This is a ‘PRIVATE VILLA’ suspended in the air</li>
-              <li >The ‘DUPLEX’ at Riverdale Grove has two Master
+              <li class="mb-2">This is a ‘PRIVATE VILLA’ suspended in the air</li>
+              <li class="mb-2">The ‘DUPLEX’ at Riverdale Grove has two Master
                 Bedrooms, a unique feature never seen before</span></li>
-              <li >The ‘BAY WINDOWS’ at both levels provide exquisite
+              <li class="mb-2">The ‘BAY WINDOWS’ at both levels provide exquisite
                 panoramic view</span></li>
-              <li >A privately tucked away dining room separate from the
+              <li class="mb-2">A privately tucked away dining room separate from the
                 living room</span></li>
-              <li >The Double-Height atrium has an exquisite feeling of
+              <li class="mb-2">The Double-Height atrium has an exquisite feeling of
                 premiumness to it</span></li>
-              <li >The Double-Height height provides maximum ventilation
+              <li class="mb-2">The Double-Height height provides maximum ventilation
                 to the Duplex with the volume of air within the room
                 getting multiplied several times over</p>
 
@@ -934,7 +934,7 @@
 
         <div class=" ml-28 mt-4 md:mt-10 pb-32 mx-auto w-fit flex justify-start">
           <button
-            class="youtubevideo uppercase inline-block border border-white  px-12 py-3 text-sm font-medium text-white transition hover:bg-blue-500 hover:text-white focus:outline-none">
+            class="popup-btn youtubevideo uppercase inline-block border border-white  px-12 py-3 text-sm font-medium text-white transition hover:bg-blue-500 hover:text-white focus:outline-none">
             Enquire Now
           </button>
         </div>
@@ -1735,20 +1735,32 @@
       <div class="flex my-10 gap-10 max-h-[800px]">
         <div class="flex flex-col justify-between w-[30%]">
           <!-- TODO: Change the index accordingly -->
-            <button onclick="swipeToIndex(0)" class="flex items-center gap-5 pl-8 py-10 hover:rounded-md hover:shadow-md border-2 text-base font-medium text-start bg-slate-50 hover:bg-white rounded-md" type="button">
-              <img src="./assets/check.png" class="w-8 h-8 hover:text-[#36A3C0] text-slate-200 bg-slate-200 p-2 rounded-[10px]" />
-              2290 Sq.Ft Flat
-            </button>
+          <button onclick="swipeToIndex(0)" data-index="0"
+          id="imagebtn"
+          class="imagebtn flex items-center gap-5 pl-8 py-10 hover:rounded-md hover:shadow-md border-2 text-base font-medium text-start bg-slate-50 hover:bg-[#36A3C0] rounded-md"
+          type="button">
+          <img src="./assets/check.png"
+            class="w-8 h-8 hover:text-[#36A3C0] text-slate-200 bg-slate-200 p-2 rounded-[10px]" />
+          2290 Sq.Ft Flat
+        </button>
 
-            <button onclick="swipeToIndex(3)" class="flex items-center gap-5 pl-8 py-10 hover:rounded-md hover:shadow-md border-2 text-base font-medium text-start bg-slate-50 hover:bg-white rounded-md" type="button">
-              <img src="./assets/check.png" class="w-8 h-8 hover:text-[#36A3C0] text-slate-200 bg-slate-200 p-2 rounded-[10px]" />
-              1417 Sq.Ft Flat
-            </button>
+        <button onclick="swipeToIndex(3)" data-index="3"
+        id="imagebtn"
+          class="imagebtn flex items-center gap-5 pl-8 py-10 hover:rounded-md hover:shadow-md border-2 text-base font-medium text-start bg-slate-50 hover:bg-[#36A3C0] rounded-md"
+          type="button">
+          <img src="./assets/check.png"
+            class="w-8 h-8 hover:text-[#36A3C0] text-slate-200 bg-slate-200 p-2 rounded-[10px]" />
+          1417 Sq.Ft Flat
+        </button>
 
-              <button onclick="swipeToIndex(7)" class="flex items-center gap-5 pl-8 py-10 hover:rounded-md hover:shadow-md border-2 text-base font-medium text-start bg-slate-50 hover:bg-white rounded-md" type="button">
-                <img src="./assets/check.png" class="w-8 h-8 hover:text-[#36A3C0] text-slate-200 bg-slate-200 p-2 rounded-[10px]" />
-                Building Elevation
-              </button>
+        <button onclick="swipeToIndex(7)" data-index="7"
+        id="imagebtn"
+          class="imagebtn flex items-center gap-5 pl-8 py-10 hover:rounded-md hover:shadow-md border-2 text-base font-medium text-start bg-slate-50 hover:bg-[#36A3C0] rounded-md"
+          type="button">
+          <img src="./assets/check.png"
+            class="w-8 h-8 hover:text-[#36A3C0] text-slate-200 bg-slate-200 p-2 rounded-[10px]" />
+          Building Elevation
+        </button>
         </div>
           <!-- Slider main container -->
           <div class="swiper mySwiper">
@@ -1790,53 +1802,72 @@
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
           </div>
-      </div>
-
+          
       <script type="module">
 
         function initializeSwiper() {
-        import('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs')
+          import('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs')
             .then(module => {
-                const Swiper = module.default;
-                const swiper = new Swiper('.mySwiper', {
-                  effect: "coverflow",
-                  grabCursor: true,
-                  centeredSlides: true,
-                  slidesPerView: 2,
-                  coverflowEffect: {
-                    rotate: 0,
-                    stretch: 0,
-                    depth: 200,
-                    modifier: 3,
-                    slideShadows: true,
-                  },
-                    navigation: {
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev',
-                    },
+              const Swiper = module.default;
+              const swiper = new Swiper('.mySwiper', {
+                effect: "coverflow",
+                grabCursor: true,
+                centeredSlides: true,
+                slidesPerView: 2,
+                coverflowEffect: {
+                  rotate: 0,
+                  stretch: 0,
+                  depth: 200,
+                  modifier: 3,
+                  slideShadows: true,
+                },
+                navigation: {
+                  nextEl: '.swiper-button-next',
+                  prevEl: '.swiper-button-prev',
+                },
+              });
+
+              window.swipeToIndex = function (index) {
+                swiper.slideTo(index);
+
+
+                var buttons = document.querySelectorAll('.imagebtn');
+                buttons.forEach(function (button) {
+                  button.classList.remove('selected');
                 });
 
-                window.swipeToIndex = function(index) {
-                    swiper.slideTo(index); 
+                // Add the 'selected' class to the clicked button
+                var button = document.querySelector('.imagebtn[data-index="' + index + '"]');
+                if (button) {
+                  button.classList.add('selected');
+                }
+
+                // Reset button colors
+                buttons.forEach(function (button) {
+                  var buttonIndex = parseInt(button.getAttribute('data-index'));
+                  if (buttonIndex === index) {
+                    button.style.backgroundColor = '#36A3C0'; // Set background color for the selected button
+                    button.style.color = 'white'; // Set text color for the selected button
+                  } else {
+                    button.style.backgroundColor = 'initial'; // Reset background color for other buttons
+                    button.style.color = 'initial'; // Reset text color for other buttons
+                  }
+
+                });
+
                 };
-                const nextButton = document.querySelector('.swiper-button-next');
-                    const prevButton = document.querySelector('.swiper-button-prev');
 
-                    nextButton.addEventListener('click', function() {
-                      nextButton.style.borderColor = 'blue';
-
-                    });
-
-                    prevButton.addEventListener('click', function() {
-                        prevButton.style.borderColor = 'red';
-                    });
-            })
+              })
             .catch(error => {
-                console.error('Failed to load Swiper:', error);
+              console.error('Failed to load Swiper:', error);
             });
-          }
-          document.addEventListener('DOMContentLoaded', initializeSwiper);
+        }
+        document.addEventListener('DOMContentLoaded', initializeSwiper);
       </script>
+      </div>
+
+    </section>
+
     </section>
 
 
@@ -1854,7 +1885,7 @@
                 src="https://ik.imagekit.io/athxbsw68/Duville%20Estate/public/RiverdaleGrand/ApartmentFloor.jpg?updatedAt=1707284614148s"
                 alt="">
               <button
-                class="youtubevideo absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  border-[#36A3C0] text-[#36A3C0] bg-white 500 py-2 px-4 rounded cursor-pointer uppercase">isometric
+                class="popup-btn youtubevideo absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  border-[#36A3C0] text-[#36A3C0] bg-white 500 py-2 px-4 rounded cursor-pointer uppercase">isometric
                 view</button>
             </div>
           </div>
@@ -1864,7 +1895,7 @@
                 src="https://ik.imagekit.io/athxbsw68/Duville%20Estate/public/RiverdaleGrand/ApartmentFloor.jpg?updatedAt=1707284614148s"
                 alt="">
               <button
-                class="youtubevideo absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border-[#36A3C0] text-[#36A3C0] bg-white py-2 px-4 rounded cursor-pointer uppercase">Floor
+                class="popup-btn youtubevideo absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border-[#36A3C0] text-[#36A3C0] bg-white py-2 px-4 rounded cursor-pointer uppercase">Floor
                 Plan</button>
             </div>
           </div>
@@ -2343,7 +2374,7 @@
 
           <div class="mt-4">
             <button id="popup-form-btn" type="submit"
-              class="submit inline-block w-full rounded-md bg-[#36A3C0] hover:bg-black transition 0.5 ease in out px-5 py-3 font-medium text-white sm:w-auto">
+              class="submit text-base inline-block w-full rounded-md bg-[#36A3C0] hover:bg-black transition 0.5 ease in out px-5 py-3 font-medium text-white sm:w-auto">
               Send Enquiry
             </button>
           </div>
@@ -2362,7 +2393,6 @@
         const form = document.getElementById("popup-form");
     
         // Check if popup should be displayed
-        if (!localStorage.getItem("popupClosed")) {
             popup.classList.remove("hidden");
         }
     
