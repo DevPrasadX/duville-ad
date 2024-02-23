@@ -579,20 +579,77 @@
       document.getElementById("floor_plan").style.display = "none";
     }
 
-    function showPriceBreakdown() {
-      var popupSection = document.getElementById('popup');
 
-      // Make the popup section visible
-      popupSection.style.display = 'block';
+    function savedata() {
+    // Get the value from the input field with id "name"
+    var formname = document.getElementById("name").value;
+
+    // Store the value in localStorage with a key "namess"
+    localStorage.setItem("namess", formname);
+
+    if (localStorage.getItem('namess') === formname) {
+      var popupSection = document.getElementById('popup');
+        // Make the popup section visible
+        popupSection.style.display = 'none';
+      var popupSuccessSection = document.getElementById('popup-success');
+  popupSuccessSection.style.display = 'block';
+
+  var blurElements = document.querySelectorAll('.blur');
+    blurElements.forEach(function(element) {
+      element.classList.remove('blur');
+    });
+
+
     }
+
+    
+}
+
+function showPriceBreakdown() {
+    var formname = document.getElementById("name").value;
+
+    if (localStorage.getItem('namess') === formname) {
+        var popupSection = document.getElementById('popup');
+
+        // Make the popup section visible
+        popupSection.style.display = 'none';
+
+        var pdfURL = './Riverdale Grand Mini Brochure_18-08-2023.pdf';
+
+        // Creating an anchor element to trigger the download
+        var anchorElement = document.createElement('a');
+        anchorElement.href = pdfURL;
+
+        // Setting the download attribute to force download
+        anchorElement.download = 'filename.pdf';
+
+        // Appending the anchor element to the body and triggering the click event
+        document.body.appendChild(anchorElement);
+        anchorElement.click();
+
+        // Removing the anchor element from the DOM
+        document.body.removeChild(anchorElement);
+
+        
+    } else {
+        var popupSection = document.getElementById('popup');
+        // Make the popup section visible
+        popupSection.style.display = 'block';
+  
+    }
+}
+function Enquire()
+{
+  var popupSection = document.getElementById('popup');
+        // Make the popup section visible
+        popupSection.style.display = 'block';
+}
+
 
   </script>
 
   <!-- Style and CDN for Swiper  -->
-  <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-  />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <link rel="stylesheet" href="./style.css" />
   <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
@@ -620,9 +677,9 @@
               </div>
             </a>
           </div>
-          
-          
-          
+
+
+
 
           <div class="md:flex md:items-center md:gap-10 ">
             <nav aria-label="Global" class="hidden md:block ">
@@ -709,8 +766,47 @@
       </div>
       
      
+
+      
     </section> -->
+
+
+    <section id="popup-success" class="hidden">
+      <div class="h-screen w-full fixed top-0 left-0 flex justify-center items-center bg-black/60 z-50">
+        <div class="mx-auto max-w-lg bg-white m-4 p-8 rounded-lg relative">
+          <div class="text-center">
+            <img class="w-full max-w-3xl object-cover mx-auto" src="./assets/Banner-2.png"/>
+            <h1 class="mt-4 text-3xl font-bold tracking-tight text-green-500 sm:text-5xl">Success</h1>
+            <p class="mt-6 text-base leading-7 text-gray-600">We have successfully received your request. Our team will get back to you shortly.</p>
+            <div class="mt-10 flex items-center justify-center gap-x-6">
+              <button id="go-home-btn" class="rounded-md bg-[#36A3C0] px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-white">Go back home</button>
+            </div>
+          </div>
+          <button id="close-modal-btn" class="p-2 bg-gray-50 rounded-full text-gray-900 absolute right-0 top-0 translate-x-1/2 -translate-y-1/2">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+<script>
+  document.getElementById('go-home-btn').addEventListener('click', function() {
+  closePopup();
+});
+
+// Add event listener to the close button
+document.getElementById('close-modal-btn').addEventListener('click', function() {
+  closePopup();
+});
+
+function closePopup() {
+  var popupSuccessSection = document.getElementById('popup-success');
+  popupSuccessSection.style.display = 'none';
+}
+</script>    
     <button
+    onclick="Enquire()"
       class="popup-btn fixed top-1/2 -rotate-90 right-[-4rem]  border border-white inline-block rounded bg-[#36A3C0] px-12 py-3 text-sm font-medium text-white transition hover:bg-amber-950 focus:outline-none z-10">
       Enquire Now
     </button>
@@ -724,49 +820,54 @@
     <section style="position: relative;">
       <!-- Desktop Banner -->
       <div id="top_banner" class="hidden sm:block lg:block md:block h-screen w-full relative">
-          <img id="desktop_banner" src="./assets/Riverdale Grove hd image.jpg" class="block h-full w-full object-cover" />
-          <div class="youtubevideo absolute right-20 bg-white p-24 bg-opacity-75 text-white text-center fixed top-1/2 transform -translate-y-1/2 p-6">
-              <div class=" text-[#0E2544] border border-gray-400 rounded-b-lg">
-                <div class="">
-                  <p class="bg-[#36A3C0] pl-12 pr-12 text-white text-3xl px-4 py-2 inline-block ">3.5 & 3 BHK DUPLEXES<BR> LAUNCHED</p>
-              </div>
-              <p class="text-2xl m-6">Starting at <b>@1.65 CR.</b>Only</p>
-                  <p class=" font-bold text-3xl">TWICE THE LIFE</p>
-                  <p class=" font-bold text-3xl">TWICE THE MEMORIES!</p>
-                
-                  <div class="mt-2 mb-10">
-                      <p class="px-4 py-2 rounded-lg inline-block  font-bold text-lg">Heart of Kharadi!</p>
-                      <br><span class="text-1xl ">Riverdale Riverside - Kharadi - Shivane Road</span>
-                  </div>
-              </div>
+        <img id="desktop_banner" src="./assets/Riverdale Grove hd image.jpg" class="block h-full w-full object-cover" />
+        <div
+          class="youtubevideo absolute right-20 bg-white p-24 bg-opacity-75 text-white text-center fixed top-1/2 transform -translate-y-1/2 p-6">
+          <div class=" text-[#0E2544] border border-gray-400 rounded-b-lg">
+            <div class="">
+              <p class="bg-[#36A3C0] pl-12 pr-12 text-white text-3xl px-4 py-2 inline-block ">3.5 & 3 BHK DUPLEXES<BR>
+                LAUNCHED</p>
+            </div>
+            <p class="text-2xl m-6">Starting at <b>@1.65 CR.</b>Only</p>
+            <p class=" font-bold text-3xl">TWICE THE LIFE</p>
+            <p class=" font-bold text-3xl">TWICE THE MEMORIES!</p>
+
+            <div class="mt-2 mb-10">
+              <p class="px-4 py-2 rounded-lg inline-block  font-bold text-lg">Heart of Kharadi!</p>
+              <br><span class="text-1xl ">Riverdale Riverside - Kharadi - Shivane Road</span>
+            </div>
           </div>
+        </div>
       </div>
-  
+
       <!-- Mobile Banner -->
       <div id="top_banner" class="block sm:hidden h-screen w-full relative">
-          <img id="mobile_banner" src="./assets/riverdale-phone-banner.jpg" class="block sm:hidden md:hidden h-full w-full" />
-          <!-- <div class="youtubevideo absolute bg-white p-24 bg-opacity-75 text-white text-center fixed top-1/2 transform -translate-y-1/2 p-6"> -->
-          <div class="youtubevideo text-[#0E2544] absolute bg-white p-24 bg-opacity-85 text-center fixed ml-10 transform translate-y-[-106%] p-6">
-            <div class=" text-[#0E2544] border border-gray-400 rounded-b-lg">
-              <div class="">
-                  <p class="bg-[#36A3C0] pl-12 pr-12 text-white text-1xl px-4 py-2 inline-block ">3.5 & 3 BHK DUPLEXES<BR> LAUNCHED</p>
-               </div>
-               <p class="text-black text-1xl mt-2 p-2">Starting at <b>@1.65 CR. </b>Only</p>
-               <p class=" font-bold text-1xl">TWICE THE LIFE</p>
-               <p class=" font-bold text-1xl">TWICE THE MEMORIES!</p>
-             
-               
-                  <div class="">
-                      <p class="px-4 py-2 rounded-lg inline-block text-black font-bold text-1xl">Heart of Kharadi!</p>
-                      <br><span class="text-1xl text-black">Riverdale Riverside <br> Kharadi - Shivane Road</span>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </section>
-  
+        <img id="mobile_banner" src="./assets/riverdale-phone-banner.jpg"
+          class="block sm:hidden md:hidden h-full w-full" />
+        <!-- <div class="youtubevideo absolute bg-white p-24 bg-opacity-75 text-white text-center fixed top-1/2 transform -translate-y-1/2 p-6"> -->
+        <div
+          class="youtubevideo text-[#0E2544] absolute bg-white p-24 bg-opacity-85 text-center fixed ml-10 transform translate-y-[-106%] p-6">
+          <div class=" text-[#0E2544] border border-gray-400 rounded-b-lg">
+            <div class="">
+              <p class="bg-[#36A3C0] pl-12 pr-12 text-white text-1xl px-4 py-2 inline-block ">3.5 & 3 BHK DUPLEXES<BR>
+                LAUNCHED</p>
+            </div>
+            <p class="text-black text-1xl mt-2 p-2">Starting at <b>@1.65 CR. </b>Only</p>
+            <p class=" font-bold text-1xl">TWICE THE LIFE</p>
+            <p class=" font-bold text-1xl">TWICE THE MEMORIES!</p>
 
- 
+
+            <div class="">
+              <p class="px-4 py-2 rounded-lg inline-block text-black font-bold text-1xl">Heart of Kharadi!</p>
+              <br><span class="text-1xl text-black">Riverdale Riverside <br> Kharadi - Shivane Road</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
 
     <!-- icons -->
     <section class="mt-10 w-full mb-10 mx-auto strip-section" id="strip">
@@ -790,7 +891,7 @@
                   src="./assets/icons/Carpet area.png"></div>
               <div class="data">
                 <div class="title">1168 - 1358 & 2290*Sq.Ft.
-                 Carpet Areas</div>
+                  Carpet Areas</div>
                 <div class="links-description">Carpet Area</div>
               </div>
             </div>
@@ -840,16 +941,16 @@
             <div class="border-2 sm:mb-2 border-blue-500 w-16 "></div>
             <h2 class="text-lg sm:text-2xl font-bold ">
               Riverdale Grove
-    
-    
+
+
             </h2>
             <b>SPACIOUS DUPLEXES LAUNCHED in a 3.5 and 3 BHK OPTIONS.</b>
           </div>
 
-          <div class="w-full text-left lg:text-left">
+          <div class="w-full text-left lg:text-left ">
             <ul class="leading-8 mt-4 sm:block sm:w-9/12 mx-auto list-disc list-inside text-base" style="   list-style-position: outside; 
             ">
-           
+
               <li class="mb-2">The ‘DUPLEX’ at Riverdale Grove is for those with a
                 to possess and own a bungalow</span></li>
               <li class="mb-2">This is a ‘PRIVATE VILLA’ suspended in the air</li>
@@ -870,6 +971,7 @@
 
           <div class="ml-16 mt-4 md:mt-8 pb-6 mx-auto w-fit flex justify-start">
             <button
+            onclick="Enquire()"
               class="popup-btn inline-block   bg-[#36A3C0] px-12 py-3 text-sm font-medium text-white transition hover:bg-blue-500 hover:text-white focus:outline-none">
               Enquire Now
             </button>
@@ -911,18 +1013,18 @@
             <li>An ‘OASIS’ of ‘LUXURY’ with approximately 475 Sq. Ft. of Living &
               Dining space</li>
             <li>‘OPULENT DESIGN LIVING’ ASIS’ of ‘LUXURY’ with approximately
-                475 Sq. Ft. of Living & Dining space </li>
+              475 Sq. Ft. of Living & Dining space </li>
 
 
-            <li>‘COMPREHENSIVE VENTILATION’ with 6 Balconies  plus a Dry
-                Balcony attached to the Kitchen</span> </li>
+            <li>‘COMPREHENSIVE VENTILATION’ with 6 Balconies plus a Dry
+              Balcony attached to the Kitchen</span> </li>
 
-            <li>Option to design and create a ‘PRIVATE SCREENING  ROOM’ for
-                friends & family to celebrate an occasion </span>
+            <li>Option to design and create a ‘PRIVATE SCREENING ROOM’ for
+              friends & family to celebrate an occasion </span>
             </li>
 
             <li>Option to create a ‘SMALL PRIVATE OFFICE’ with a Balcony for
-                coffee and a tete a tete</span> </li>
+              coffee and a tete a tete</span> </li>
 
             <li>Absolutely surreal sunset views into an ‘OPEN HORIZON’
             </li>
@@ -934,6 +1036,7 @@
 
         <div class=" ml-28 mt-4 md:mt-10 pb-32 mx-auto w-fit flex justify-start">
           <button
+          onclick="Enquire()"
             class="popup-btn youtubevideo uppercase inline-block border border-white  px-12 py-3 text-sm font-medium text-white transition hover:bg-blue-500 hover:text-white focus:outline-none">
             Enquire Now
           </button>
@@ -953,25 +1056,27 @@
           <p class="text-sm text-start ml-3 font-semibold">EXPANSIVE OPULENT 4.5 BHK HOMES</p>
         </div>
         <div class="w-full text-left lg:text-left">
-          <ul class="leading-8 p-10 mt-4 sm:block space-y-4 w-full md:w-9/12 mx-auto list-disc list-inside text-base" style="  list-style-position: outside;
+          <ul class="leading-8 p-10 mt-4 sm:block space-y-4 w-full md:w-9/12 mx-auto list-disc list-inside text-base"
+            style="  list-style-position: outside;
           ">
             <li>An ‘OASIS’ of ‘LUXURY’ with approximately 475 Sq. Ft. of Living & Dining
               space</li>
             <li>‘OPULENT DESIGN LIVING’ ASIS’ of ‘LUXURY’ with approximately 475 Sq. Ft. of Living &
-                Dining space</span></li>
-            <li>‘COMPREHENSIVE VENTILATION’ with 6 Balconies  plus a Dry Balcony attached to the
-                Kitchen</span></li>
-            <li>Option to design and create a ‘PRIVATE SCREENING  ROOM’ for friends & family to
-                celebrate an occasion </span></li>
+              Dining space</span></li>
+            <li>‘COMPREHENSIVE VENTILATION’ with 6 Balconies plus a Dry Balcony attached to the
+              Kitchen</span></li>
+            <li>Option to design and create a ‘PRIVATE SCREENING ROOM’ for friends & family to
+              celebrate an occasion </span></li>
             <li>Option to create a ‘SMALL PRIVATE OFFICE’ with a Balcony for coffee and a tete a
-                tete</span></li>
+              tete</span></li>
             <li>Absolutely surreal sunset views into an ‘OPEN HORIZON’</li>
           </ul>
         </div>
         <div class="ml-0 mt-4 md:mt-8 pb-6 mx-auto w-full md:w-fit flex justify-center">
           <button
-            class="youtubevideo  md:ml-36 uppercase inline-block border border-white px-12 py-3 text-sm font-medium text-white transition hover:bg-blue-500 hover:text-white focus:outline-none">Enquire
-            Now</button>
+          onclick="Enquire()"
+            class="youtubevideo  md:ml-36 uppercase inline-block border border-white px-12 py-3 text-sm font-medium text-white transition hover:bg-blue-500 hover:text-white focus:outline-none">
+            Enquire Now</button>
         </div>
       </div>
     </div>
@@ -994,7 +1099,7 @@
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               class="w-full h-72"></iframe>
           </a>
-    
+
         </div>
 
 
@@ -1003,7 +1108,7 @@
             <iframe src="https://www.youtube.com/embed/9B849TUZMd0?si=eP0EV-dwDKrFaO7T" title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               class="w-full  h-72"></iframe> </a>
-          
+
         </div>
 
 
@@ -1012,7 +1117,7 @@
             <iframe src="https://www.youtube.com/embed/c8xaWvJajYA?si=p-cuXi_sc6PCa1_R" title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               class="w-full  h-72"></iframe> </a>
-         
+
         </div>
       </div>
     </div>
@@ -1025,58 +1130,58 @@
         </h2>
       </div>
       <!-- Slider main container -->
-        <div class="swiper videoScroll">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide">
-              <iframe src="https://www.youtube.com/embed/9B849TUZMd0?si=eP0EV-dwDKrFaO7T" title="YouTube video player"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      class="w-full h-80">
-              </iframe> 
-            </div>
-            <div class="swiper-slide">
-              <iframe src="https://www.youtube.com/embed/u623FKKndQA?si=HJ6fPFcLtCk2-DTi" title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    class="w-full h-80">
-              </iframe>
-            </div>
-            <div class="swiper-slide">
-              <iframe src="https://www.youtube.com/embed/c8xaWvJajYA?si=p-cuXi_sc6PCa1_R" title="YouTube video player"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      class="w-full h-80">
-              </iframe>
-            </div>
+      <div class="swiper videoScroll">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <iframe src="https://www.youtube.com/embed/9B849TUZMd0?si=eP0EV-dwDKrFaO7T" title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              class="w-full h-80">
+            </iframe>
           </div>
-          <!-- If we need navigation buttons -->
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+          <div class="swiper-slide">
+            <iframe src="https://www.youtube.com/embed/u623FKKndQA?si=HJ6fPFcLtCk2-DTi" title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              class="w-full h-80">
+            </iframe>
+          </div>
+          <div class="swiper-slide">
+            <iframe src="https://www.youtube.com/embed/c8xaWvJajYA?si=p-cuXi_sc6PCa1_R" title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              class="w-full h-80">
+            </iframe>
+          </div>
         </div>
-    </div>
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+      </div>
 
-    <script type="module">
-      function initializeSwiper1() {
-      import('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs')
-          .then(module => {
+      <script type="module">
+        function initializeSwiper1() {
+          import('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs')
+            .then(module => {
               const Swiper = module.default;
               const swiper = new Swiper('.videoScroll', {
                 slidesPerView: 1,
                 loop: true,
                 spaceBetween: 30,
-                  navigation: {
-                      nextEl: '.swiper-button-next',
-                      prevEl: '.swiper-button-prev',
-                  },
+                navigation: {
+                  nextEl: '.swiper-button-next',
+                  prevEl: '.swiper-button-prev',
+                },
               });
-          })
-          .catch(error => {
+            })
+            .catch(error => {
               console.error('Failed to load Swiper:', error);
-          });
+            });
         }
         document.addEventListener('DOMContentLoaded', initializeSwiper1);
-    </script>
+      </script>
     </section>
-    
+
 
     <!-- price -->
     <div class="youtubevideo mt-24 space-y-16 my-42 ml-3 sm:ml-16 sm:mr-16">
@@ -1355,17 +1460,17 @@
             class="text-5xl  font-medium dynalight-regular  text-[#ED1C26]"><br class="block md:hidden lg:hidden">with
             unrivaled amenities</span></h3> -->
 
-            <div class="ml-5 sm:ml-16">
-              <div class="border-2 border-blue-500 w-16 "></div>
-              <div class="flex items-center mr-20 ">
-          <h2 class="text-lg sm:text-2xl font-bold ">
-            Elevate your Lifestyle with unrivaled amenities</span>
+        <div class="ml-5 sm:ml-16">
+          <div class="border-2 border-blue-500 w-16 "></div>
+          <div class="flex items-center mr-20 ">
+            <h2 class="text-lg sm:text-2xl font-bold ">
+              Elevate your Lifestyle with unrivaled amenities</span>
 
 
-          </h2>
-          <div class="hidden lg:flex flex-grow justify-end items-center">
-            <button class="price-breakdown" onclick="showPriceBreakdown()">Download Brochure</button>
-          </div>
+            </h2>
+            <div class="hidden lg:flex flex-grow justify-end items-center">
+              <button class="price-breakdown" id="downloadbrochure" onclick="showPriceBreakdown()">Download Brochure</button>
+            </div>
           </div>
         </div>
 
@@ -1373,86 +1478,86 @@
         <!-- New Scroll  -->
         <section class="mt-2">
           <!-- Slider main container -->
-            <div class="swiper scrollSwiper">
-              <!-- Additional required wrapper -->
-              <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">
-                  <img src="./assets/Amenities/Duville_2_GrandGrove-01.jpg"/>
-                </div>
-                <div class="swiper-slide">
-                  <img src="./assets/Amenities/Duville_2_GrandGrove-02.jpg"/>
-                </div>
-                <div class="swiper-slide">
-                  <img src="./assets/Amenities/Duville_2_GrandGrove-03.jpg"/>
-                </div>
-                <div class="swiper-slide">
-                  <img src="./assets/Amenities/Duville_2_GrandGrove-04.jpg"/>
-                </div>
-                <div class="swiper-slide">
-                  <img src="./assets/Amenities/Duville_2_GrandGrove-05.jpg"/>
-                </div>
-                <div class="swiper-slide">
-                  <img src="./assets/Amenities/Duville_2_GrandGrove-06.jpg"/>
-                </div>
-                <div class="swiper-slide">
-                  <img src="./assets/Amenities/Duville_2_GrandGrove-07.jpg"/>
-                </div>
+          <div class="swiper scrollSwiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <img src="./assets/Amenities/Duville_2_GrandGrove-01.jpg" />
               </div>
-              <!-- If we need navigation buttons -->
-              <div class="swiper-button-prev"></div>
-              <div class="swiper-button-next"></div>
+              <div class="swiper-slide">
+                <img src="./assets/Amenities/Duville_2_GrandGrove-02.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/Amenities/Duville_2_GrandGrove-03.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/Amenities/Duville_2_GrandGrove-04.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/Amenities/Duville_2_GrandGrove-05.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/Amenities/Duville_2_GrandGrove-06.jpg" />
+              </div>
+              <div class="swiper-slide">
+                <img src="./assets/Amenities/Duville_2_GrandGrove-07.jpg" />
+              </div>
             </div>
-        </div>
-
-        <script type="module">
-
-          function initializeSwiper1() {
-          import('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs')
-              .then(module => {
-                  const Swiper = module.default;
-                  const swiper = new Swiper('.scrollSwiper', {
-                    slidesPerView: 1,
-                    loop: true,
-                    breakpoints: {
-                      640: {
-                        slidesPerView: 1,
-                        spaceBetween: 20,
-                      },
-                      768: {
-                        slidesPerView: 2,
-                        spaceBetween: 40,
-                      },
-                      1024: {
-                        slidesPerView: 3,
-                        spaceBetween: 50,
-                      },
-                    },
-                    spaceBetween: 30,
-                      navigation: {
-                          nextEl: '.swiper-button-next',
-                          prevEl: '.swiper-button-prev',
-                      },
-                  });
-              })
-              .catch(error => {
-                  console.error('Failed to load Swiper:', error);
-              });
-            }
-            document.addEventListener('DOMContentLoaded', initializeSwiper1);
-        </script>
-        </section>
-
-        
-        <div class="flex lg:hidden justify-center items-center mt-10 mb-10">
-          <button class="price-breakdown" onclick="showPriceBreakdown()">Download Brochure</button>
-        </div>
-
-
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
       </div>
 
-      
-      <!-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <script type="module">
+
+        function initializeSwiper1() {
+          import('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs')
+            .then(module => {
+              const Swiper = module.default;
+              const swiper = new Swiper('.scrollSwiper', {
+                slidesPerView: 1,
+                loop: true,
+                breakpoints: {
+                  640: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                  },
+                  768: {
+                    slidesPerView: 2,
+                    spaceBetween: 40,
+                  },
+                  1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 50,
+                  },
+                },
+                spaceBetween: 30,
+                navigation: {
+                  nextEl: '.swiper-button-next',
+                  prevEl: '.swiper-button-prev',
+                },
+              });
+            })
+            .catch(error => {
+              console.error('Failed to load Swiper:', error);
+            });
+        }
+        document.addEventListener('DOMContentLoaded', initializeSwiper1);
+      </script>
+    </section>
+
+
+    <div class="flex lg:hidden justify-center items-center mt-10 mb-10">
+      <button class="price-breakdown" onclick="showPriceBreakdown()"> Brochure</button>
+    </div>
+
+
+    </div>
+
+
+    <!-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img class="d-block w-80" src="./assets/Amenities/Duville_2_GrandGrove-07.jpg" alt="First slide">
@@ -1723,11 +1828,11 @@
 
     <!-- New Peek Into Riverdale Section  -->
     <section class="w-11/12 mx-auto my-20 hidden lg:block">
-      
+
       <div>
         <div class="border-2 sm:mb-4 border-blue-500 w-16 "></div>
         <h2 class="text-lg sm:text-2xl font-bold ">
-         Peek Into Riverdale</span>
+          Peek Into Riverdale</span>
 
 
         </h2>
@@ -1735,135 +1840,132 @@
       <div class="flex my-10 gap-10 max-h-[800px]">
         <div class="flex flex-col justify-between w-[30%]">
           <!-- TODO: Change the index accordingly -->
-          <button onclick="swipeToIndex(0)" data-index="0"
-          id="imagebtn"
-          class="imagebtn flex items-center gap-5 pl-8 py-10 hover:rounded-md hover:shadow-md border-2 text-base font-medium text-start bg-slate-50 hover:bg-[#36A3C0] rounded-md"
-          type="button">
-          <img src="./assets/check.png"
-            class="w-8 h-8 hover:text-[#36A3C0] text-slate-200 bg-slate-200 p-2 rounded-[10px]" />
-          2290 Sq.Ft Flat
-        </button>
+          <button onclick="swipeToIndex(0)" data-index="0" id="imagebtn"
+            class="imagebtn flex items-center gap-5 pl-8 py-10 hover:rounded-md hover:shadow-md border-2 text-base font-medium text-start bg-slate-50 hover:bg-[#36A3C0] rounded-md"
+            type="button">
+            <img src="./assets/check.png"
+              class="w-8 h-8 hover:text-[#36A3C0] text-slate-200 bg-slate-200 p-2 rounded-[10px]" />
+            2290 Sq.Ft Flat
+          </button>
 
-        <button onclick="swipeToIndex(3)" data-index="3"
-        id="imagebtn"
-          class="imagebtn flex items-center gap-5 pl-8 py-10 hover:rounded-md hover:shadow-md border-2 text-base font-medium text-start bg-slate-50 hover:bg-[#36A3C0] rounded-md"
-          type="button">
-          <img src="./assets/check.png"
-            class="w-8 h-8 hover:text-[#36A3C0] text-slate-200 bg-slate-200 p-2 rounded-[10px]" />
-          1417 Sq.Ft Flat
-        </button>
+          <button onclick="swipeToIndex(3)" data-index="3" id="imagebtn"
+            class="imagebtn flex items-center gap-5 pl-8 py-10 hover:rounded-md hover:shadow-md border-2 text-base font-medium text-start bg-slate-50 hover:bg-[#36A3C0] rounded-md"
+            type="button">
+            <img src="./assets/check.png"
+              class="w-8 h-8 hover:text-[#36A3C0] text-slate-200 bg-slate-200 p-2 rounded-[10px]" />
+            1417 Sq.Ft Flat
+          </button>
 
-        <button onclick="swipeToIndex(7)" data-index="7"
-        id="imagebtn"
-          class="imagebtn flex items-center gap-5 pl-8 py-10 hover:rounded-md hover:shadow-md border-2 text-base font-medium text-start bg-slate-50 hover:bg-[#36A3C0] rounded-md"
-          type="button">
-          <img src="./assets/check.png"
-            class="w-8 h-8 hover:text-[#36A3C0] text-slate-200 bg-slate-200 p-2 rounded-[10px]" />
-          Building Elevation
-        </button>
+          <button onclick="swipeToIndex(7)" data-index="7" id="imagebtn"
+            class="imagebtn flex items-center gap-5 pl-8 py-10 hover:rounded-md hover:shadow-md border-2 text-base font-medium text-start bg-slate-50 hover:bg-[#36A3C0] rounded-md"
+            type="button">
+            <img src="./assets/check.png"
+              class="w-8 h-8 hover:text-[#36A3C0] text-slate-200 bg-slate-200 p-2 rounded-[10px]" />
+            Building Elevation
+          </button>
         </div>
-          <!-- Slider main container -->
-          <div class="swiper mySwiper">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-              <!-- Slides -->
-              <div class="swiper-slide">
-                <img src="./assets/PeekIntoRiverdale/2290/grove.jpg"/>
-              </div>
-              <div class="swiper-slide">
-                <img src="./assets/PeekIntoRiverdale/2290/InternalApartment1.jpg"/>
-              </div>
-              <div class="swiper-slide">
-                <img src="./assets/PeekIntoRiverdale/2290/Living Room.jpg"/>
-              </div>
-              <div class="swiper-slide">
-                <img src="./assets/PeekIntoRiverdale/1417/Grand_master Bed.jpg"/>
-              </div>
-              <div class="swiper-slide">
-                <img src="./assets/PeekIntoRiverdale/1417/InternalApartment3.jpg"/>
-              </div>
-              <div class="swiper-slide">
-                <img src="./assets/PeekIntoRiverdale/1417/InternalApartment4.jpg"/>
-              </div>
-              <div class="swiper-slide">
-                <img src="./assets/PeekIntoRiverdale/1417/InternalApartment6.jpg"/>
-              </div>
-              <div class="swiper-slide">
-                <img src="./assets/PeekIntoRiverdale/Elevation/Grand elevation.jpg"/>
-              </div>
-              <div class="swiper-slide">
-                <img src="./assets/PeekIntoRiverdale/Elevation/elevation2.jpg" class="object-fit"/>
-              </div>
-              <div class="swiper-slide">
-                <img src="./assets/PeekIntoRiverdale/Elevation/Riverdale Grand_3.jpg"/>
-              </div>
+        <!-- Slider main container -->
+        <div class="swiper mySwiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img src="./assets/PeekIntoRiverdale/2290/grove.jpg" />
             </div>
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
+            <div class="swiper-slide">
+              <img src="./assets/PeekIntoRiverdale/2290/InternalApartment1.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/PeekIntoRiverdale/2290/Living Room.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/PeekIntoRiverdale/1417/Grand_master Bed.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/PeekIntoRiverdale/1417/InternalApartment3.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/PeekIntoRiverdale/1417/InternalApartment4.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/PeekIntoRiverdale/1417/InternalApartment6.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/PeekIntoRiverdale/Elevation/Grand elevation.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/PeekIntoRiverdale/Elevation/elevation2.jpg" class="object-fit" />
+            </div>
+            <div class="swiper-slide">
+              <img src="./assets/PeekIntoRiverdale/Elevation/Riverdale Grand_3.jpg" />
+            </div>
           </div>
-          
-      <script type="module">
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
 
-        function initializeSwiper() {
-          import('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs')
-            .then(module => {
-              const Swiper = module.default;
-              const swiper = new Swiper('.mySwiper', {
-                effect: "coverflow",
-                grabCursor: true,
-                centeredSlides: true,
-                slidesPerView: 2,
-                coverflowEffect: {
-                  rotate: 0,
-                  stretch: 0,
-                  depth: 200,
-                  modifier: 3,
-                  slideShadows: true,
-                },
-                navigation: {
-                  nextEl: '.swiper-button-next',
-                  prevEl: '.swiper-button-prev',
-                },
-              });
+        <script type="module">
 
-              window.swipeToIndex = function (index) {
-                swiper.slideTo(index);
-
-
-                var buttons = document.querySelectorAll('.imagebtn');
-                buttons.forEach(function (button) {
-                  button.classList.remove('selected');
+          function initializeSwiper() {
+            import('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs')
+              .then(module => {
+                const Swiper = module.default;
+                const swiper = new Swiper('.mySwiper', {
+                  effect: "coverflow",
+                  grabCursor: true,
+                  centeredSlides: true,
+                  slidesPerView: 2,
+                  coverflowEffect: {
+                    rotate: 0,
+                    stretch: 0,
+                    depth: 200,
+                    modifier: 3,
+                    slideShadows: true,
+                  },
+                  navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                  },
                 });
 
-                // Add the 'selected' class to the clicked button
-                var button = document.querySelector('.imagebtn[data-index="' + index + '"]');
-                if (button) {
-                  button.classList.add('selected');
-                }
+                window.swipeToIndex = function (index) {
+                  swiper.slideTo(index);
 
-                // Reset button colors
-                buttons.forEach(function (button) {
-                  var buttonIndex = parseInt(button.getAttribute('data-index'));
-                  if (buttonIndex === index) {
-                    button.style.backgroundColor = '#36A3C0'; // Set background color for the selected button
-                    button.style.color = 'white'; // Set text color for the selected button
-                  } else {
-                    button.style.backgroundColor = 'initial'; // Reset background color for other buttons
-                    button.style.color = 'initial'; // Reset text color for other buttons
+
+                  var buttons = document.querySelectorAll('.imagebtn');
+                  buttons.forEach(function (button) {
+                    button.classList.remove('selected');
+                  });
+
+                  // Add the 'selected' class to the clicked button
+                  var button = document.querySelector('.imagebtn[data-index="' + index + '"]');
+                  if (button) {
+                    button.classList.add('selected');
                   }
 
-                });
+                  // Reset button colors
+                  buttons.forEach(function (button) {
+                    var buttonIndex = parseInt(button.getAttribute('data-index'));
+                    if (buttonIndex === index) {
+                      button.style.backgroundColor = '#36A3C0'; // Set background color for the selected button
+                      button.style.color = 'white'; // Set text color for the selected button
+                    } else {
+                      button.style.backgroundColor = 'initial'; // Reset background color for other buttons
+                      button.style.color = 'initial'; // Reset text color for other buttons
+                    }
+
+                  });
 
                 };
 
               })
-            .catch(error => {
-              console.error('Failed to load Swiper:', error);
-            });
-        }
-        document.addEventListener('DOMContentLoaded', initializeSwiper);
-      </script>
+              .catch(error => {
+                console.error('Failed to load Swiper:', error);
+              });
+          }
+          document.addEventListener('DOMContentLoaded', initializeSwiper);
+        </script>
       </div>
 
     </section>
@@ -2152,8 +2254,8 @@
           background-color: #737373;
           /* Your hexadecimal color code */
         }
-        .bg-custom-clr
-        {
+
+        .bg-custom-clr {
           background-color: #36A3C0;
 
         }
@@ -2202,6 +2304,7 @@
 
 
           <button
+          onclick="Enquire()"
             class="popup-btn enquirebtn flex justify-start  mt-8 mr-0 w-fit inline-block px-12 py-3 text-sm font-medium text-white ">
             Enquire Now
           </button>
@@ -2296,16 +2399,17 @@
       class="flex lg:hidden fixed bottom-0 h-14 text-white text-sm  justify-between z-10 items-center px-2 py-1 bg-gray-900 w-full">
       <div class="flex flex-row gap-1 w-full justify-between">
         <a class=" flex  flex-row items-center gap-2" href="tel:+919922992628">
-          <img src="./assets/icons/Call icon_white-01.svg" class="max-w-6" /><br/>
+          <img src="./assets/icons/Call icon_white-01.svg" class="max-w-6" /><br />
           <p>Call us</p>
         </a>
         <!-- TODO: Open Popup  -->
-        <a class=" flex flex-row items-center gap-2" href="">
-          <img src="./assets/icons/Menu.svg" /><br/>
-          <p>Enquire</p>
+        <a class=" flex flex-row items-center gap-2">
+          <img src="./assets/icons/Menu.svg" /><br />
+          
+          <p onclick="Enquire()">Enquire</p>
         </a>
         <a class=" flex flex-row items-center gap-2" href="https://wa.link/tkmiq5">
-          <img src="./assets/whatsapp copy.png" class="max-w-5" /><br/>
+          <img src="./assets/whatsapp copy.png" class="max-w-5" /><br />
           <p>WhatsApp Us</p>
         </a>
 
@@ -2327,15 +2431,13 @@
 
 
 
-<!-- https://script.google.com/macros/s/AKfycbzebJ_v0KHY-aSvV03_Ou6nJU62Go0-31u0AaTWf97WlJFt0ts5kP9HeJKfV0Rpxxdx/exec -->
+    <!-- https://script.google.com/macros/s/AKfycbzebJ_v0KHY-aSvV03_Ou6nJU62Go0-31u0AaTWf97WlJFt0ts5kP9HeJKfV0Rpxxdx/exec -->
   </main>
 
-  <section id="popup"  class="hidden">
+  <section id="popup" class="hidden">
     <div class="h-screen w-full fixed top-0 left-0 flex justify-center items-center bg-black/60 z-50">
       <div class="mx-auto max-w-lg bg-white p-8 rounded-lg relative">
-        <form id="popup-form" method="POST"
-          action="./thankyou.html"
-          class="form space-y-7">
+        <form id="popup-form" method="POST" action="./thankyou.html" class="form space-y-7">
           <p class="text-center text-lg font-medium">Contact us now</p>
           <div>
             <label class="sr-only" for="name">Name</label>
@@ -2374,6 +2476,7 @@
 
           <div class="mt-4">
             <button id="popup-form-btn" type="submit"
+            onclick="savedata()"
               class="submit text-base inline-block w-full rounded-md bg-[#36A3C0] hover:bg-black transition 0.5 ease in out px-5 py-3 font-medium text-white sm:w-auto">
               Send Enquiry
             </button>
@@ -2388,47 +2491,15 @@
         </button>
       </div>
     </div>
-      document.addEventListener("DOMContentLoaded", function () {
-        const popup = document.getElementById("popup");
-        const form = document.getElementById("popup-form");
     
-        // Check if popup should be displayed
-            popup.classList.remove("hidden");
-        }
-    
-        // Event listener for form submission
-        form.addEventListener("submit", function (e) {
-            e.preventDefault();
-            
-            // Store form data in local storage
-            localStorage.setItem("popupClosed", true);
-    
-            // Perform form submission
-            form.submit();
-            
-            // Hide the popup
-            popup.classList.add("hidden");
-            alert("form submitted");
-        });
-    
-        // Event listener for closing the popup
-        document.getElementById("popup-close").addEventListener("click", function () {
-            popup.classList.add("hidden");
-            localStorage.setItem("popupClosed", true);
-        });
-    });
-    
-    </script> -->
   </section>
 
-  
+
 
   <section id="popup" class="hidden">
     <div class="h-screen w-full fixed top-0 left-0 flex justify-center items-center bg-black/60 z-50">
       <div class="mx-auto max-w-lg bg-white p-8 rounded-lg relative">
-        <form id="popup-form" method="POST"
-          action="./thankyou.html"
-          class="form space-y-7">
+        <form id="popup-form" method="POST" action="./thankyou.html" class="form space-y-7">
           <p class="text-center text-lg font-medium">Contact us now</p>
           <div>
             <label class="sr-only" for="name">Name</label>
