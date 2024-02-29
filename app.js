@@ -136,10 +136,10 @@ const sendDataToGoogleSheet = async (name, email, phone,configuration) => {
         configuration: configuration,
     }
 
-
+// https://sheetdb.io/api/v1/2u05e1oydua18
     if(requestData){
         try {
-            const response = await fetch('https://sheetdb.io/api/v1/2u05e1oydua18', {
+            const response = await fetch('https://sheetdb.io/api/v1/164r9x0oo9drx ', {
                 method: 'POST',
                 headers: {
                     'Accept': 'application/json',
@@ -200,7 +200,8 @@ footerFormBtn.addEventListener("click", async (e) => {
     const createLeadStatus = await createLead(name, email, phone,configuration)
     const sendDataToGoogleSheetStatus = await sendDataToGoogleSheet(name,email, phone,configuration)
     if(createLeadStatus && sendDataToGoogleSheetStatus){
-        window.location.replace('./thankyou.html')
+       
+        localStorage.setItem("name", name)
     }
 })
 
@@ -216,7 +217,8 @@ contactFormBtn.addEventListener("click", async (e) => {
     const createLeadStatus = await createLead(name, email, phone,configuration)
     const sendDataToGoogleSheetStatus = await sendDataToGoogleSheet(name,email, phone,configuration)
     if(createLeadStatus && sendDataToGoogleSheetStatus){
-        window.location.replace('./thankyou.html')
+       
+        localStorage.setItem("name", name)
     }
 })
 

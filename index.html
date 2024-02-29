@@ -783,15 +783,13 @@ function Enquire()
 
 
     <section id="popup-success" class="hidden">
-  <head>
-    <script>
-      gtag('event', 'conversion', {'send_to': 'AW-11375769926/TMVRCJja05YZEMbysbAq'});
-    </script>
-  </head>
+      <script>
+  gtag('event', 'conversion', {'send_to': 'AW-11375769926/TMVRCJja05YZEMbysbAq'});
+</script>
       <div class="h-screen w-full fixed top-0 left-0 flex justify-center items-center bg-black/60 z-50">
         <div class="mx-auto max-w-lg bg-white m-4 p-8 rounded-lg relative">
           <div class="text-center">
-            <img class="w-full max-w-3xl object-cover mx-auto" src="./assets/bannerthankyou.jpg"/>
+            <img class="w-full max-w-3xl object-cover mx-auto" src="./assets/Banner-2.png"/>
             <h1 class="mt-4 text-3xl font-bold tracking-tight text-green-500 sm:text-5xl">Success</h1>
             <p class="mt-6 text-base leading-7 text-gray-600">We have successfully received your request. Our team will get back to you shortly.</p>
             <div class="mt-10 flex items-center justify-center gap-x-6">
@@ -1010,7 +1008,7 @@ function closePopup() {
 
     <!-- About -->
 
-    <div class="flex md:flex-row-reverse flex-col-reverse items-center justify-center mx-auto p-5">
+    <div id="about" class="flex md:flex-row-reverse flex-col-reverse items-center justify-center mx-auto p-5">
       <div>
         <div class="w-full max-w-xl text-left lg:text-left">
 
@@ -1261,7 +1259,7 @@ function closePopup() {
 
 
     <!-- price -->
-    <div class="youtubevideo mt-24 space-y-16 my-42 ml-3 sm:ml-16 sm:mr-16">
+    <div id="plan" class="youtubevideo mt-24 space-y-16 my-42 ml-3 sm:ml-16 sm:mr-16">
 
       <div>
         <div class="border-2 sm:mb-4 border-blue-500 w-16 "></div>
@@ -2342,63 +2340,66 @@ function closePopup() {
           background-color: #36A3C0;
         }
       </style>
-      <div
-        class="flex flex-col md:flex-row-reverse bg-[#4C4C4C] pb-10 h-full text-white w-full gap-y- 20 place-content-center mx-auto mt-20">
+     <div
+     class="flex flex-col md:flex-row-reverse bg-[#4C4C4C] pb-10 h-full text-white w-full gap-y- 20 place-content-center mx-auto mt-20">
 
-        <form id="popup-form" method="POST" >
-        <div class=" flex  flex-col md:p-10 justify-center md:max-w-2xl  space-y-4  md:mt-10 p-10">
+     
 
-          <p class="flex justify-center md:justify-start text-white text-mob-heading md:text-[24px] leading-[21px] ">
-                        Initiate a Conversation</p>
-          <div class="flex flex-col space-y-4"> 
+     <form method="POST" action="./thankyou.html" class="form space-y-7">
 
-      
-            <div class="flex flex-row  justify-between">
+     <div class=" flex  flex-col md:p-10 justify-center md:max-w-2xl  space-y-4  md:mt-10 p-10">
 
-              <input type="text" id="firstname" placeholder="Name*"
-                class=" p-2 w-[130px] lg:mr-4 md:w-[336px] bg-custom-color placeholder:placeholder:text-[12px]  md:placeholder:text-[14px]    placeholder:leading-[21px]"
-                name="firstname">
+       <p class="flex justify-center md:justify-start text-white text-mob-heading md:text-[24px] leading-[21px] ">
+                     Initiate a Conversation</p>
+       <div class="flex flex-col space-y-4"> 
 
-                <input type="email" 
-                name="email" placeholder="Email address" type="email" id="email" required="true"
-              
-                class=" bg-custom-color lg:mr-4 p-2 w-[130px] md:w-[336px] bg-custom-color placeholder:placeholder:text-[12px]  md:placeholder:text-[14px] placeholder:leading-[21px]"
-                >
-            </div>
+   
+         <div class="flex flex-row  justify-between">
+
+           <input type="text" id="name" placeholder="Name*"
+             class=" text-sm p-2 w-[130px] md:w-[336px] bg-custom-color placeholder:placeholder:text-[12px]  md:placeholder:text-[14px]    placeholder:leading-[21px]"
+             name="name">
+
+             <input type="email" 
+             name="email" placeholder="Email address" type="email" id="email" required="true"
+           
+             class="text-sm bg-custom-color lg:ml-4 p-2 w-[130px] md:w-[336px] bg-custom-color placeholder:placeholder:text-[12px]  md:placeholder:text-[14px] placeholder:leading-[21px]"
+             >
+         </div>
 
 
-            <div class="flex flex-row  justify-between">
-             
-              <input 
-
-              placeholder="Phone Number" type="number" id="phone" required="true" maxlength="10"
-                class=" bg-custom-color p-2 w-[130px] md:w-[336px] bg-custom-color placeholder:placeholder:text-[12px]  md:placeholder:text-[14px] placeholder:leading-[21px]"
-                name="city">
-
-                <select name="configuration" id="duplex" val class="ml-4 bg-custom-color p-2 w-[130px] md:w-[336px] bg-custom-color placeholder:placeholder:text-[12px] lg:text-[18px]  md:placeholder:text-[14px] placeholder:leading-[21px]">
-                  <option value="text-red-600"  disabled selected>Select Configuration</option>
-                  <option value="2duplex">2 BHK Apartment</option>
-                  <option value="3duplex">3 BHK Duplex</option>
-                  <option value="3.5duplex">3.5 BHK Duplex</option>
-                  <option value="4.5duplex">4.5 BHK Apartment</option>
-                </select>
-            </div>
+         <div class="flex flex-row  justify-between">
           
-          </div>
+           <input 
+
+           placeholder="Phone Number" type="number" id="phone" required="true" maxlength="10"
+             class="text-sm bg-custom-color p-2 w-[130px] md:w-[336px] bg-custom-color placeholder:placeholder:text-[12px]  md:placeholder:text-[14px] placeholder:leading-[21px]"
+             name="phone">
+
+             <select name="configuration" id="duplex" val class=" ml-4 bg-custom-color p-2 w-[130px] md:w-[336px] bg-custom-color placeholder:placeholder:text-[12px] lg:text-[18px]  md:placeholder:text-[14px] placeholder:leading-[21px]">
+               <option value="text-red-600"  disabled selected>Select Configuration</option>
+               <option value="2duplex">2 BHK Apartment</option>
+               <option value="3duplex">3 BHK Duplex</option>
+               <option value="3.5duplex">3.5 BHK Duplex</option>
+               <option value="4.5duplex">4.5 BHK Apartment</option>
+             </select>
+         </div>
+       
+       </div>
 
 
-          <p class=" text-[14px] font-normal leading-[22px] ">I grant authorization to Duville and its
-            representatives to contact me via Call, SMS, Email, or WhatsApp regarding its products and offers. This
-            consent takes precedence over any registration for DNC/NDNC.</p>
+       <p class=" text-[14px] font-normal leading-[22px] ">I grant authorization to Duville and its
+         representatives to contact me via Call, SMS, Email, or WhatsApp regarding its products and offers. This
+         consent takes precedence over any registration for DNC/NDNC.</p>
 
 
-         
           <button
-          id="popup-form-btn" type="submit"
           onclick="savedata()"
-            class="submit enquirebtn flex justify-start  mt-8 mr-0 w-fit inline-block px-12 py-3 text-sm font-medium text-white ">
+            class="popup-btn enquirebtn flex justify-start  mt-8 mr-0 w-fit inline-block px-12 py-3 text-sm font-medium text-white ">
             Enquire Now
           </button>
+
+      
 
         </div>
 </form>
@@ -2446,7 +2447,7 @@ function closePopup() {
 
 
                 </div>
-                <div class="text-xs	pr-2">
+                <div class="text-xs	pr-4">
                   <h1 class="font-semibold text-left">Riverdale Grand</h1>
                   <p class="text-smfont-plus-jakarta-sans text-left">MahaRERA No.P52100034877</p>
                   <p class="text-sm  font-plus-jakarta-sans text-red"><a href="/pdf_files/Riverdale-Grand.pdf"
@@ -2465,7 +2466,7 @@ function closePopup() {
 
                 </div>
 
-                <div class="text-center pr-2 text-xs	 text-left">
+                <div class="text-center text-xs	 text-left pr-4">
                   <h1 class="font-semibold text-left">Riverdale Grove</h1>
 
                   <p class="font-plus-jakarta-sans text-left">MahaRERA No.P52100029023</p>
@@ -2494,7 +2495,7 @@ function closePopup() {
           <p>Call us</p>
         </a>
         <!-- TODO: Open Popup  -->
-        <a class=" flex flex-row items-center gap-2">
+        <a class=" flex flex-row items-center gap-2 " onclick="Enquire()">
           <img src="./assets/icons/Menu.svg" /><br />
           
           <p onclick="Enquire()">Enquire</p>
@@ -2510,7 +2511,7 @@ function closePopup() {
     <!-- Footer -->
     <footer class="youtubevideo bg-black flex justify-center xs:mb-10 sm:mb-10">
       <div class="mx-auto max-w-screen-1xl px-4 py-6 sm:px-24 lg:px-8 text-white">
-© Copyright 2024 Riverdale Grand | Disclaimer | Designed and Developed by<a href="https://blackcherie.media/"> Black Cherie Media</a>
+      © Copyright 2024 Riverdale Grand | Disclaimer | Designed and Developed by<a href="https://blackcherie.media/"> Black Cherie Media</a>
       </div>
 
     </footer>
@@ -2528,7 +2529,7 @@ function closePopup() {
   <section id="popup" class="hidden">
     <div class="h-screen w-full fixed top-0 left-0 flex justify-center items-center bg-black/60 z-50">
       <div class="mx-auto max-w-lg bg-white p-8 rounded-lg relative">
-        <form id="popup-form" method="POST" action="./thankyou.html" class="form space-y-7">
+        <form id="popup-form" method="POST" class="form space-y-7">
           <p class="text-center text-lg font-medium">Contact us now</p>
           <div>
             <label class="sr-only" for="name">Name</label>
@@ -2558,7 +2559,7 @@ function closePopup() {
             <label class="sr-only" for="name">Configuration</label>
             <select name="configuration" id="duplex" val class="w-full rounded-lg border border-gray-200 p-3 text-sm">
               <option value="" disabled selected>Select Configuration</option>
-              <option value="2duplex">2 BHK Apartment</option>
+              <option value="3duplex">2 BHK Apartment</option>
               <option value="3duplex">3 BHK Duplex</option>
               <option value="3.5duplex">3.5 BHK Duplex</option>
               <option value="4.5duplex">4.5 BHK Apartment</option>
@@ -2590,7 +2591,7 @@ function closePopup() {
   <section id="popup" class="hidden">
     <div class="h-screen w-full fixed top-0 left-0 flex justify-center items-center bg-black/60 z-50">
       <div class="mx-auto max-w-lg bg-white p-8 rounded-lg relative">
-        <form id="popup-form" method="POST" action="./thankyou.html" class="form space-y-7">
+        <form id="popup-form" method="POST"  class="form space-y-7">
           <p class="text-center text-lg font-medium">Contact us now</p>
           <div>
             <label class="sr-only" for="name">Name</label>
