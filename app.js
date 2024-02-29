@@ -180,7 +180,7 @@ popupFormBtn.addEventListener("click", async (e) => {
 
    
     if(createLeadStatus && sendDataToGoogleSheetStatus){
-       //window.location.replace('./thankyou.html')
+       window.location.replace('./thankyou.html')
      
        localStorage.setItem("name", name)
     
